@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'NAMU';
+    src: local('NAMU Bold'), local('NAMU-Bold'), url('NAMU-1960.woff2') format('woff2'), url('NAMU-1960.woff') format('woff'), url('NAMU-1960.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
