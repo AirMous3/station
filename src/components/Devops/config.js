@@ -17,3 +17,26 @@ export const devopsConfig = [
       'Комплексная система, которая поможет получить выгодные офферы в перспективных проектах',
   },
 ];
+
+export const salaries = [
+  {
+    position: 'trainee',
+    salary: '>700$',
+  },
+  {
+    position: 'junior',
+    salary: '700$- 1500$',
+  },
+  {
+    position: 'middle',
+    salary: '1500$- 3500$',
+  },
+  {
+    position: 'senior/ lead',
+    salary: '3500$- 7000$',
+  },
+  {
+    position: 'arcitect',
+    salary: '5000$- 10000$',
+  },
+];

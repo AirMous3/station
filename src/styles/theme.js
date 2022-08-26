@@ -3,6 +3,13 @@ import { css } from 'styled-components';
 export const colors = {
   background: {
     body: '#1c1c1c',
+    salaryTablets: [
+      'linear-gradient(118.24deg, rgba(255, 255, 255, 0.26) 13.43%, rgba(254, 111, 95, 0.05) 71.65%)',
+      'linear-gradient(118.24deg, rgba(255, 255, 255, 0.26) 13.43%, rgba(254, 111, 95, 0.05) 71.65%, rgba(254, 111, 95, 0.2) 71.65%)',
+      'linear-gradient(118.24deg, rgba(255, 255, 255, 0.26) 13.43%, rgba(254, 111, 95, 0.4) 71.65%)',
+      'linear-gradient(118.24deg, rgba(255, 255, 255, 0.26) 13.43%, rgba(254, 111, 95, 0.6) 71.65%)',
+      'linear-gradient(117.07deg, rgba(255, 255, 255, 0.26) 13.44%, rgba(254, 111, 95, 0.8) 90.75%)',
+    ],
   },
   text: {
     main: '#ffffff',

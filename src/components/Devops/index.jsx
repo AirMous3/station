@@ -2,9 +2,9 @@ import backgroundImageDevops from '@/assets/icons/backgroundDevops.png';
 import { Container } from '@/components/Container';
 import { devopsConfig } from '@/components/Devops/config';
 import { Feature } from '@/components/Feature';
-import { SalaryTablet } from '@/components/SalaryTablet';
 
 import * as S from './components';
+import { salaries } from './config';
 
 export const Devops = () => {
   return (
@@ -37,12 +37,19 @@ export const Devops = () => {
           </S.FeaturesWrapper>
         </div>
 
+        <S.ArticleTitle>Востребованность на рынке</S.ArticleTitle>
+
         <S.SalaryWrapper>
-          <S.ArticleTitle>Востребованность на рынке</S.ArticleTitle>
           {/*<img src={backgroundImageDevops} alt="backgroundImage" />*/}
           <S.SalaryTabletsWrapper>
-            <SalaryTablet />
+            {salaries.map(({ salary, position }, i) => (
+              <S.SalaryTablet index={i} key={salary}>
+                <S.Salary index={i}>{salary}</S.Salary>
+                <S.Position>{position}</S.Position>
+              </S.SalaryTablet>
+            ))}
           </S.SalaryTabletsWrapper>
+          <S.VacanciesNote>* >2000 вакансийDevOps Engineer link hh.ru</S.VacanciesNote>
         </S.SalaryWrapper>
       </Container>
     </S.Section>
