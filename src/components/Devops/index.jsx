@@ -1,6 +1,8 @@
+import backgroundImageDevops from '@/assets/icons/backgroundDevops.png';
 import { Container } from '@/components/Container';
 import { devopsConfig } from '@/components/Devops/config';
 import { Feature } from '@/components/Feature';
+import { SalaryTablet } from '@/components/SalaryTablet';
 
 import * as S from './components';
 
@@ -34,9 +36,14 @@ export const Devops = () => {
             ))}
           </S.FeaturesWrapper>
         </div>
-        <div>
+
+        <S.SalaryWrapper>
           <S.ArticleTitle>Востребованность на рынке</S.ArticleTitle>
-        </div>
+          {/*<img src={backgroundImageDevops} alt="backgroundImage" />*/}
+          <S.SalaryTabletsWrapper>
+            <SalaryTablet />
+          </S.SalaryTabletsWrapper>
+        </S.SalaryWrapper>
       </Container>
     </S.Section>
   );

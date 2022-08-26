@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+
+
+import backgroundImageDevops from '@/assets/icons/backgroundDevops.png';
+
+
 export const Section = styled.section`
   padding-top: 70px;
 `;
@@ -48,3 +53,11 @@ export const FeaturesWrapper = styled.div`
   display: flex;
   justify-content: space-between;
 `;
+export const SalaryWrapper = styled.div`
+  background-image: url(${backgroundImageDevops});
+  background-repeat: no-repeat;
+  background-position: 10% 10%;
+`;
+export const SalaryTabletsWrapper = styled.div`
+  display: flex;
+`
