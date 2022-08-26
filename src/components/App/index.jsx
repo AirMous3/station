@@ -1,11 +1,13 @@
-import { Container } from '@/components/Container';
 import { Header } from '@/components/Header';
+import { Main } from '@/components/Main';
+import { StartInfoLine } from '@/components/StartInfoLine';
 
 export const App = () => {
   return (
     <div>
       <Header />
-      <Container>123</Container>
+        <Main />
+      <StartInfoLine />
     </div>
   );
 };
