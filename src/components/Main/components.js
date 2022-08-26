@@ -10,15 +10,17 @@ export const Description = styled.div`
   font-size: ${({ theme }) => theme.typography.size[4]};
   color: ${({ theme }) => theme.colors.text.additional};
   max-width: 164px;
+  text-align: center;
 `;
 export const RevertDescription = styled(Description)`
   display: flex;
   align-items: end;
-`
-export const Title = styled.div`
-  color: ${({ theme }) => theme.colors.text.main};
+`;
+export const Title = styled.h1`
+  font-family: Generator;
   font-weight: 700;
-  font-size: ${({ theme }) => theme.typography.size[16]};
+  font-size: ${({ theme }) => theme.typography.size[17]};
+  color: ${({ theme }) => theme.colors.text.main};
   position: absolute;
   text-transform: uppercase;
   transform: rotate(34.19deg);

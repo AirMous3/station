@@ -8,6 +8,7 @@ export const colors = {
     main: '#ffffff',
     secondary: '#000000',
     additional: 'rgba(196, 196, 196, 0.06);',
+    turquoise: '#53cbd8',
   },
 };
 
@@ -31,6 +32,8 @@ export const typography = {
     '120px', // 15
     '140px', // 16
     '150px', // 17
+    '300px', // 18
+    '350px', // 19
   ],
 };
 
