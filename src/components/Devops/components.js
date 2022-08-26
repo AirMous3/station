@@ -8,7 +8,7 @@ export const TitleWrapper = styled.div`
   overflow-x: clip;
   user-select: none;
 `;
-export const Title = styled.h2`
+export const Title = styled.h1`
   font-family: Generator;
   font-weight: 800;
   color: ${({ theme }) => theme.colors.text.turquoise};
@@ -34,4 +34,17 @@ export const BackgroundTitle = styled.div`
   -webkit-text-stroke: 1px #273d5c;
   text-align: end;
   margin-right: -70px;
+`;
+export const ArticleTitle = styled.h2`
+  font-family: NAMU;
+  font-weight: 700;
+  font-size: ${({ theme }) => theme.typography.size[12]};
+  color: ${({ theme }) => theme.colors.text.main};
+  margin-bottom: 30px;
+  max-width: 820px;
+  line-height: 54px;
+`;
+export const FeaturesWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;

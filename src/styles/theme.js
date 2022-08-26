@@ -9,6 +9,8 @@ export const colors = {
     secondary: '#000000',
     additional: 'rgba(196, 196, 196, 0.06);',
     turquoise: '#53cbd8',
+    blue: '#3B92EA',
+    grey: '#C3C3C3',
   },
 };
 

@@ -1,4 +1,6 @@
 import { Container } from '@/components/Container';
+import { devopsConfig } from '@/components/Devops/config';
+import { Feature } from '@/components/Feature';
 
 import * as S from './components';
 
@@ -16,7 +18,26 @@ export const Devops = () => {
         </S.Description>
         <S.BackgroundTitle>DevOps</S.BackgroundTitle>
       </S.TitleWrapper>
-      <Container>123</Container>
+
+      <Container>
+        <div>
+          <S.ArticleTitle>Как это будет</S.ArticleTitle>
+
+          <S.FeaturesWrapper>
+            {devopsConfig.map(({ number, title, description }) => (
+              <Feature
+                key={number}
+                number={number}
+                title={title}
+                description={description}
+              />
+            ))}
+          </S.FeaturesWrapper>
+        </div>
+        <div>
+          <S.ArticleTitle>Востребованность на рынке</S.ArticleTitle>
+        </div>
+      </Container>
     </S.Section>
   );
 };
