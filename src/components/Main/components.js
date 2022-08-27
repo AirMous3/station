@@ -11,6 +11,7 @@ export const Description = styled.div`
   color: ${({ theme }) => theme.colors.text.additional};
   max-width: 164px;
   text-align: center;
+  user-select: none;
 `;
 export const RevertDescription = styled(Description)`
   display: flex;

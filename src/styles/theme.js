@@ -19,6 +19,7 @@ export const colors = {
     blue: '#3B92EA',
     grey: '#C3C3C3',
     darkGrey: '#5E5E5E',
+    lightGrey: '#BCBCBC',
   },
 };
 

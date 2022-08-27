@@ -3,7 +3,6 @@ import { Devops } from '@/components/Devops';
 import { Header } from '@/components/Header';
 import { Main } from '@/components/Main';
 import { StartInfoLine } from '@/components/StartInfoLine';
-import { Ticker } from '@/components/Ticker';
 
 export const App = () => {
   return (
@@ -13,8 +12,6 @@ export const App = () => {
       <StartInfoLine />
       <Devops />
       <AboutCourse />
-      <Ticker />
-      <Ticker direction={'left'} />
     </div>
   );
 };

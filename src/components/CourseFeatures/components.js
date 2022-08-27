@@ -1,0 +1,36 @@
+import styled from 'styled-components';
+
+export const Wrapper = styled.div`
+  font-family: Roboto;
+  margin-top: 115px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+`;
+export const FeatureWrapper = styled.div`
+  max-width: 33.33%;
+`;
+export const FeatureTitle = styled.div`
+  font-weight: 700;
+  font-size: ${({ theme }) => theme.typography.size[2]};
+  text-align: center;
+  color: ${({ theme }) => theme.colors.text.main};
+  //TODO
+  border: 2px solid #fe6f5f;
+  border-radius: 50px;
+  max-width: 326px;
+  max-height: 74px;
+  padding: 21px 41px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+
+  //TODO полосочки
+`;
+export const FeatureDescription = styled.div`
+  font-weight: 500;
+  font-size: ${({ theme }) => theme.typography.size[4]};
+  color: ${({ theme }) => theme.colors.text.lightGrey};
+  text-align: center;
+  max-width: 283px;
+  margin-left: 15px;
+`;
