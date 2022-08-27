@@ -30,6 +30,7 @@ export const Title = styled.h1`
 `;
 export const ImageWrapper = styled.div`
   position: relative;
+  margin-left: -200px;
 `;
 export const SecondMainImage = styled.img`
   position: absolute;

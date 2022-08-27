@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 
-import backgroundImageDevops from '@/assets/icons/backgroundDevops.png';
-
 export const Section = styled.section`
   padding-top: 70px;
+  position: relative;
+
+  img {
+    position: absolute;
+    bottom: -9%;
+    left: 6%;
+  }
 `;
 export const TitleWrapper = styled.div`
   position: relative;
@@ -24,6 +29,7 @@ export const Description = styled.div`
   position: absolute;
   top: 70px;
   left: 527px;
+  //TODO
   color: #ebebeb;
   max-width: 665px;
   z-index: 2;
@@ -52,9 +58,7 @@ export const FeaturesWrapper = styled.div`
 `;
 export const SalaryWrapper = styled.div`
   padding: 0 34px;
-  background-image: url(${backgroundImageDevops});
-  background-repeat: no-repeat;
-  background-position: 10% 10%;
+  margin-top: 150px;
 `;
 export const SalaryTabletsWrapper = styled.div`
   display: flex;
@@ -111,7 +115,7 @@ export const Salary = styled.div`
   font-weight: 700;
   line-height: 160%;
   // TODO
-  margin: ${({ index }) => `${10 * index + 10}px`} 0;
+  margin: ${({ theme, index }) => `${theme.margin.salaryTablets[index]}`} 0;
 `;
 
 export const Position = styled.div`
@@ -125,5 +129,5 @@ export const VacanciesNote = styled.div`
   color: #fe6f5f;
   font-weight: 700;
   font-size: 30px;
-  line-height: 160%;
+  margin-bottom: 200px;
 `;

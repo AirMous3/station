@@ -18,6 +18,7 @@ export const colors = {
     turquoise: '#53cbd8',
     blue: '#3B92EA',
     grey: '#C3C3C3',
+    darkGrey: '#5E5E5E',
   },
 };
 
@@ -46,6 +47,10 @@ export const typography = {
   ],
 };
 
+export const margin = {
+  salaryTablets: ['10px', '20px', '30px', '40px', '70px'],
+};
+
 export const breakpoints = {
   xs: 320,
   xxs: 360,
@@ -72,4 +77,4 @@ const below = Object.keys(breakpoints).reduce((acc, key) => {
   return acc;
 }, {});
 
-export const theme = { above, below, colors, typography };
+export const theme = { above, below, colors, typography, margin };
