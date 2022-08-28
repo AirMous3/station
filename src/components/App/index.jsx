@@ -1,5 +1,6 @@
 import { AboutCourse } from '@/components/AboutCourse';
 import { AboutTraining } from '@/components/AboutTraining';
+import { Curriculum } from '@/components/Curriculum';
 import { Devops } from '@/components/Devops';
 import { Header } from '@/components/Header';
 import { JobAssistance } from '@/components/JobAssistance';
@@ -18,6 +19,7 @@ export const App = () => {
       {/*<JobAssistance />*/}
       <AboutTraining />
       <OurTeam />
+      <Curriculum />
     </div>
   );
 };
