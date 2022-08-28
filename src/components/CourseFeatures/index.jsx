@@ -8,7 +8,7 @@ export const CourseFeatures = () => {
     <Container>
       <S.Wrapper>
         {courseFeaturesConfig.map(({ title, description }) => (
-          <S.FeatureWrapper>
+          <S.FeatureWrapper key={title}>
             <S.FeatureTitle>{title}</S.FeatureTitle>
 
             <S.FeatureDescription>{description}</S.FeatureDescription>
