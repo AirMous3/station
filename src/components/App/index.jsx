@@ -4,6 +4,7 @@ import { Devops } from '@/components/Devops';
 import { Header } from '@/components/Header';
 import { JobAssistance } from '@/components/JobAssistance';
 import { Main } from '@/components/Main';
+import { OurTeam } from '@/components/OurTeam';
 import { StartInfoLine } from '@/components/StartInfoLine';
 
 export const App = () => {
@@ -14,8 +15,9 @@ export const App = () => {
       <StartInfoLine />
       <Devops />
       <AboutCourse />
-      <JobAssistance />
+      {/*<JobAssistance />*/}
       <AboutTraining />
+      <OurTeam />
     </div>
   );
 };

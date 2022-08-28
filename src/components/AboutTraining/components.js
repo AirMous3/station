@@ -6,6 +6,7 @@ import { ArticleTitle } from '@/components/Devops/components';
 export const Section = styled.section`
   font-family: Roboto;
   margin-top: 35px;
+  margin-bottom: 150px;
 `;
 
 export const Article = styled(ArticleTitle)`
@@ -20,12 +21,12 @@ export const ArticleDescription = styled.div`
   margin-top: 30px;
 `;
 
-export const FeaturesWrapper = styled.div`
+export const FeaturesWrapper = styled.ul`
   margin-top: 65px;
   margin-bottom: 96px;
 `;
 
-export const Feature = styled.div`
+export const Feature = styled.li`
   display: flex;
   align-items: center;
   // TODO

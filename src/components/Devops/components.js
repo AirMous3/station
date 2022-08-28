@@ -55,6 +55,7 @@ export const ArticleTitle = styled.h2`
 export const FeaturesWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 40px;
 `;
 export const SalaryWrapper = styled.div`
   padding: 0 34px;

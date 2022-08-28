@@ -16,7 +16,7 @@ export const Number = styled.div`
 export const Description = styled.div`
   font-size: ${({ theme }) => theme.typography.size[4]};
   color: ${({ theme }) => theme.colors.text.grey};
-  max-width: 283px;
+  max-width: 318px;
   text-align: center;
 `;
 export const Title = styled.div`
