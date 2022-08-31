@@ -6,7 +6,6 @@ export const Section = styled.section`
   font-family: Roboto;
   color: ${({ theme }) => theme.colors.text.main};
   margin-top: 100px;
-  text-align: center;
   padding: 0 60px;
   margin-bottom: 150px;
 `;
@@ -18,9 +17,10 @@ export const PackagesWrapper = styled.div`
   justify-content: center;
   gap: 50px;
   margin-top: 80px;
+  text-align: center;
 `;
 
-export const PackageWrapper = styled.div`
+export const PackageWrapper = styled.ul`
   width: 25%;
   border-radius: 20px;
   display: flex;
@@ -29,13 +29,13 @@ export const PackageWrapper = styled.div`
   padding: 34px 0;
 `;
 
-export const PackageTitle = styled.div`
+export const PackageTitle = styled.h3`
   font-weight: 700;
   font-size: ${({ theme }) => theme.typography.size[8]};
   text-transform: uppercase;
 `;
 
-export const PackageFeature = styled.div`
+export const PackageFeature = styled.li`
   font-weight: 500;
   font-size: ${({ theme }) => theme.typography.size[1]};
   border-bottom: 1px solid blueviolet;

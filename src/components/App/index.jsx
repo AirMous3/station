@@ -2,6 +2,7 @@ import { AboutCourse } from '@/components/AboutCourse';
 import { AboutTraining } from '@/components/AboutTraining';
 import { Curriculum } from '@/components/Curriculum';
 import { Devops } from '@/components/Devops';
+import { Feedbacks } from '@/components/Feedbacks';
 import { Header } from '@/components/Header';
 import { JobAssistance } from '@/components/JobAssistance';
 import { Main } from '@/components/Main';
@@ -22,6 +23,7 @@ export const App = () => {
       <OurTeam />
       <Curriculum />
       <PackageCost />
+      <Feedbacks />
     </div>
   );
 };

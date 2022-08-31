@@ -11,11 +11,11 @@ export const PackageCost = () => {
       </Container>
 
       <S.PackagesWrapper>
-        {packageConfig.map(({ title, features }) => (
-          <S.PackageWrapper>
+        {packageConfig.map(({ title, features }, index) => (
+          <S.PackageWrapper key={index}>
             <S.PackageTitle>{title}</S.PackageTitle>
-            {features.map((feature) => (
-              <S.PackageFeature>{feature}</S.PackageFeature>
+            {features.map((feature, index) => (
+              <S.PackageFeature key={index}>{feature}</S.PackageFeature>
             ))}
             <S.PackagePrice>От 2200 BYN</S.PackagePrice>
           </S.PackageWrapper>

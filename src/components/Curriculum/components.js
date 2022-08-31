@@ -59,6 +59,7 @@ export const FeatureNumber = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 0px 20px 8px rgba(176, 173, 184, 0.2);
 `;
 
 export const FeatureWrapper = styled.li`
@@ -72,6 +73,7 @@ export const FeatureWrapper = styled.li`
     ${FeatureNumber} {
       //  TODO
       background: linear-gradient(180deg, #2037fb 0%, #50dadd 100%);
+      box-shadow: 0px 0px 20px 8px rgba(100, 212, 244, 0.2);
     }
   }
 `;
