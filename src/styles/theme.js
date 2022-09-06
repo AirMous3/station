@@ -10,6 +10,7 @@ export const colors = {
       'linear-gradient(118.24deg, rgba(255, 255, 255, 0.26) 13.43%, rgba(254, 111, 95, 0.6) 71.65%)',
       'linear-gradient(117.07deg, rgba(255, 255, 255, 0.26) 13.44%, rgba(254, 111, 95, 0.8) 90.75%)',
     ],
+    feedback: '#F8F8F8',
   },
   text: {
     main: '#ffffff',

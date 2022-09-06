@@ -1,8 +1,42 @@
+import { useEffect, useState } from 'react';
+
+
+
+import mentorImage from '@/assets/icons/miniMentorImage.png';
 import { Container } from '@/components/Container';
+
+
 
 import * as S from './components';
 
+
 export const Feedbacks = () => {
+  const [state, setState] = useState([
+    { id: 1, title: 'Игорь', description: 'Март 2022' },
+    { id: 2, title: 'Игорь', description: 'Март 2022' },
+    { id: 3, title: 'Игорь', description: 'Март 2022' },
+    { id: 4, title: 'Игорь', description: 'Март 2022' },
+  ]);
+
+  const [activeId, setActiveId] = useState(1);
+
+  const handleClick = (id) => {
+    setActiveId(id);
+  };
+
+  useEffect(() => {
+    let id = activeId;
+
+    const intervalId = setInterval(() => {
+      id === 4 ? (id = 1) : (id += 1);
+      setActiveId(id);
+    }, 2000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [activeId]);
+
   return (
     <S.Wrapper>
       <Container>
@@ -17,15 +51,27 @@ export const Feedbacks = () => {
               поддерживать с ментором связь, всегда даёт советы и поддерживает. Самым
               большим плюсом при обучении была практика на реальных кейсов. Информацию
               можно нагуглить и бесплатно, а вот практика – бесценна.
+              <S.AvatarsWrapper>
+                {state.map(({ id, description, title }) => {
+                  const active = activeId === id;
+
+                  return (
+                    <S.AvatarWrapper
+                      active={active}
+                      key={id}
+                      onClick={() => handleClick(id)}
+                    >
+                      <img src={mentorImage} alt="mentorImage" />
+                      <S.AvatarDescriptionWrapper>
+                        <S.AvatarTitle>{title}</S.AvatarTitle>
+                        <S.AvatarDescription>{description}</S.AvatarDescription>
+                      </S.AvatarDescriptionWrapper>
+                    </S.AvatarWrapper>
+                  );
+                })}
+              </S.AvatarsWrapper>
             </S.FeedbackDescription>
           </S.DescriptionWrapper>
-
-          <S.AvatarsWrapper>
-            <S.Avatar />
-            <S.Avatar />
-            <S.Avatar />
-            <S.Avatar />
-          </S.AvatarsWrapper>
         </S.FeedbacksWrapper>
       </Container>
     </S.Wrapper>
