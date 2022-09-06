@@ -3,6 +3,7 @@ import { AboutTraining } from '@/components/AboutTraining';
 import { Curriculum } from '@/components/Curriculum';
 import { Devops } from '@/components/Devops';
 import { Feedbacks } from '@/components/Feedbacks';
+import { GetStarted } from '@/components/GetStarted';
 import { Header } from '@/components/Header';
 import { JobAssistance } from '@/components/JobAssistance';
 import { Main } from '@/components/Main';
@@ -24,6 +25,7 @@ export const App = () => {
       <Curriculum />
       <PackageCost />
       <Feedbacks />
+      <GetStarted />
     </div>
   );
 };

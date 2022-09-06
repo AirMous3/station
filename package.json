@@ -40,6 +40,7 @@
   "devDependencies": {
     "@craco/craco": "^6.4.5",
     "@trivago/prettier-plugin-sort-imports": "^3.3.0",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "react-phone-input-2": "^2.15.1"
   }
 }

@@ -7,7 +7,9 @@ export const Wrapper = styled.div`
   color: ${({ theme }) => theme.colors.text.main};
 `;
 
-export const Article = styled(ArticleTitle)``;
+export const Article = styled(ArticleTitle)`
+  max-width: 576px;
+`;
 
 export const FeedbacksWrapper = styled.div`
   display: flex;
