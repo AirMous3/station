@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import cross from '@/assets/icons/cross.svg';
 import { ArticleTitle } from '@/components/Devops/components';
@@ -29,7 +29,6 @@ export const FeaturesWrapper = styled.ul`
 
 export const Cross = styled.div`
   position: relative;
-  margin-left: auto;
   background-image: url(${cross});
   background-repeat: no-repeat;
   background-position: center;
@@ -37,11 +36,17 @@ export const Cross = styled.div`
   height: 15px;
   margin-right: 15px;
   cursor: pointer;
+  transition: transform 0.1s ease-in-out;
 
-  &:active {
-    transform: rotate(47.15deg);
-    transition: all 0.1s ease-out;
-  }
+  ${({ active }) =>
+    active &&
+    css`
+      transform: rotate(47.15deg);
+    `}
+`;
+
+export const CrossWrapper = styled(motion.div)`
+  margin-left: auto;
 `;
 
 export const Feature = styled(motion.li)`
@@ -51,6 +56,7 @@ export const Feature = styled(motion.li)`
   // TODO
   border-bottom: 1px solid #535353;
   color: ${({ theme }) => theme.colors.text.main};
+  transition: color ease-in 0.5s;
 
   &:hover {
     color: ${({ theme }) => theme.colors.text.darkGrey};
@@ -61,13 +67,14 @@ export const Feature = styled(motion.li)`
   }
 `;
 
-export const FeaturesTitle = styled.div`
+export const FeatureTitle = styled(motion.div)`
   position: relative;
   font-weight: 700;
   font-size: ${({ theme }) => theme.typography.size[4]};
   color: inherit;
   padding-bottom: 32px;
   padding-top: 42px;
+  padding-left: 15px;
 
   &:after {
     content: '01';
@@ -83,6 +90,14 @@ export const FeaturesTitle = styled.div`
     top: 30px;
     right: -15px;
   }
+`;
+
+export const FeatureDescription = styled(motion.div)`
+  font-weight: 400;
+  font-size: ${({ theme }) => theme.typography.size[2]};
+  max-width: 476px;
+  margin: 32px 0;
+  margin-left: auto;
 `;
 
 export const Background = styled(motion.div)`

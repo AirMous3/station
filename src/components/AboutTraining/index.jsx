@@ -8,6 +8,11 @@ import * as S from './components';
 
 export const AboutTraining = () => {
   const [hoveredFeature, setHoveredFeature] = useState();
+  const [isOpenDescription, setIsOpenDescription] = useState();
+
+  const handleClick = (id) => {
+    setIsOpenDescription(id);
+  };
 
   return (
     <Container>
@@ -20,19 +25,39 @@ export const AboutTraining = () => {
         </S.ArticleDescription>
 
         <S.FeaturesWrapper>
-          {trainingFeaturesConfig.map(({ number, title }) => (
-            <S.Feature
-              key={number}
-              onPointerOver={() => setHoveredFeature(number)}
-              onPointerOut={() => setHoveredFeature(undefined)}
-            >
-              {hoveredFeature === number && <S.Background layoutId="background" />}
-
-              <S.FeaturesTitle number={number}>{title}</S.FeaturesTitle>
-
-              <S.Cross />
-            </S.Feature>
-          ))}
+          {trainingFeaturesConfig.map(({ number, title, description }) => {
+            let active = isOpenDescription === number;
+            return (
+              <S.Feature
+                key={number}
+                onPointerOver={() => setHoveredFeature(number)}
+                onPointerOut={() => setHoveredFeature(undefined)}
+                layout="preserve"
+              >
+                {hoveredFeature === number && <S.Background layoutId="background" />}
+                <S.FeatureTitle layout="preserve" number={number}>
+                  {title}
+                </S.FeatureTitle>
+                {active && (
+                  <S.FeatureDescription
+                    layout
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.8 }}
+                  >
+                    {description}
+                  </S.FeatureDescription>
+                )}
+                <S.CrossWrapper layout="preserve">
+                  <S.Cross
+                    active={active}
+                    onClick={() => handleClick(active ? undefined : number)}
+                  />
+                </S.CrossWrapper>
+              </S.Feature>
+            );
+          })}
         </S.FeaturesWrapper>
 
         <Button>Записаться</Button>
