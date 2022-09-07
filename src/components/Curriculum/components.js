@@ -68,6 +68,7 @@ export const FeatureWrapper = styled.li`
   align-items: center;
   z-index: 2;
   margin-left: ${({ margin }) => margin};
+  transition: background 0.5s ;
 
   &:hover {
     ${FeatureNumber} {

@@ -1,6 +1,6 @@
 import { Button } from '@/components/Button';
 import { CourseFeatures } from '@/components/CourseFeatures';
-import { Levels } from '@/components/Levels';
+import { Levels } from '@/components/AboutCourse/Levels';
 import { Ticker } from '@/components/Ticker';
 
 import * as S from './components';

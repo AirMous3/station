@@ -36,12 +36,13 @@ export const Cross = styled.div`
   height: 15px;
   margin-right: 15px;
   cursor: pointer;
-  transition: transform 0.1s ease-in-out;
+  transition: transform 0.3s ease-in-out, margin-top 0.5s ease-in;
 
   ${({ active }) =>
     active &&
     css`
       transform: rotate(47.15deg);
+      margin-top: -75px;
     `}
 `;
 
