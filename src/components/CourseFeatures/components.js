@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+
+const FEATURE_HEIGHT = 74;
+
 export const Wrapper = styled.div`
   font-family: Roboto;
   margin-top: 115px;
@@ -8,7 +11,7 @@ export const Wrapper = styled.div`
   margin-bottom: 100px;
 `;
 export const FeatureWrapper = styled.div`
-  max-width: 33.33%;
+  position: relative;
 `;
 export const FeatureTitle = styled.div`
   font-weight: 700;
@@ -19,8 +22,8 @@ export const FeatureTitle = styled.div`
   border: 2px solid #fe6f5f;
   border-radius: 50px;
   max-width: 326px;
-  max-height: 74px;
-  padding: 21px 41px;
+  height: ${FEATURE_HEIGHT}px;
+  padding: 21px 20px;
   box-sizing: border-box;
   margin-bottom: 30px;
 
@@ -33,4 +36,11 @@ export const FeatureDescription = styled.div`
   text-align: center;
   max-width: 283px;
   margin-left: 15px;
+`;
+
+export const LineBlock = styled.div`
+  flex-grow: 1;
+  height: 2px;
+  background-color: #fe6f5f;
+  margin-top: ${FEATURE_HEIGHT / 2}px;
 `;

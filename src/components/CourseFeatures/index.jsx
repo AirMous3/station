@@ -7,13 +7,17 @@ export const CourseFeatures = () => {
   return (
     <Container>
       <S.Wrapper>
-        {courseFeaturesConfig.map(({ title, description }) => (
-          <S.FeatureWrapper key={title}>
-            <S.FeatureTitle>{title}</S.FeatureTitle>
+        {courseFeaturesConfig.map(({ title, description, specialBlock }, index) => {
+          return specialBlock ? (
+            <S.LineBlock key={index} />
+          ) : (
+            <S.FeatureWrapper key={index}>
+              <S.FeatureTitle>{title}</S.FeatureTitle>
 
-            <S.FeatureDescription>{description}</S.FeatureDescription>
-          </S.FeatureWrapper>
-        ))}
+              <S.FeatureDescription>{description}</S.FeatureDescription>
+            </S.FeatureWrapper>
+          );
+        })}
       </S.Wrapper>
     </Container>
   );
