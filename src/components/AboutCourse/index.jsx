@@ -1,6 +1,8 @@
+import { Link } from 'react-scroll';
+
+import { Levels } from '@/components/AboutCourse/Levels';
 import { Button } from '@/components/Button';
 import { CourseFeatures } from '@/components/CourseFeatures';
-import { Levels } from '@/components/AboutCourse/Levels';
 import { Ticker } from '@/components/Ticker';
 
 import * as S from './components';
@@ -13,9 +15,9 @@ export const AboutCourse = () => {
 
         <Levels />
 
-        <div>
+        <Link to={'getStarted'} smooth={true}>
           <Button>Узнать подробнее</Button>
-        </div>
+        </Link>
       </S.Container>
 
       <Ticker />

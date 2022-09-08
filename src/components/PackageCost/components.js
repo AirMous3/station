@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
+
+
 import { ArticleTitle } from '@/components/Devops/components';
+
 
 export const Section = styled.section`
   font-family: Roboto;
@@ -38,7 +41,6 @@ export const PackageTitle = styled.h3`
 export const PackageFeature = styled.li`
   font-weight: 500;
   font-size: ${({ theme }) => theme.typography.size[1]};
-  border-bottom: 1px solid blueviolet;
   border-bottom: 2px solid transparent;
   //TODO
   border-image: radial-gradient(

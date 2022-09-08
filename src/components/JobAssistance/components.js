@@ -12,19 +12,21 @@ export const Title = styled.h2`
   //TODO
   color: #d2d2d2;
   max-width: 455px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   margin-bottom: 50px;
+  line-height: 76.8px;
 
   span {
+    max-height: 106px;
+    display: block;
     //TODO
     background: rgba(254, 111, 95, 0.2);
     border-right: 2px solid #fe6f5f;
     border-left: 2px solid #fe6f5f;
-    padding: 10px 20px;
+    padding: 0px 20px 22px 20px;
     box-sizing: border-box;
     position: relative;
+    margin-top: 14px;
+    margin-left: -20px;
 
     &:before {
       content: '';
@@ -64,7 +66,7 @@ export const Features = styled.div`
 export const Feature = styled.li`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   background: linear-gradient(
     126.59deg,
     rgba(255, 255, 255, 0.4) 12.11%,
@@ -72,13 +74,19 @@ export const Feature = styled.li`
   );
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(40px);
-  padding: 25px 31px;
+  //padding: 25px 31px;
+  padding-left: 35px;
+  padding-top: 32px;
+  padding-right: 26px;
   box-sizing: border-box;
   /* Note: backdrop-filter has minimal browser support */
   border-radius: 40px;
   max-width: 346px;
   max-height: 205px;
   min-height: 205px;
+  border: 1px solid #868a8c;
+  position: relative;
+  z-index: 2;
 `;
 
 export const FeatureTitle = styled.div`
@@ -92,14 +100,42 @@ export const FeatureDescription = styled.div`
   font-size: ${({ theme }) => theme.typography.size[0]};
 `;
 export const LeftFeatures = styled.ul`
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 150px;
   justify-content: center;
+
+  &:after {
+    position: absolute;
+    top: 95px;
+    right: -35px;
+    content: '';
+    height: 100%;
+    width: 1px;
+    background-color: #4ed3df;
+    box-shadow: 0px 0px 5px 3px rgba(78, 211, 223, 0.2);
+  }
 `;
 
 export const RightFeatures = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 150px;
+`;
+
+export const Circle = styled.div`
+  position: absolute;
+  right: -42px;
+  bottom: -39px;
+  width: 96px;
+  height: 96px;
+  background: linear-gradient(231.92deg, #ffffff 29.99%, #6c6c6c 91.35%);
+  z-index: -1;
+  border-radius: 50%;
+`;
+
+export const CircleRight = styled(Circle)`
+  left: -45px;
+  bottom: -45px;
 `;

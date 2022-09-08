@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-scroll';
 
 import { trainingFeaturesConfig } from '@/components/AboutTraining/config';
 import { Button } from '@/components/Button';
@@ -33,6 +34,7 @@ export const AboutTraining = () => {
                 onPointerOver={() => setHoveredFeature(number)}
                 onPointerOut={() => setHoveredFeature(undefined)}
                 layout="preserve"
+                onClick={() => handleClick(active ? undefined : number)}
               >
                 {hoveredFeature === number && <S.Background layoutId="background" />}
                 <S.FeatureTitle layout="preserve" number={number}>
@@ -40,7 +42,7 @@ export const AboutTraining = () => {
                 </S.FeatureTitle>
                 {active && (
                   <S.FeatureDescription
-                    layout
+                    layout="preserve"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -59,8 +61,9 @@ export const AboutTraining = () => {
             );
           })}
         </S.FeaturesWrapper>
-
-        <Button>Записаться</Button>
+        <Link to={'getStarted'} smooth={true}>
+          <Button>Записаться</Button>
+        </Link>
       </S.Section>
     </Container>
   );

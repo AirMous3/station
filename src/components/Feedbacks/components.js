@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
 
 import { ArticleTitle } from '@/components/Devops/components';
@@ -36,7 +37,7 @@ export const DescriptionWrapper = styled.div`
   gap: 35px;
 `;
 
-export const AvatarsWrapper = styled.div`
+export const AvatarsWrapper = styled(motion.div)`
   display: flex;
   align-items: center;
   height: 99px;
@@ -44,8 +45,9 @@ export const AvatarsWrapper = styled.div`
   margin-top: 50px;
   white-space: nowrap;
 `;
+export const AvatarImage = styled(motion.img)``;
 
-export const AvatarWrapper = styled.div`
+export const AvatarWrapper = styled(motion.div)`
   width: 81px;
   height: 81px;
   border-radius: 890px;
@@ -57,16 +59,12 @@ export const AvatarWrapper = styled.div`
   cursor: pointer;
   transition: width 0.5s, height 0.3s linear;
 
-  ${({ active }) =>
-    active
+  ${({ isActive }) =>
+    isActive
       ? css`
-          width: 284px;
+          width: 250px;
           height: 97px;
           border-radius: 890px;
-
-          img {
-            margin-left: 25px;
-          }
         `
       : css`
           ${AvatarDescriptionWrapper} {
@@ -87,22 +85,24 @@ export const AvatarWrapper = styled.div`
   }
 `;
 
-export const AvatarDescriptionWrapper = styled.div`
+export const AvatarDescriptionWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   margin-left: 17px;
   color: black;
-  transition: opacity 0.9s;
+  transition: opacity 0.5s ease-in-out;
 `;
 
 export const AvatarTitle = styled.div`
   font-weight: 600;
   font-size: 23px;
   line-height: 120%;
+  transition: opacity 0.5s ease-in-out;
 `;
 
 export const AvatarDescription = styled.div`
   font-weight: 500;
   font-size: 16px;
   line-height: 120%;
+  transition: opacity 0.5s ease-in-out;
 `;

@@ -36,7 +36,7 @@ export const Cross = styled.div`
   height: 15px;
   margin-right: 15px;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out, margin-top 0.5s ease-in;
+  transition: transform 0.3s ease-in-out, margin-top 0.1s ease-in-out;
 
   ${({ active }) =>
     active &&
@@ -58,6 +58,7 @@ export const Feature = styled(motion.li)`
   border-bottom: 1px solid #535353;
   color: ${({ theme }) => theme.colors.text.main};
   transition: color ease-in 0.5s;
+  cursor: pointer;
 
   &:hover {
     color: ${({ theme }) => theme.colors.text.darkGrey};

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 import { ArticleTitle } from '@/components/Devops/components';
@@ -18,7 +19,7 @@ export const Features = styled.div`
   margin-bottom: 150px;
 `;
 
-export const Circle = styled.div`
+export const Circle = styled(motion.div)`
   position: relative;
   width: 588px;
   height: 588px;
@@ -68,7 +69,7 @@ export const FeatureWrapper = styled.li`
   align-items: center;
   z-index: 2;
   margin-left: ${({ margin }) => margin};
-  transition: background 0.5s ;
+  transition: background 0.8s;
 
   &:hover {
     ${FeatureNumber} {

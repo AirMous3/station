@@ -30,7 +30,7 @@ export const GetStarted = () => {
   return (
     <S.Section>
       <Container>
-        <S.Article>Измени свою жизнь уже сейчас</S.Article>
+        <S.Article id="getStarted">Измени свою жизнь уже сейчас</S.Article>
 
         <S.Wrapper>
           <img src={image} alt="" />

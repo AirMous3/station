@@ -16,15 +16,16 @@ export const JobAssistance = () => {
               <S.Feature key={title}>
                 <S.FeatureTitle>{title}</S.FeatureTitle>
                 <S.FeatureDescription>{description}</S.FeatureDescription>
+                <S.Circle />
               </S.Feature>
             ))}
           </S.LeftFeatures>
-
           <S.RightFeatures>
             {rightJobFeatures.map(({ title, description }) => (
               <S.Feature key={title}>
                 <S.FeatureTitle>{title}</S.FeatureTitle>
                 <S.FeatureDescription>{description}</S.FeatureDescription>
+                <S.CircleRight />
               </S.Feature>
             ))}
           </S.RightFeatures>

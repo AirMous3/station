@@ -22,8 +22,8 @@ export const Curriculum = () => {
             </S.FeatureWrapper>
           ))}
         </S.FeaturesWrapper>
-
       </S.Features>
+
       <Button>Скачать программу курса</Button>
     </S.Section>
   );
