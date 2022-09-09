@@ -53,6 +53,10 @@ export const AboutTraining = () => {
                 )}
                 <S.CrossWrapper layout="preserve">
                   <S.Cross
+                    layout="preserve"
+                    animate={active ? { y: -60, rotate: 405 } : { y: 0, rotate: 0 }}
+                    exit={{ y: 0 }}
+                    transition={{ duration: 0.5 }}
                     active={active}
                     onClick={() => handleClick(active ? undefined : number)}
                   />

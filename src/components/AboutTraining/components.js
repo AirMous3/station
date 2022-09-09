@@ -27,27 +27,19 @@ export const FeaturesWrapper = styled.ul`
   margin-bottom: 96px;
 `;
 
-export const Cross = styled.div`
+export const Cross = styled(motion.div)`
   position: relative;
   background-image: url(${cross});
   background-repeat: no-repeat;
   background-position: center;
   width: 15px;
   height: 15px;
-  margin-right: 15px;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out, margin-top 0.1s ease-in-out;
-
-  ${({ active }) =>
-    active &&
-    css`
-      transform: rotate(47.15deg);
-      margin-top: -75px;
-    `}
 `;
 
 export const CrossWrapper = styled(motion.div)`
   margin-left: auto;
+  margin-right: 15px;
 `;
 
 export const Feature = styled(motion.li)`
@@ -77,6 +69,8 @@ export const FeatureTitle = styled(motion.div)`
   padding-bottom: 32px;
   padding-top: 42px;
   padding-left: 15px;
+  width: 326px;
+  box-sizing: border-box;
 
   &:after {
     content: '01';
@@ -99,7 +93,7 @@ export const FeatureDescription = styled(motion.div)`
   font-size: ${({ theme }) => theme.typography.size[2]};
   max-width: 476px;
   margin: 32px 0;
-  margin-left: auto;
+  margin-left: 35%;
 `;
 
 export const Background = styled(motion.div)`
