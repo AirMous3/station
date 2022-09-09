@@ -47,9 +47,6 @@ export const LevelDescription = styled(motion.div)`
   font-weight: 500;
   max-width: 475px;
   font-size: ${({ theme }) => theme.typography.size[4]};
-  margin-right: 300px;
-  margin-top: 15px;
-  margin-bottom: 15px;
 `;
 
 export const LevelWrapper = styled.div`

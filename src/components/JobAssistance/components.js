@@ -4,6 +4,12 @@ export const Section = styled.section`
   font-family: Roboto;
   color: ${({ theme }) => theme.colors.text.main};
   margin-bottom: 200px;
+  justify-content: center;
+
+  ${({ theme }) => theme.below.m`
+    display: flex;
+    flex-direction: column;
+  `}
 `;
 export const Title = styled.h2`
   font-family: NAMU;
@@ -14,6 +20,7 @@ export const Title = styled.h2`
   max-width: 455px;
   margin-bottom: 50px;
   line-height: 76.8px;
+  margin-left: 10%;
 
   span {
     max-height: 106px;
@@ -61,6 +68,15 @@ export const Features = styled.div`
   gap: 70px;
   margin-left: 35%;
   margin-top: -13%;
+
+  ${({ theme }) => theme.below.l`
+    margin-left: 25%;
+  `}
+
+  ${({ theme }) => theme.below.m`
+    margin-left: 0;
+
+  `}
 `;
 
 export const Feature = styled.li`
@@ -73,20 +89,16 @@ export const Feature = styled.li`
     rgba(255, 255, 255, 0.1) 73.08%
   );
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(40px);
-  //padding: 25px 31px;
-  padding-left: 35px;
-  padding-top: 32px;
+  padding-left: 26px;
+  padding-top: 23px;
   padding-right: 26px;
   box-sizing: border-box;
-  /* Note: backdrop-filter has minimal browser support */
   border-radius: 40px;
   max-width: 346px;
   max-height: 205px;
   min-height: 205px;
-  border: 1px solid #868a8c;
+  border: 2px solid #868a8c;
   position: relative;
-  z-index: 2;
 `;
 
 export const FeatureTitle = styled.div`

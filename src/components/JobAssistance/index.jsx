@@ -6,10 +6,10 @@ import * as S from './components';
 export const JobAssistance = () => {
   return (
     <S.Section>
+      <S.Title>
+        Как вы <span>найдете</span> работу
+      </S.Title>
       <Container>
-        <S.Title>
-          Как вы <span>найдете</span> работу
-        </S.Title>
         <S.Features>
           <S.LeftFeatures>
             {leftJobFeatures.map(({ title, description }) => (

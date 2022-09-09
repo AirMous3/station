@@ -18,8 +18,8 @@ export const App = () => {
       <Main />
       <StartInfoLine />
       <Devops />
-      {/*<AboutCourse />*/}
-      {/*<JobAssistance />*/}
+      <AboutCourse />
+      <JobAssistance />
       {/*<AboutTraining />*/}
       {/*<OurTeam />*/}
       {/*<Curriculum />*/}
