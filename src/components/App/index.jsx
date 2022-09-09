@@ -16,16 +16,16 @@ export const App = () => {
     <div>
       <Header />
       <Main />
-      <StartInfoLine />
-      <Devops />
-      <AboutCourse />
-      <JobAssistance />
-      <AboutTraining />
-      <OurTeam />
-      <Curriculum />
-      <PackageCost />
-      <Feedbacks />
-      <GetStarted />
+      {/*<StartInfoLine />*/}
+      {/*<Devops />*/}
+      {/*<AboutCourse />*/}
+      {/*<JobAssistance />*/}
+      {/*<AboutTraining />*/}
+      {/*<OurTeam />*/}
+      {/*<Curriculum />*/}
+      {/*<PackageCost />*/}
+      {/*<Feedbacks />*/}
+      {/*<GetStarted />*/}
     </div>
   );
 };

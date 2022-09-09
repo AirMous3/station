@@ -54,11 +54,15 @@ export const margin = {
 };
 
 export const breakpoints = {
-  xs: 320,
-  xxs: 360,
-  sm: 450,
-  md: 768,
-  xl: 1000,
+  xxxs: 300,
+  xxs: 400,
+  xs: 500,
+  s: 800,
+  m: 1024,
+  l: 1280,
+  xl: 1366,
+  xxl: 1440,
+  xxxl: 1600,
 };
 
 const above = Object.keys(breakpoints).reduce((acc, key) => {
