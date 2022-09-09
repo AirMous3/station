@@ -7,7 +7,7 @@ export const Container = styled.div`
 
   ${({ theme }) => theme.below.xxl`
     max-width: 1280px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
   `}
 `;

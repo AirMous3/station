@@ -10,18 +10,27 @@ export const Section = styled.section`
     left: 6%;
   }
 `;
+
 export const TitleWrapper = styled.div`
   position: relative;
   overflow-x: clip;
   user-select: none;
+  min-height: 400px;
 `;
+
 export const Title = styled.h1`
   font-family: Generator;
   font-weight: 800;
   color: ${({ theme }) => theme.colors.text.turquoise};
   font-size: ${({ theme }) => theme.typography.size[17]};
-  padding-left: 250px;
+  padding-left: 100px;
+
+  ${({ theme }) => theme.below.m`
+    font-size: 120px;
+    padding-left: 80px;  
+  `}
 `;
+
 export const Description = styled.div`
   font-family: Roboto;
   font-weight: 500;
@@ -33,16 +42,49 @@ export const Description = styled.div`
   color: #ebebeb;
   max-width: 665px;
   z-index: 2;
+
+  ${({ theme }) => theme.below.l`
+    font-size: 21px;
+    padding-right: 20px;
+  `}
+
+  ${({ theme }) => theme.below.m`
+    font-size: 18px;
+  `}
 `;
+
 export const BackgroundTitle = styled.div`
+  position: absolute;
   font-family: Generator;
   font-weight: 800;
-  font-size: ${({ theme }) => theme.typography.size[19]};
+  font-size: ${({ theme }) => theme.typography.size[18]};
   color: ${({ theme }) => theme.colors.background.body};
   -webkit-text-stroke: 1px #273d5c;
   text-align: end;
-  margin-right: -70px;
+  z-index: -1;
+  bottom: 0;
+  right: -60px;
+
+  ${({ theme }) => theme.above.xxl`
+    font-size: ${({ theme }) => theme.typography.size[19]};
+    bottom: -110px;
+  `}
+
+  ${({ theme }) => theme.below.xxl`
+    bottom: -60px;
+  `}
+
+  ${({ theme }) => theme.below.l`
+    font-size: 250px;
+    bottom: 0px;
+  `}
+
+  ${({ theme }) => theme.below.m`
+      font-size: 230px;
+      bottom: 39px;
+  `}
 `;
+
 export const ArticleTitle = styled.h2`
   font-family: NAMU;
   font-weight: 700;
@@ -51,16 +93,23 @@ export const ArticleTitle = styled.h2`
   margin-bottom: 30px;
   max-width: 820px;
   line-height: 54px;
+
+  ${({ theme }) => theme.above.xxl`
+    margin-top: 50px;
+  `}
 `;
+
 export const FeaturesWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
 `;
+
 export const SalaryWrapper = styled.div`
   padding: 0 34px;
   margin-top: 150px;
 `;
+
 export const SalaryTabletsWrapper = styled.div`
   display: flex;
   align-items: flex-end;
@@ -78,51 +127,48 @@ export const SalaryTablet = styled.div`
   box-sizing: border-box;
   border-radius: 40px;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(40px);
+  background: ${({ theme, index }) => theme.colors.background.salaryTablets[index]};
+  background-blend-mode: overlay;
+  background-clip: padding-box; /* !importanté */
+  border: solid 2px transparent; /* !importanté */
 
-  &::before {
+  &:before {
     content: '';
     position: absolute;
-    z-index: -1;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
-    border-radius: inherit;
-    background: ${({ theme, index }) => theme.colors.background.salaryTablets[index]};
+    left: 0;
+    z-index: -1;
+    margin: -2px; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: ${({ theme, index }) => theme.colors.background.linearGradients[index]};
   }
 
-  &::after {
-    content: '';
-    position: absolute;
-    z-index: -2;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border-radius: inherit;
-    background: linear-gradient(
-      124.48deg,
-      #ffffff 14.54%,
-      rgba(237, 96, 51, 0.17) 38.19%,
-      #ed6033 54.86%,
-      #ed6033 88.98%
-    );
-  }
+  ${({ theme }) => theme.below.m`
+    max-width: 130px; 
+  `}
 `;
 
 export const Salary = styled.div`
   color: #fff;
   font-weight: 700;
   line-height: 160%;
-  // TODO
   margin: ${({ theme, index }) => `${theme.margin.salaryTablets[index]}`} 0;
+
+  ${({ theme }) => theme.below.m`
+    font-size: 24px; 
+  `}
 `;
 
 export const Position = styled.div`
   color: #c4c4c4;
   font-weight: 700;
   line-height: 120%;
+
+  ${({ theme }) => theme.below.m`
+    font-size: 23px; 
+  `}
 `;
 
 export const VacanciesNote = styled.div`

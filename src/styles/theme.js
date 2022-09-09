@@ -4,11 +4,18 @@ export const colors = {
   background: {
     body: '#1c1c1c',
     salaryTablets: [
-      'linear-gradient(118.24deg, rgba(255, 255, 255, 0.26) 13.43%, rgba(254, 111, 95, 0.05) 71.65%)',
-      'linear-gradient(118.24deg, rgba(255, 255, 255, 0.26) 13.43%, rgba(254, 111, 95, 0.05) 71.65%, rgba(254, 111, 95, 0.2) 71.65%)',
-      'linear-gradient(118.24deg, rgba(255, 255, 255, 0.26) 13.43%, rgba(254, 111, 95, 0.4) 71.65%)',
-      'linear-gradient(118.24deg, rgba(255, 255, 255, 0.26) 13.43%, rgba(254, 111, 95, 0.6) 71.65%)',
-      'linear-gradient(117.07deg, rgba(255, 255, 255, 0.26) 13.44%, rgba(254, 111, 95, 0.8) 90.75%)',
+      'linear-gradient(118.24deg, #575758 13.43%, #3f3332 50.43%, #292221 71.65%)',
+      'linear-gradient(118.24deg, #575758 13.43%, #3f3332 50.43%, #2b2831 71.65%)',
+      'linear-gradient(118.24deg, #5c606d 13.43%, #6e5862 50.43%, #7a4548 71.65%)',
+      'linear-gradient(118.24deg, #5c606d 13.43%, #906164 50.43%, #a5514c 71.65%)',
+      'linear-gradient(118.24deg, #5c606d 13.43%, #906164 50.43%, #cb6256 71.65%)',
+    ],
+    linearGradients: [
+      'linear-gradient(124.48deg, #FFFFFF 14.54%, rgba(237, 96, 51, 0.17) 38.19%, #4c190d 54.86%, #4c190d 88.98%);)',
+      'linear-gradient(124.48deg, #FFFFFF 14.54%, rgba(237, 96, 51, 0.17) 38.19%, #4c190d 54.86%, #4c190d 88.98%);)',
+      'linear-gradient(124.48deg, #FFFFFF 14.54%, rgba(237, 96, 51, 0.17) 38.19%, #e2341d 54.86%, #e2341d 88.98%);)',
+      'linear-gradient(124.48deg, #FFFFFF 14.54%, rgba(237, 96, 51, 0.17) 38.19%, #f23d1e 54.86%, #f23d1e 88.98%);)',
+      'linear-gradient(124.48deg, #FFFFFF 14.54%, rgba(237, 96, 51, 0.17) 38.19%, #f94822 54.86%, #f94822 88.98%);)',
     ],
     feedback: '#F8F8F8',
   },
@@ -50,7 +57,7 @@ export const typography = {
 };
 
 export const margin = {
-  salaryTablets: ['10px', '20px', '30px', '40px', '70px'],
+  salaryTablets: ['0', '0', '30px', '40px', '70px'],
 };
 
 export const breakpoints = {
