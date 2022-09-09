@@ -16,7 +16,7 @@ export const App = () => {
     <div>
       <Header />
       <Main />
-      {/*<StartInfoLine />*/}
+      <StartInfoLine />
       {/*<Devops />*/}
       {/*<AboutCourse />*/}
       {/*<JobAssistance />*/}

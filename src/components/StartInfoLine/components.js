@@ -12,7 +12,18 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
   line-height: 43.2px;
+  margin-top: 20px;
 
+  ${({ theme }) => theme.below.l`
+    font-size: ${({ theme }) => theme.typography.size[4]};
+  `}
+  ${({ theme }) => theme.below.m`
+    font-size: 18px;
+  `}
+  ${({ theme }) => theme.below.s`
+    font-size: 14px;
+    padding: 10px 0;
+  `}
   div {
     &:before {
       content: '/*';

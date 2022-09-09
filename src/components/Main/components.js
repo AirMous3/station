@@ -5,7 +5,7 @@ export const Section = styled.section`
   display: flex;
   justify-content: space-between;
   min-height: 760px;
-  padding: 70px 0 50px;
+  padding: 70px 0 0px;
 `;
 
 export const Description = styled.div`
