@@ -4,25 +4,24 @@ import { ArticleTitle } from '@/components/Devops/components';
 
 export const Article = styled(ArticleTitle)``;
 
-export const Wrapper = styled.div`
+export const Section = styled.section`
   font-family: Roboto;
   display: flex;
-  margin-top: 80px;
+  flex-direction: column;
+  margin-right: auto;
+  padding-left: 105px;
 `;
 
-export const TeamWrapper = styled.ul`
+export const TeamWrapper = styled.li`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin-left: 70px;
 `;
-export const ImageWrapper = styled.li`
+
+export const ImageWrapper = styled.div`
   position: relative;
   padding: 10px;
   border: ${({ active }) => (active ? '2.5px solid #fe6f5f' : 'none')};
   border-radius: 50%;
+  cursor: pointer;
 
   &:after {
     position: absolute;
@@ -37,7 +36,6 @@ export const ImageWrapper = styled.li`
 
   img {
     filter: ${({ active }) => (active ? 'grayscale(0%)' : 'grayscale(100%)')};
-    max-width: ${({ active }) => (active ? '143px' : '106px')};
     max-height: ${({ active }) => (active ? '143px' : '106px')};
   }
 `;
@@ -46,7 +44,9 @@ export const AboutMentorWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 120px;
+  position: absolute;
+  top: 0;
+  left: 350px;
 `;
 
 export const MentorName = styled.div`
@@ -59,4 +59,10 @@ export const MentorDescription = styled.div`
   font-weight: 400;
   font-size: ${({ theme }) => theme.typography.size[4]};
   color: ${({ theme }) => theme.colors.text.lightGrey};
+`;
+
+export const ImagesWrapper = styled.ul`
+  margin-top: 85px;
+  position: relative;
+  padding-left: 100px;
 `;

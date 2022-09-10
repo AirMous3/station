@@ -1,30 +1,43 @@
-import image from '@/assets/icons/mentorImage.png';
-import { Container } from '@/components/Container';
-import { ourTeamConfig } from '@/components/OurTeam/config';
+import { useState } from 'react';
+
+import { mentorConfig, teamImages } from '@/components/OurTeam/config';
 
 import * as S from './components';
 
 export const OurTeam = () => {
-  return (
-    <section>
-      <Container>
-        <S.Article>Наша команда</S.Article>
-        <S.Wrapper>
-          <S.TeamWrapper>
-            {ourTeamConfig.map(({ image, active }, index) => (
-              <S.ImageWrapper active={active} key={index}>
-                <img src={image} alt="teamImage" />
-              </S.ImageWrapper>
-            ))}
-          </S.TeamWrapper>
+  const [isOpen, setIsOpen] = useState(1);
 
-          <S.AboutMentorWrapper>
-            <img src={image} alt="mentorImage" />
-            <S.MentorName>Алексей</S.MentorName>
-            <S.MentorDescription>Краткая инфа о преподе</S.MentorDescription>
-          </S.AboutMentorWrapper>
-        </S.Wrapper>
-      </Container>
-    </section>
+  const handleClick = (id) => {
+    setIsOpen(id);
+  };
+  return (
+    <S.Section>
+        <S.Article>Наша команда</S.Article>
+
+        <S.ImagesWrapper>
+          {teamImages.map(({ imageId, image }) => {
+            let active = imageId === isOpen;
+            return (
+              <S.TeamWrapper key={imageId}>
+                <S.ImageWrapper active={active} onClick={() => handleClick(imageId)}>
+                  <img src={image} alt="teamImage" />
+                </S.ImageWrapper>
+
+                {active &&
+                  mentorConfig.map(({ fullImage, name, description, mentorId }) => {
+                    if (mentorId !== imageId) return;
+                    return (
+                      <S.AboutMentorWrapper key={mentorId}>
+                        <img src={fullImage} alt="mentorImage" />
+                        <S.MentorName>{name}</S.MentorName>
+                        <S.MentorDescription>{description}</S.MentorDescription>
+                      </S.AboutMentorWrapper>
+                    );
+                  })}
+              </S.TeamWrapper>
+            );
+          })}
+        </S.ImagesWrapper>
+    </S.Section>
   );
 };

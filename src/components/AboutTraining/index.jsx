@@ -16,8 +16,8 @@ export const AboutTraining = () => {
   };
 
   return (
-    <Container>
-      <S.Section>
+    <S.Section>
+      <Container>
         <S.Article>Как проходит обчуение</S.Article>
 
         <S.ArticleDescription>
@@ -65,10 +65,10 @@ export const AboutTraining = () => {
             );
           })}
         </S.FeaturesWrapper>
-        <Link to={'getStarted'} smooth={true}>
+        <Link to="getStarted" smooth={true}>
           <Button>Записаться</Button>
         </Link>
-      </S.Section>
-    </Container>
+      </Container>
+    </S.Section>
   );
 };

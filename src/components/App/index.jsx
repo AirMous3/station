@@ -21,7 +21,7 @@ export const App = () => {
       <AboutCourse />
       <JobAssistance />
       <AboutTraining />
-      {/*<OurTeam />*/}
+      <OurTeam />
       {/*<Curriculum />*/}
       {/*<PackageCost />*/}
       {/*<Feedbacks />*/}
