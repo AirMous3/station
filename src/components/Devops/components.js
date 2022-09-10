@@ -32,7 +32,6 @@ export const Title = styled.h1`
 `;
 
 export const Description = styled.div`
-  font-family: Roboto;
   font-weight: 500;
   font-size: ${({ theme }) => theme.typography.size[4]};
   position: absolute;
@@ -172,7 +171,6 @@ export const Position = styled.div`
 `;
 
 export const VacanciesNote = styled.div`
-  font-family: Roboto;
   color: #fe6f5f;
   font-weight: 700;
   font-size: 30px;

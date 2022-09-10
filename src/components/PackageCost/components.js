@@ -6,7 +6,6 @@ import { ArticleTitle } from '@/components/Devops/components';
 
 
 export const Section = styled.section`
-  font-family: Roboto;
   color: ${({ theme }) => theme.colors.text.main};
   margin-top: 100px;
   padding: 0 60px;

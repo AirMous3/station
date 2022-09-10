@@ -4,7 +4,6 @@ import buttonArrow from '@/assets/icons/buttonArrow.svg';
 import { ArticleTitle } from '@/components/Devops/components';
 
 export const Section = styled.section`
-  font-family: Roboto;
   margin-top: 200px;
   position: relative;
   margin-bottom: 200px;

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  font-family: Roboto;
   color: ${({ theme }) => theme.colors.text.main};
   margin-bottom: 200px;
   justify-content: center;

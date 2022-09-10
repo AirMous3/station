@@ -5,11 +5,9 @@ import { ArticleTitle } from '@/components/Devops/components';
 export const Article = styled(ArticleTitle)``;
 
 export const Section = styled.section`
-  font-family: Roboto;
   display: flex;
   flex-direction: column;
   margin-right: auto;
-  padding-left: 50px;
 `;
 
 export const TeamWrapper = styled.li`

@@ -25,7 +25,7 @@ export const App = () => {
       <Curriculum />
       <PackageCost />
       <Feedbacks />
-      {/*<GetStarted />*/}
+      <GetStarted />
     </div>
   );
 };

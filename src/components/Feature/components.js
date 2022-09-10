@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  font-family: Roboto;
   position: relative;
   max-width: 30%;
   margin-bottom: 50px;

@@ -9,7 +9,6 @@ export const Section = styled.section`
 `;
 
 export const Description = styled.div`
-  font-family: Roboto;
   font-size: ${({ theme }) => theme.typography.size[4]};
   color: ${({ theme }) => theme.colors.text.additional};
   max-width: 164px;

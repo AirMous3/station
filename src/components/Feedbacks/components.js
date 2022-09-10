@@ -20,6 +20,7 @@ export const FeedbacksWrapper = styled.div`
 `;
 
 export const Quotes = styled.div`
+  font-family: Generator;
   font-weight: 900;
   font-size: ${({ theme }) => theme.typography.size[16]};
 `;

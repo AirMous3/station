@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const FEATURE_HEIGHT = 74;
 
 export const Wrapper = styled.div`
-  font-family: Roboto;
   margin-top: 115px;
   display: flex;
   justify-content: space-between;

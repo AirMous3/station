@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const ButtonWrapper = styled.div`
-  font-family: Roboto;
   font-weight: 500;
   font-size: ${({ theme }) => theme.typography.size[4]};
   //TODO

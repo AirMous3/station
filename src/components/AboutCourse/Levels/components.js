@@ -6,7 +6,6 @@ import arrowImage from '@/assets/icons/arrow.svg';
 export const Wrapper = styled.div`
   margin-top: 50px;
   margin-bottom: 90px;
-  font-family: Roboto;
   color: white;
   min-height: 180px;
 `;

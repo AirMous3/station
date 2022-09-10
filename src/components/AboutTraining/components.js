@@ -5,7 +5,6 @@ import cross from '@/assets/icons/cross.svg';
 import { ArticleTitle } from '@/components/Devops/components';
 
 export const Section = styled.section`
-  font-family: Roboto;
   margin-top: 35px;
   margin-bottom: 150px;
 `;
