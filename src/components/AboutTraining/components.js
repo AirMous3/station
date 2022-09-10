@@ -92,8 +92,7 @@ export const FeatureDescription = styled(motion.div)`
   font-weight: 400;
   font-size: ${({ theme }) => theme.typography.size[2]};
   max-width: 476px;
-  margin: 32px 0;
-  margin-left: 35%;
+  margin: 32px 0 32px 200px;
 `;
 
 export const Background = styled(motion.div)`

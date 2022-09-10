@@ -6,6 +6,7 @@ import { ArticleTitle } from '@/components/Devops/components';
 export const Section = styled.section`
   margin-top: 170px;
   font-family: Roboto;
+  padding-right: 50px;
 `;
 
 export const Article = styled(ArticleTitle)`
@@ -46,6 +47,7 @@ export const FeaturesWrapper = styled.ul`
   flex-direction: column;
   gap: 45px;
   margin-top: 30px;
+  max-width: 771px;
 `;
 
 export const FeatureNumber = styled.div`

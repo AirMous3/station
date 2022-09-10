@@ -9,7 +9,7 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   margin-right: auto;
-  padding-left: 105px;
+  padding-left: 50px;
 `;
 
 export const TeamWrapper = styled.li`

@@ -22,7 +22,7 @@ export const App = () => {
       <JobAssistance />
       <AboutTraining />
       <OurTeam />
-      {/*<Curriculum />*/}
+      <Curriculum />
       {/*<PackageCost />*/}
       {/*<Feedbacks />*/}
       {/*<GetStarted />*/}
