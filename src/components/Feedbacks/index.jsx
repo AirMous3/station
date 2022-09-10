@@ -1,20 +1,14 @@
-import { AnimatePresence, LayoutGroup } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 import mentorImage from '@/assets/icons/miniMentorImage.png';
 import { Container } from '@/components/Container';
+import { feedbackConfig } from '@/components/Feedbacks/config';
 
 import * as S from './components';
 
 export const Feedbacks = () => {
-  const [state] = useState([
-    { id: 1, title: 'Игорь', description: 'Март 2022' },
-    { id: 2, title: 'Игорь', description: 'Март 2022' },
-    { id: 3, title: 'Игорь', description: 'Март 2022' },
-    { id: 4, title: 'Игорь', description: 'Март 2022' },
-  ]);
-
-  const [activeId, setActiveId] = useState(1);
+  const [activeId, setActiveId] = useState(0);
 
   const handleClick = (id) => {
     setActiveId(id);
@@ -24,7 +18,7 @@ export const Feedbacks = () => {
     let id = activeId;
 
     const intervalId = setInterval(() => {
-      id === 4 ? (id = 1) : (id += 1);
+      id === 3 ? (id = 0) : (id += 1);
       setActiveId(id);
     }, 2000);
 
@@ -40,22 +34,20 @@ export const Feedbacks = () => {
         <S.FeedbacksWrapper>
           <S.DescriptionWrapper>
             <S.Quotes>“</S.Quotes>
-            <S.FeedbackDescription>
-              Понравилась подача информации – качественно проработанные материалы, всё
-              понятно и актуально, без воды. Чувствуется, что преподаватель сам варится в
-              этой сфере, а не просто читает по методичке. По окончании обучения продолжаю
-              поддерживать с ментором связь, всегда даёт советы и поддерживает. Самым
-              большим плюсом при обучении была практика на реальных кейсов. Информацию
-              можно нагуглить и бесплатно, а вот практика – бесценна.
+            <S.FeedbackDescriptionWrapper>
+              <S.FeedbackDescription>
+                {feedbackConfig[activeId].feedback}
+              </S.FeedbackDescription>
+
               <S.AvatarsWrapper>
-                {state.map(({ id, description, title }) => {
-                  const active = activeId === id;
+                {feedbackConfig.map(({ id, description, title }, index) => {
+                  const active = activeId === index;
 
                   return (
                     <S.AvatarWrapper
                       isActive={active}
-                      key={id}
-                      onClick={() => handleClick(id)}
+                      key={index}
+                      onClick={() => handleClick(index)}
                       layout="preserve"
                     >
                       <S.AvatarImage
@@ -81,7 +73,7 @@ export const Feedbacks = () => {
                   );
                 })}
               </S.AvatarsWrapper>
-            </S.FeedbackDescription>
+            </S.FeedbackDescriptionWrapper>
           </S.DescriptionWrapper>
         </S.FeedbacksWrapper>
       </Container>

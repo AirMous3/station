@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components';
 import { ArticleTitle } from '@/components/Devops/components';
 
 export const Wrapper = styled.div`
-  font-family: Generator;
   color: ${({ theme }) => theme.colors.text.main};
 `;
 
@@ -25,10 +24,12 @@ export const Quotes = styled.div`
   font-size: ${({ theme }) => theme.typography.size[16]};
 `;
 
-export const FeedbackDescription = styled.div`
-  font-family: Roboto;
+export const FeedbackDescriptionWrapper = styled.div`
   font-size: ${({ theme }) => theme.typography.size[4]};
   color: ${({ theme }) => theme.colors.text.lightGrey};
+`;
+export const FeedbackDescription = styled.div`
+  min-height: 234px;
   max-width: 696px;
 `;
 
@@ -58,6 +59,7 @@ export const AvatarWrapper = styled(motion.div)`
   background-color: ${({ theme }) => theme.colors.background.feedback};
   cursor: pointer;
   transition: width 0.5s, height 0.3s linear;
+  box-shadow: 0px 0px 2px 5px rgba(254, 111, 95, 0.2);
 
   ${({ isActive }) =>
     isActive
@@ -72,17 +74,6 @@ export const AvatarWrapper = styled(motion.div)`
             transition: opacity 0.5s;
           }
         `};
-
-  &:before {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #fe6f5f;
-    filter: blur(7px);
-    border-radius: 890px;
-  }
 `;
 
 export const AvatarDescriptionWrapper = styled(motion.div)`

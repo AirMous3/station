@@ -23,8 +23,8 @@ export const App = () => {
       <AboutTraining />
       <OurTeam />
       <Curriculum />
-      {/*<PackageCost />*/}
-      {/*<Feedbacks />*/}
+      <PackageCost />
+      <Feedbacks />
       {/*<GetStarted />*/}
     </div>
   );

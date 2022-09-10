@@ -1,9 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
-import generator from '@/assets/fonts/generator/generator.css';
-import inter from '@/assets/fonts/inter/inter.css';
-import namu from '@/assets/fonts/namu/namu.css';
-import roboto from '@/assets/fonts/roboto/roboto.css';
+import '@/assets/fonts/generator/generator.css';
+import '@/assets/fonts/inter/inter.css';
+import '@/assets/fonts/namu/namu.css';
+import '@/assets/fonts/roboto/roboto.css';
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     touch-action: none;
     margin: 0;
     background: ${({ theme }) => theme.colors.background.body};
-    font-family: ${inter && namu && roboto && generator};
+    font-family: Roboto;
   }
 
   ul,
