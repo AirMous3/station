@@ -1,14 +1,19 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-export const Section = styled.section`
-  overflow: hidden;
+import image from '@/assets/backgroundImage.jpg';
+
+export const Section = styled(motion.section)`
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${image});
+  background-size: cover;
   display: flex;
-  justify-content: space-between;
-  min-height: 760px;
-  padding: 70px 0 0px;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
 `;
 
-export const Description = styled.div`
+export const Description = styled(motion.div)`
   font-size: ${({ theme }) => theme.typography.size[4]};
   color: ${({ theme }) => theme.colors.text.additional};
   max-width: 164px;
@@ -25,20 +30,15 @@ export const RevertDescription = styled(Description)`
   `}
 `;
 
-export const Title = styled.h1`
+export const Title = styled(motion.h1)`
   font-family: Generator;
   font-weight: 700;
   font-size: ${({ theme }) => theme.typography.size[17]};
   color: ${({ theme }) => theme.colors.text.main};
-  position: absolute;
   text-transform: uppercase;
-  transform: rotate(34.19deg);
-  top: 185px;
-  left: 150px;
   z-index: 2;
 
   ${({ theme }) => theme.below.m`
-    left: 105px;
     font-size: 140px;
   `}
 
@@ -46,10 +46,14 @@ export const Title = styled.h1`
     font-size: 115px;
   `}
 `;
+export const TitleWrapper = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+`;
 
-export const ImageWrapper = styled.div`
+export const ImageWrapper = styled(motion.div)`
   position: relative;
-  margin-left: -200px;
+  margin-left: -20%;
 
   ${({ theme }) => theme.below.m`
     margin-left: 55px;
@@ -57,7 +61,7 @@ export const ImageWrapper = styled.div`
   `}
 `;
 
-export const FirstImage = styled.img`
+export const FirstImage = styled(motion.img)`
   width: 100%;
 
   ${({ theme }) => theme.below.s`
@@ -65,7 +69,7 @@ export const FirstImage = styled.img`
   `}
 `;
 
-export const SecondMainImage = styled.img`
+export const SecondMainImage = styled(motion.img)`
   position: absolute;
   bottom: -46px;
   right: -324px;
@@ -79,4 +83,20 @@ export const SecondMainImage = styled.img`
     width: 75%;
     right: -110px;
   `}
+`;
+
+export const StartWrapper = styled(motion.div)`
+  font-family: NAMU;
+  font-weight: 700;
+  font-size: ${({ theme }) => theme.typography.size[9]};
+  padding: 20px 0;
+  color: ${({ theme }) => theme.colors.text.main};
+`;
+
+export const Wrapper = styled(motion.div)`
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex: 1;
+  justify-content: space-around;
 `;

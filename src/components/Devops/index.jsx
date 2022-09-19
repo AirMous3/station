@@ -7,10 +7,22 @@ import * as S from './components';
 import { salaries } from './config';
 
 export const Devops = () => {
+  const titleAnimation = {
+    hidden: {
+      y: 70,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
   return (
-    <S.Section>
+    <S.Section initial="hidden" whileInView="visible">
       <S.TitleWrapper>
-        <S.Title>DevOps</S.Title>
+        <S.Title variants={titleAnimation} viewport={{ amount: 0.2 }}>
+          DevOps
+        </S.Title>
         <S.Description>
           инженеры контролируют все этапы создания продукта: от написания кода до релиза.
           Помогают отделам разработки и администрирования, синхронизируют их усилия и
@@ -40,7 +52,7 @@ export const Devops = () => {
         <S.ArticleTitle>Востребованность на рынке</S.ArticleTitle>
 
         <S.SalaryWrapper>
-          <img src={backgroundImageDevops} alt='backgroundImage' />
+          <img src={backgroundImageDevops} alt="backgroundImage" />
           <S.SalaryTabletsWrapper>
             {salaries.map(({ salary, position }, i) => (
               <S.SalaryTablet index={i} key={salary}>

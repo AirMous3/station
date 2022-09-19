@@ -1,6 +1,7 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-export const Section = styled.section`
+export const Section = styled(motion.section)`
   padding-top: 70px;
   position: relative;
 
@@ -11,14 +12,14 @@ export const Section = styled.section`
   }
 `;
 
-export const TitleWrapper = styled.div`
+export const TitleWrapper = styled(motion.div)`
   position: relative;
   overflow-x: clip;
   user-select: none;
   min-height: 400px;
 `;
 
-export const Title = styled.h1`
+export const Title = styled(motion.h1)`
   font-family: Generator;
   font-weight: 800;
   color: ${({ theme }) => theme.colors.text.turquoise};

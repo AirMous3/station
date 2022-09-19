@@ -14,12 +14,12 @@ export const ButtonWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   position: relative;
   box-shadow: 0px 0px 13px 4px rgba(222, 73, 55, 0.2);
 
   &:hover {
-    color: #f0094a;
+    color: white;
     background: transparent;
     box-shadow: none;
   }
