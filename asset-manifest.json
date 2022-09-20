@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/station/static/css/main.72ab78c3.css",
-    "main.js": "/station/static/js/main.70287bc6.js",
+    "main.js": "/station/static/js/main.f4e8258f.js",
     "static/media/Inter.var.woff2?v=3.19": "/station/static/media/Inter.var.c2fe3cb2b7c746f7966a.woff2",
     "static/media/Inter-italic.var.woff2?v=3.19": "/station/static/media/Inter-italic.var.30807be7abc48ba8c73c.woff2",
     "static/media/Inter-roman.var.woff2?v=3.19": "/station/static/media/Inter-roman.var.ba4caefcdf5b36b438db.woff2",
-    "static/media/Website_Blogs_1150x500_Text_Intelligence_18_scaled_5b13317763.jpg": "/station/static/media/Website_Blogs_1150x500_Text_Intelligence_18_scaled_5b13317763.c0c8e5137e74a83e2a04.jpg",
+    "static/media/backgroundImage.jpg": "/station/static/media/backgroundImage.c0c8e5137e74a83e2a04.jpg",
     "static/media/Inter-SemiBoldItalic.woff?v=3.19": "/station/static/media/Inter-SemiBoldItalic.463bdbfb28abad0fa6df.woff",
     "static/media/Inter-BoldItalic.woff?v=3.19": "/station/static/media/Inter-BoldItalic.b376885042f6c961a541.woff",
     "static/media/Inter-MediumItalic.woff?v=3.19": "/station/static/media/Inter-MediumItalic.3d0107dd43d0101274d3.woff",
@@ -94,15 +94,15 @@
     "static/media/Generator-Bold.woff2": "/station/static/media/Generator-Bold.c6966140ddca1adab638.woff2",
     "static/media/teamImage.png": "/station/static/media/teamImage.cec31abd9c137a9a4c02.png",
     "static/media/miniMentorImage.png": "/station/static/media/miniMentorImage.dfc607aeae9718b3b0d4.png",
-    "static/media/arrow.svg": "/station/static/media/arrow.ef70f6635fce9d4d42b767dad2587a26.svg",
     "index.html": "/station/index.html",
+    "static/media/arrow.svg": "/station/static/media/arrow.ef70f6635fce9d4d42b767dad2587a26.svg",
     "static/media/cross.svg": "/station/static/media/cross.4423c3251200051a41a44989dee9489b.svg",
     "static/media/buttonArrow.svg": "/station/static/media/buttonArrow.4e8927c7abca82a0f7b3e575102b7aed.svg",
     "main.72ab78c3.css.map": "/station/static/css/main.72ab78c3.css.map",
-    "main.70287bc6.js.map": "/station/static/js/main.70287bc6.js.map"
+    "main.f4e8258f.js.map": "/station/static/js/main.f4e8258f.js.map"
   },
   "entrypoints": [
     "static/css/main.72ab78c3.css",
-    "static/js/main.70287bc6.js"
+    "static/js/main.f4e8258f.js"
   ]
 }
