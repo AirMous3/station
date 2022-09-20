@@ -9,6 +9,7 @@ export const Section = styled(motion.section)`
     position: absolute;
     bottom: -9%;
     left: 6%;
+    z-index: -1;
   }
 `;
 

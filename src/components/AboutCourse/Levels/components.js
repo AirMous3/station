@@ -8,6 +8,8 @@ export const Wrapper = styled.div`
   margin-bottom: 90px;
   color: white;
   min-height: 180px;
+  position: relative;
+  z-index: 2;
 `;
 export const LevelsWrapper = styled(motion.div)`
   display: flex;

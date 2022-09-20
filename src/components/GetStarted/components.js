@@ -11,7 +11,7 @@ export const Section = styled.section`
 
 export const Article = styled(ArticleTitle)`
   position: absolute;
-  top: 40px;
+  top: 0;
   left: 330px;
   line-height: 73px;
   text-align: center;
