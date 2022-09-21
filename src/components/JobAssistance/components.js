@@ -74,21 +74,73 @@ export const Features = styled.div`
 
   ${({ theme }) => theme.below.m`
     margin-left: 0;
-
   `}
 `;
 
-export const Feature = styled.li`
+export const Circle = styled.div`
+  position: absolute;
+  right: -42px;
+  bottom: -39px;
+  width: 96px;
+  height: 96px;
+  z-index: -1;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(231.92deg, #ffffff 29.99%, #6c6c6c 91.35%);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(231.92deg, #4ed3df 29.99%, #1d2efd 91.35%);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+`;
+
+export const CircleRight = styled(Circle)`
+  left: -45px;
+  bottom: -45px;
+`;
+
+export const FeatureWrapper = styled.li`
+  position: relative;
+
+  &:hover ${Circle} {
+    &:after {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &:before {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+`;
+
+export const Feature = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  background: linear-gradient(
-    126.59deg,
-    rgba(255, 255, 255, 0.4) 12.11%,
-    rgba(255, 255, 255, 0.1) 73.08%
-  );
+  gap: 15px;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
-  padding-left: 26px;
+  padding-left: 35px;
   padding-top: 23px;
   padding-right: 26px;
   box-sizing: border-box;
@@ -98,6 +150,55 @@ export const Feature = styled.li`
   min-height: 205px;
   border: 2px solid #868a8c;
   position: relative;
+  backdrop-filter: blur(20px);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    background: linear-gradient(
+      126.59deg,
+      rgba(255, 255, 255, 0.4) 12.11%,
+      rgba(255, 255, 255, 0.1) 73.08%
+    );
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    background: linear-gradient(
+      111.15deg,
+      rgba(78, 211, 223, 0.2) 17.66%,
+      rgba(29, 46, 253, 0.2) 94.11%
+    );
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &:before {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
 `;
 
 export const FeatureTitle = styled.div`
@@ -126,27 +227,12 @@ export const LeftFeatures = styled.ul`
     width: 1px;
     background-color: #4ed3df;
     box-shadow: 0px 0px 5px 3px rgba(78, 211, 223, 0.2);
+    z-index: -2;
   }
 `;
 
-export const RightFeatures = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: 150px;
-`;
-
-export const Circle = styled.div`
-  position: absolute;
-  right: -42px;
-  bottom: -39px;
-  width: 96px;
-  height: 96px;
-  background: linear-gradient(231.92deg, #ffffff 29.99%, #6c6c6c 91.35%);
-  z-index: -1;
-  border-radius: 50%;
-`;
-
-export const CircleRight = styled(Circle)`
-  left: -45px;
-  bottom: -45px;
+export const RightFeatures = styled(LeftFeatures)`
+  &:after {
+    display: none;
+  }
 `;

@@ -13,20 +13,24 @@ export const JobAssistance = () => {
         <S.Features>
           <S.LeftFeatures>
             {leftJobFeatures.map(({ title, description }) => (
-              <S.Feature key={title}>
-                <S.FeatureTitle>{title}</S.FeatureTitle>
-                <S.FeatureDescription>{description}</S.FeatureDescription>
+              <S.FeatureWrapper key={title}>
+                <S.Feature>
+                  <S.FeatureTitle>{title}</S.FeatureTitle>
+                  <S.FeatureDescription>{description}</S.FeatureDescription>
+                </S.Feature>
                 <S.Circle />
-              </S.Feature>
+              </S.FeatureWrapper>
             ))}
           </S.LeftFeatures>
           <S.RightFeatures>
             {rightJobFeatures.map(({ title, description }) => (
-              <S.Feature key={title}>
-                <S.FeatureTitle>{title}</S.FeatureTitle>
-                <S.FeatureDescription>{description}</S.FeatureDescription>
+              <S.FeatureWrapper key={title}>
+                <S.Feature>
+                  <S.FeatureTitle>{title}</S.FeatureTitle>
+                  <S.FeatureDescription>{description}</S.FeatureDescription>
+                </S.Feature>
                 <S.CircleRight />
-              </S.Feature>
+              </S.FeatureWrapper>
             ))}
           </S.RightFeatures>
         </S.Features>
