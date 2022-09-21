@@ -49,18 +49,47 @@ export const FeaturesWrapper = styled.ul`
 `;
 
 export const FeatureNumber = styled.div`
+  position: relative;
   font-weight: 700;
   font-size: ${({ theme }) => theme.typography.size[9]};
   color: ${({ theme }) => theme.colors.text.main};
-  //  TODO
-  background: linear-gradient(180deg, #4f4f4f 0%, #a7a7a7 100%);
+  border-radius: 50%;
   min-width: 55px;
   min-height: 55px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 20px 8px rgba(176, 173, 184, 0.2);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #4f4f4f 0%, #a7a7a7 100%);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    z-index: -1;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #2037fb 0%, #50dadd 100%);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    z-index: -1;
+  }
 `;
 
 export const FeatureWrapper = styled.li`
@@ -73,9 +102,17 @@ export const FeatureWrapper = styled.li`
 
   &:hover {
     ${FeatureNumber} {
-      //  TODO
-      background: linear-gradient(180deg, #2037fb 0%, #50dadd 100%);
       box-shadow: 0px 0px 20px 8px rgba(100, 212, 244, 0.2);
+
+      &:after {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &:before {
+        opacity: 0;
+        visibility: hidden;
+      }
     }
   }
 `;

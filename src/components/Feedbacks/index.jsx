@@ -1,4 +1,3 @@
-import { AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 import mentorImage from '@/assets/icons/miniMentorImage.png';
@@ -56,19 +55,18 @@ export const Feedbacks = () => {
                         alt="mentorImage"
                         animate={active ? { x: 15 } : { x: 0 }}
                       />
-                      <AnimatePresence>
-                        {active && (
-                          <S.AvatarDescriptionWrapper
-                            layout="preserve"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1, x: 25 }}
-                            transition={{ duration: 0.1 }}
-                          >
-                            <S.AvatarTitle>{title}</S.AvatarTitle>
-                            <S.AvatarDescription>{description}</S.AvatarDescription>
-                          </S.AvatarDescriptionWrapper>
-                        )}
-                      </AnimatePresence>
+
+                      {active && (
+                        <S.AvatarDescriptionWrapper
+                          layout="preserve"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1, x: 25 }}
+                          transition={{ duration: 0.1 }}
+                        >
+                          <S.AvatarTitle>{title}</S.AvatarTitle>
+                          <S.AvatarDescription>{description}</S.AvatarDescription>
+                        </S.AvatarDescriptionWrapper>
+                      )}
                     </S.AvatarWrapper>
                   );
                 })}
