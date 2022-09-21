@@ -5,19 +5,19 @@ import { ArticleTitle } from '@/components/Devops/components';
 
 export const Section = styled.section`
   margin-top: 200px;
-  position: relative;
   margin-bottom: 200px;
 `;
 
 export const Article = styled(ArticleTitle)`
   position: absolute;
   top: 0;
-  left: 330px;
+  left: 120px;
   line-height: 73px;
   text-align: center;
 `;
 
 export const Wrapper = styled.div`
+  position: relative;
   display: flex;
 `;
 
@@ -99,4 +99,16 @@ export const ButtonText = styled.div`
     content: url(${buttonArrow});
     margin-left: 8px;
   }
+`;
+
+export const BackgroundFlash = styled.div`
+  position: absolute;
+  width: 326px;
+  height: 361px;
+  top: -50px;
+  left: 243px;
+  background: linear-gradient(180deg, #1f95b7 0%, #8123a2 100%);
+  filter: blur(100px);
+  transform: rotate(-38.18deg);
+  z-index: -1;
 `;
