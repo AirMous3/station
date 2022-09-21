@@ -30,10 +30,12 @@ export const GetStarted = () => {
   return (
     <S.Section>
       <Container>
-        <S.Article id="getStarted">Измени свою жизнь уже сейчас</S.Article>
-
         <S.Wrapper>
-          <img src={image} alt="" />
+          <S.Article id="getStarted">Измени свою жизнь уже сейчас</S.Article>
+
+          <S.BackgroundFlash />
+
+          <img src={image} alt="image" />
 
           <S.GetStartedFormWrapper>
             <S.Input type="text" placeholder="Твоё имя" />
@@ -45,9 +47,10 @@ export const GetStarted = () => {
               value={state}
               onChange={(phone) => setState(phone)}
             />
-            <S.CommentInput type="text" placeholder="Коментарий" />
 
-            <S.Button>
+            <S.CommentInput type="text" placeholder="Комментарий" />
+
+            <S.Button type="submit">
               <S.ButtonText>Записаться</S.ButtonText>
             </S.Button>
           </S.GetStartedFormWrapper>
