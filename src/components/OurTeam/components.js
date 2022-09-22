@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 import { ArticleTitle } from '@/components/Devops/components';
 
-export const Article = styled(ArticleTitle)``;
+export const Article = styled(ArticleTitle)`
+  position: relative;
+`;
 
 export const Section = styled.section`
   display: flex;
@@ -63,4 +65,16 @@ export const ImagesWrapper = styled.ul`
   margin-top: 85px;
   position: relative;
   padding-left: 100px;
+`;
+
+export const BackgroundFlash = styled.div`
+  position: absolute;
+  width: 351.55px;
+  height: 347.65px;
+  right: 0;
+  bottom: 0;
+
+  background: rgba(217, 217, 217, 0.51);
+  filter: blur(150px);
+  transform: rotate(-1.4deg);
 `;

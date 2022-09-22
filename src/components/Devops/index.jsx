@@ -52,7 +52,10 @@ export const Devops = () => {
         <S.ArticleTitle>Востребованность на рынке</S.ArticleTitle>
 
         <S.SalaryWrapper>
+          <S.BackgroundFlash />
+
           <img src={backgroundImageDevops} alt="backgroundImage" />
+
           <S.SalaryTabletsWrapper>
             {salaries.map(({ salary, position }, i) => (
               <S.SalaryTablet index={i} key={salary}>
@@ -61,6 +64,7 @@ export const Devops = () => {
               </S.SalaryTablet>
             ))}
           </S.SalaryTabletsWrapper>
+
           <S.VacanciesNote>* >2000 вакансийDevOps Engineer link hh.ru</S.VacanciesNote>
         </S.SalaryWrapper>
       </Container>

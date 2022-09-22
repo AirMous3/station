@@ -65,16 +65,12 @@ export const FeatureTitle = styled(motion.div)`
   font-weight: 700;
   font-size: ${({ theme }) => theme.typography.size[4]};
   color: inherit;
-  padding-bottom: 32px;
-  padding-top: 42px;
-  padding-left: 15px;
-  width: 326px;
+  padding: 42px 10px 32px 15px;
+  max-width: 326px;
   box-sizing: border-box;
 
   &:after {
-    content: '01';
-    //TODO
-    // content: ${({ number }) => number};
+    content: '${({ number }) => number}';
     width: 19px;
     height: 19px;
     font-weight: 500;
@@ -83,7 +79,7 @@ export const FeatureTitle = styled(motion.div)`
     color: #3783cf;
     position: absolute;
     top: 30px;
-    right: -15px;
+    right: -10px;
   }
 `;
 
