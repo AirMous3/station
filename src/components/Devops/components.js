@@ -128,7 +128,6 @@ export const SalaryTablet = styled.div`
   border-radius: 40px;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
   background: ${({ theme, index }) => theme.colors.background.salaryTablets[index]};
-  background-blend-mode: overlay;
   background-clip: padding-box;
   border: solid 2px transparent;
 
