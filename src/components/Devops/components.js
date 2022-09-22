@@ -105,6 +105,7 @@ export const FeaturesWrapper = styled.div`
 `;
 
 export const SalaryWrapper = styled.div`
+  position: relative;
   padding: 0 34px;
   margin-top: 150px;
 `;
@@ -128,8 +129,8 @@ export const SalaryTablet = styled.div`
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
   background: ${({ theme, index }) => theme.colors.background.salaryTablets[index]};
   background-blend-mode: overlay;
-  background-clip: padding-box; /* !importanté */
-  border: solid 2px transparent; /* !importanté */
+  background-clip: padding-box;
+  border: solid 2px transparent;
 
   &:before {
     content: '';
@@ -139,8 +140,8 @@ export const SalaryTablet = styled.div`
     bottom: 0;
     left: 0;
     z-index: -1;
-    margin: -2px; /* !importanté */
-    border-radius: inherit; /* !importanté */
+    margin: -2px;
+    border-radius: inherit;
     background: ${({ theme, index }) => theme.colors.background.linearGradients[index]};
   }
 
@@ -175,4 +176,18 @@ export const VacanciesNote = styled.div`
   font-weight: 700;
   font-size: 30px;
   margin-bottom: 200px;
+`;
+
+export const BackgroundFlash = styled.div`
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  right: 390px;
+  bottom: 43px;
+  background: linear-gradient(
+    180deg,
+    rgba(95, 14, 145, 0.1) 0%,
+    rgba(31, 155, 189, 0.1) 100%
+  );
+  filter: blur(200px);
 `;
