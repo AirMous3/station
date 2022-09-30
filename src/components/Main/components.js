@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const Section = styled.section`
@@ -25,26 +26,18 @@ export const RevertDescription = styled(Description)`
   `}
 `;
 
-export const Title = styled.h1`
+export const DevopsTitle = styled(motion.h1)`
   font-family: Generator;
   font-weight: 700;
   font-size: ${({ theme }) => theme.typography.size[17]};
   color: ${({ theme }) => theme.colors.text.main};
-  position: absolute;
   text-transform: uppercase;
-  transform: rotate(34.19deg);
-  top: 185px;
-  left: 150px;
-  z-index: 2;
+  position: absolute;
+  z-index: 1;
+`;
 
-  ${({ theme }) => theme.below.m`
-    left: 105px;
-    font-size: 140px;
-  `}
-
-  ${({ theme }) => theme.below.s`
-    font-size: 115px;
-  `}
+export const ProgramTitle = styled(DevopsTitle)`
+  z-index: 3;
 `;
 
 export const ImageWrapper = styled.div`
@@ -67,9 +60,9 @@ export const FirstImage = styled.img`
 
 export const SecondMainImage = styled.img`
   position: absolute;
-  bottom: -46px;
-  right: -324px;
-  width: 100%;
+  bottom: 15px;
+  right: -210px;
+  z-index: 2;
 
   ${({ theme }) => theme.below.m`
     bottom: -46px;
@@ -79,4 +72,32 @@ export const SecondMainImage = styled.img`
     width: 75%;
     right: -110px;
   `}
+`;
+
+export const Char = styled.span`
+  transform: rotate(-${({ number }) => number + 8 * 2}deg);
+  transform-origin: bottom center;
+`;
+
+export const BackgroundFlash = styled.div`
+  position: absolute;
+  width: 288px;
+  height: 214.02px;
+  left: 0;
+  top: 249.55px;
+  z-index: -1;
+  background: #3c97ea;
+  filter: blur(100px);
+  transform: rotate(26.63deg);
+`;
+export const SecondBackgroundFlash = styled.div`
+  position: absolute;
+  width: 284.5px;
+  height: 284.14px;
+  left: 117px;
+  bottom: 91px;
+  z-index: -1;
+  background: rgba(79, 213, 222, 0.6);
+  filter: blur(100px);
+  transform: rotate(26.63deg);
 `;

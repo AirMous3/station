@@ -12,7 +12,6 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
   line-height: 43.2px;
-  margin-top: 20px;
 
   ${({ theme }) => theme.below.l`
     font-size: ${({ theme }) => theme.typography.size[4]};
