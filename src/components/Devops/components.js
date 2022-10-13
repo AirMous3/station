@@ -24,32 +24,18 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.text.turquoise};
   font-size: ${({ theme }) => theme.typography.size[17]};
   padding-left: 100px;
-
-  ${({ theme }) => theme.below.m`
-    font-size: 120px;
-    padding-left: 80px;  
-  `}
 `;
 
 export const Description = styled.div`
   font-weight: 500;
   font-size: ${({ theme }) => theme.typography.size[4]};
   position: absolute;
-  top: 70px;
-  left: 527px;
   //TODO
   color: #ebebeb;
   max-width: 665px;
   z-index: 2;
-
-  ${({ theme }) => theme.below.l`
-    font-size: 21px;
-    padding-right: 20px;
-  `}
-
-  ${({ theme }) => theme.below.m`
-    font-size: 18px;
-  `}
+  top: 118px;
+  left: 509px;
 `;
 
 export const BackgroundTitle = styled.div`
@@ -61,27 +47,8 @@ export const BackgroundTitle = styled.div`
   -webkit-text-stroke: 1px #273d5c;
   text-align: end;
   z-index: -1;
-  bottom: 0;
-  right: -60px;
-
-  ${({ theme }) => theme.above.xxl`
-    font-size: ${({ theme }) => theme.typography.size[19]};
-    bottom: -110px;
-  `}
-
-  ${({ theme }) => theme.below.xxl`
-    bottom: -60px;
-  `}
-
-  ${({ theme }) => theme.below.l`
-    font-size: 250px;
-    bottom: 0px;
-  `}
-
-  ${({ theme }) => theme.below.m`
-      font-size: 230px;
-      bottom: 39px;
-  `}
+  bottom: -57px;
+  right: -49px;
 `;
 
 export const ArticleTitle = styled.h2`
@@ -90,12 +57,9 @@ export const ArticleTitle = styled.h2`
   font-size: ${({ theme }) => theme.typography.size[12]};
   color: ${({ theme }) => theme.colors.text.main};
   margin-bottom: 30px;
+  margin-top: 60px;
   max-width: 820px;
   line-height: 54px;
-
-  ${({ theme }) => theme.above.xxl`
-    margin-top: 50px;
-  `}
 `;
 
 export const FeaturesWrapper = styled.div`

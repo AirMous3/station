@@ -1,34 +1,39 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
+
+import { useEffect, useState } from 'react';
 
 import mainImage2 from '@/assets/icons/mainImage2.png';
 import mainImage from '@/assets/icons/mainImage.png';
 import { Container } from '@/components/Container';
+import { CurveText } from '@/components/CurveText';
 import {
-  INITIAL_DEVOPS_ROTATE_POSITION,
   INITIAL_DEVOPS_X_POSITION,
   INITIAL_DEVOPS_Y_POSITION,
-  INITIAL_PROGRAM_ROTATE_POSITION,
+  INITIAL_PROGRAM_X_POSITION,
   INITIAL_PROGRAM_Y_POSITION,
 } from '@/components/Main/constants';
 
 import * as S from './components';
 
-export const Main = () => {
-  const { scrollY } = useScroll();
+const useScrollPosition = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
 
-  const devopsX = useTransform(
-    scrollY,
-    (value) => (value + INITIAL_DEVOPS_X_POSITION * 2) / 2,
-  );
-  const devopsY = useTransform(
-    scrollY,
-    (value) => (value + INITIAL_DEVOPS_Y_POSITION * 2) / 2,
-  );
-  const programX = useTransform(scrollY, (value) => value / -2);
-  const programY = useTransform(
-    scrollY,
-    (value) => (value - INITIAL_PROGRAM_Y_POSITION * 2) / -2,
-  );
+  useEffect(() => {
+    const updatePosition = () => {
+      setScrollPosition(window.pageYOffset);
+    };
+    window.addEventListener('scroll', updatePosition);
+    updatePosition();
+    return () => window.removeEventListener('scroll', updatePosition);
+  }, []);
+
+  return scrollPosition;
+};
+export const Main = () => {
+  const scrollPosition = useScrollPosition();
+
+  const offset = 64 + (scrollPosition / 4000) * 70;
+  const reverseOffset = 65 - (scrollPosition / 4000) * 70;
+
   return (
     <Container>
       <S.Section>
@@ -41,24 +46,38 @@ export const Main = () => {
           <S.BackgroundFlash />
           <S.SecondBackgroundFlash />
           <S.DevopsTitle
-            style={{ x: devopsX, y: devopsY }}
             initial={{
               y: INITIAL_DEVOPS_Y_POSITION,
               x: INITIAL_DEVOPS_X_POSITION,
-              rotate: INITIAL_DEVOPS_ROTATE_POSITION,
             }}
           >
-            devops
+            <CurveText
+              id={1}
+              width={1980}
+              height={2260}
+              radius={930}
+              reverse={true}
+              offset={`${offset}%`}
+            >
+              devops
+            </CurveText>
           </S.DevopsTitle>
-
           <S.ProgramTitle
-            style={{ x: programX, y: programY }}
             initial={{
               y: INITIAL_PROGRAM_Y_POSITION,
-              rotate: INITIAL_PROGRAM_ROTATE_POSITION,
+              x: INITIAL_PROGRAM_X_POSITION,
             }}
           >
-            program
+            <CurveText
+              id={2}
+              width={1980}
+              height={2260}
+              radius={930}
+              reverse={true}
+              offset={`${reverseOffset}%`}
+            >
+              program
+            </CurveText>
           </S.ProgramTitle>
 
           <S.FirstImage src={mainImage} alt="mainImage" />

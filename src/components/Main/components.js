@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  overflow: hidden;
   display: flex;
   justify-content: space-between;
   min-height: 760px;
@@ -34,6 +33,7 @@ export const DevopsTitle = styled(motion.h1)`
   text-transform: uppercase;
   position: absolute;
   z-index: 1;
+  letter-spacing: 22px;
 `;
 
 export const ProgramTitle = styled(DevopsTitle)`
@@ -61,7 +61,7 @@ export const FirstImage = styled.img`
 export const SecondMainImage = styled.img`
   position: absolute;
   bottom: 15px;
-  right: -210px;
+  right: -173px;
   z-index: 2;
 
   ${({ theme }) => theme.below.m`

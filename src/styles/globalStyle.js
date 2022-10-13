@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     background: ${({ theme }) => theme.colors.background.body};
     font-family: Roboto;
+    overflow-x: hidden;
   }
 
   ul,
