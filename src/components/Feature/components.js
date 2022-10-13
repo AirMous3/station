@@ -33,9 +33,9 @@ export const Title = styled.div`
   font-weight: 700;
   color: ${({ theme }) => theme.colors.text.main};
   position: absolute;
-  top: 95px;
-  left: 55px;
-  max-width: 215px;
+  top: 81px;
+  left: 42px;
+  max-width: 206px;
   text-align: center;
 
   ${({ theme }) => theme.below.l`
