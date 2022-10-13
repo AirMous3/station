@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
+import arrow from '@/assets/icons/arrowDown.svg';
+
 export const Section = styled.section`
   display: flex;
   justify-content: space-between;
@@ -100,4 +102,20 @@ export const SecondBackgroundFlash = styled.div`
   background: rgba(79, 213, 222, 0.6);
   filter: blur(100px);
   transform: rotate(26.63deg);
+`;
+
+export const Circle = styled.div`
+  position: absolute;
+  color: #ebebeb;
+  font-size: 18px;
+  bottom: 115px;
+  left: 120px;
+  cursor: pointer;
+  z-index: 10;
+
+  &:after {
+    content: url(${arrow});
+    display: block;
+    margin-top: -131px;
+  }
 `;

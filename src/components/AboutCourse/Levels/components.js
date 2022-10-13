@@ -21,7 +21,7 @@ export const LevelNumber = styled(motion.div)`
 `;
 export const LevelTitle = styled(motion.div)`
   font-weight: 700;
-  font-size: ${({ theme }) => theme.typography.size[12]};
+  font-size: 65px;
 `;
 
 export const ArrowButton = styled.div`
