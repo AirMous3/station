@@ -1,14 +1,10 @@
 import styled from 'styled-components';
 
-
-
 import { ArticleTitle } from '@/components/Devops/components';
-
 
 export const Section = styled.section`
   color: ${({ theme }) => theme.colors.text.main};
   margin-top: 100px;
-  padding: 0 60px;
   margin-bottom: 150px;
 `;
 

@@ -6,6 +6,7 @@ import { Feedbacks } from '@/components/Feedbacks';
 import { GetStarted } from '@/components/GetStarted';
 import { Header } from '@/components/Header';
 import { JobAssistance } from '@/components/JobAssistance';
+import { LearningProgram } from '@/components/LearningProgram';
 import { Main } from '@/components/Main';
 import { OurTeam } from '@/components/OurTeam';
 import { PackageCost } from '@/components/PackageCost';
@@ -23,6 +24,7 @@ export const App = () => {
       <AboutTraining />
       <OurTeam />
       <Curriculum />
+      <LearningProgram />
       <PackageCost />
       <Feedbacks />
       <GetStarted />

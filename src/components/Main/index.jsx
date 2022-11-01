@@ -4,7 +4,6 @@ import { Link } from 'react-scroll';
 
 import mainImage2 from '@/assets/icons/mainImage2.png';
 import mainImage from '@/assets/icons/mainImage.png';
-import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { CurveText } from '@/components/CurveText';
 import {
