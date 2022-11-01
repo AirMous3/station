@@ -13,27 +13,10 @@ export const learningProgramConfig = [
     courseFeatures: [
       {
         featureTitle: 'Встреча декана со студентами',
-        featureDescription:
-          '— Знакомство с UNIX/Linux\n' +
-          '— Работа в консоли\n' +
-          '— Права и пользователи в UNIX\n' +
-          '— Bash, скрипты и автоматизация\n' +
-          '— Сетевые возможности Linux\n' +
-          '— Практика. Регистрируем сервер в облаке\n' +
-          '— Практика. Запускаем веб-сервер\n' +
-          '— Практика. Как защитить свой сервер',
       },
       {
         featureTitle: 'Компьютерные сети',
-        featureDescription:
-          '— Знакомство с UNIX/Linux\n' +
-          '— Работа в консоли\n' +
-          '— Права и пользователи в UNIX\n' +
-          '— Bash, скрипты и автоматизация\n' +
-          '— Сетевые возможности Linux\n' +
-          '— Практика. Регистрируем сервер в облаке\n' +
-          '— Практика. Запускаем веб-сервер\n' +
-          '— Практика. Как защитить свой сервер',
+        featureDescription: 'ololo lololo ',
       },
       {
         featureTitle: 'Введение в UNIX-системы',
@@ -49,27 +32,11 @@ export const learningProgramConfig = [
       },
       {
         featureTitle: 'Основные сервисы на Linux для предприятия',
-        featureDescription:
-          '— Знакомство с UNIX/Linux\n' +
-          '— Работа в консоли\n' +
-          '— Права и пользователи в UNIX\n' +
-          '— Bash, скрипты и автоматизация\n' +
-          '— Сетевые возможности Linux\n' +
-          '— Практика. Регистрируем сервер в облаке\n' +
-          '— Практика. Запускаем веб-сервер\n' +
-          '— Практика. Как защитить свой сервер',
+        featureDescription: 'ololo lololo ',
       },
       {
         featureTitle: 'Анализ, оптимизация и аварийные работы в Linux',
-        featureDescription:
-          '— Знакомство с UNIX/Linux\n' +
-          '— Работа в консоли\n' +
-          '— Права и пользователи в UNIX\n' +
-          '— Bash, скрипты и автоматизация\n' +
-          '— Сетевые возможности Linux\n' +
-          '— Практика. Регистрируем сервер в облаке\n' +
-          '— Практика. Запускаем веб-сервер\n' +
-          '— Практика. Как защитить свой сервер',
+        featureDescription: 'ololo lololo ',
       },
     ],
   },
@@ -94,9 +61,12 @@ export const learningProgramConfig = [
       'до момента, пока исследуемый URL не начинает отвечать более 2с, или сервис отдает 5xx\n' +
       '— все работы по настройке серверов проекта должны выполняться кодом Ansible.',
     courseFeatures: [
-      { featureTitle: 'Основы языка Python' },
-      { featureTitle: 'Базы данных. Основы' },
-      { featureTitle: 'Системы управления конфигурациями' },
+      { featureTitle: 'Основы языка Python', featureDescription: 'ololo lololo ' },
+      { featureTitle: 'Базы данных. Основы', featureDescription: 'ololo lololo ' },
+      {
+        featureTitle: 'Системы управления конфигурациями',
+        featureDescription: 'ololo lololo ',
+      },
     ],
   },
 ];

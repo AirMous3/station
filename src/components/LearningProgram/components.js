@@ -1,5 +1,6 @@
 import styled from 'styled-components/macro';
 
+import { Cross, CrossWrapper } from '@/components/AboutTraining/components';
 import { ArticleTitle } from '@/components/Devops/components';
 
 export const Section = styled.section``;
@@ -45,6 +46,7 @@ export const LevelDescription = styled.div`
   line-height: 110%;
   color: #7a7a7a;
   margin-top: 16px;
+  margin-bottom: 32px;
 `;
 
 export const LevelProjectTitle = styled.div`
@@ -52,7 +54,6 @@ export const LevelProjectTitle = styled.div`
   font-size: 23px;
   line-height: 110%;
   color: #ffffff;
-  margin-top: 32px;
 `;
 
 export const LevelProjectDescription = styled(LevelDescription)`
@@ -67,7 +68,35 @@ export const LevelCourseTitle = styled(LevelTitle)`
   margin-bottom: 50px;
 `;
 
-export const LevelCourseFeatureTitle = styled(LevelProjectTitle)`
+export const LevelCourseFeatureWrapper = styled.div`
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid #3a3a3a;
+  padding-top: 24px;
   padding-bottom: 8px;
+`;
+
+export const LevelCourseFeatureTitle = styled(LevelProjectTitle)`
+  max-width: 345px;
+`;
+
+export const LevelCourseCross = styled(Cross)`
+  margin-left: auto;
+`;
+
+export const ButtonWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+
+export const LearningButton = styled.button`
+  border: 1px solid #ffffff;
+  background: inherit;
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 23px;
+  color: #ffffff;
+  padding: 14px 143px;
+  cursor: pointer;
 `;

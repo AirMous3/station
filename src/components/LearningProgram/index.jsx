@@ -1,9 +1,12 @@
+import { useState } from 'react';
+
 import { Container } from '@/components/Container';
 import { learningProgramConfig } from '@/components/LearningProgram/config';
 
 import * as S from './components';
 
 export const LearningProgram = () => {
+  const [isOpenProgram, setIsOpenProgram] = useState(false);
   return (
     <Container>
       <S.Section>
@@ -35,10 +38,14 @@ export const LearningProgram = () => {
 
                   <S.LevelCourseWrapper>
                     <S.LevelCourseTitle>Курсы</S.LevelCourseTitle>
-                    {courseFeatures.map(({ featureTitle }) => (
-                      <S.LevelCourseFeatureTitle>
-                        {featureTitle}
-                      </S.LevelCourseFeatureTitle>
+                    {courseFeatures.map(({ featureTitle, featureDescription }) => (
+                      <S.LevelCourseFeatureWrapper>
+                        <S.LevelCourseFeatureTitle>
+                          {featureTitle}
+                        </S.LevelCourseFeatureTitle>
+
+                        {featureDescription && <S.LevelCourseCross />}
+                      </S.LevelCourseFeatureWrapper>
                     ))}
                   </S.LevelCourseWrapper>
                 </S.LevelWrapper>
@@ -46,6 +53,9 @@ export const LearningProgram = () => {
             );
           },
         )}
+        <S.ButtonWrapper>
+          {!isOpenProgram && <S.LearningButton>Открыть всю программу</S.LearningButton>}
+        </S.ButtonWrapper>
       </S.Section>
     </Container>
   );
