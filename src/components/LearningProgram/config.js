@@ -1,4 +1,4 @@
-export const learningProgramConfig = [
+export const firstPartOfProgram = [
   {
     quarter: 'I четверть',
     levelTitle: 'Установка и настройка виртуальной машины с Linux',
@@ -65,6 +65,98 @@ export const learningProgramConfig = [
       { featureTitle: 'Базы данных. Основы', featureDescription: 'ololo lololo ' },
       {
         featureTitle: 'Системы управления конфигурациями',
+        featureDescription: 'ololo lololo ',
+      },
+    ],
+  },
+];
+
+export const secondPartOfProgram = [
+  {
+    quarter: 'III четверть',
+    levelTitle: 'Облачные технологии и микросервисная архитектура',
+    levelDescription:
+      'В третьей четверти студенты освоят облачные технологии, развернут контейнеризованные приложения в Kubernetes и Docker, а также познакомятся с  системами виртуализации.\n' +
+      '\n' +
+      'Второй курс модуля «Основы облачных технологий» разработан совместно со специалистами облачной платформы VK Cloud Solutions (Mail.ru Cloud Solutions), на нём вы получите практический опыт использования публичной облачной платформы \n' +
+      'и S3-хранилищ от ведущих экспертов рынка.',
+    projectDescription:
+      'Деплой тестового приложения в кластере Kubernete.\n' +
+      '‍\n' +
+      'Настроить интеграцию системы GitLab CI/CD c созданным ранее в облаке VK Cloud кластером Kubernetes. Настроить несколько окружений для развертывания тестового приложения - dev/stage/prod. Деплой тестового приложения во все окружения. В dev/stage деплоим автоматически. \n' +
+      'В prod требуется запустить деплой вручную. Проверяем, что приложение развернуто успешно. \n' +
+      'В случае неудачного деплоя необходимо автоматически выполнить откат \n' +
+      'к предыдущей версии.',
+    courseFeatures: [
+      { featureTitle: 'Системы виртуализации', featureDescription: 'ololo lololo ' },
+      { featureTitle: 'Основы облачных технологий', featureDescription: 'ololo lololo ' },
+      {
+        featureTitle: 'Микросервисная архитектура и контейнеризация',
+        featureDescription: 'ololo lololo ',
+      },
+    ],
+  },
+  {
+    quarter: 'IV четверть',
+    levelTitle: 'DevOps-практики',
+    levelDescription:
+      'В четвертой четверти студенты научатся налаживать процессы непрерывной интеграции и доставки кода, рассмотрят модель «Инфраструктура как код»,  изучат и  применят на практике современные методики разработки ПО. ' +
+      'Также попрактикуются  настраивать систему мониторинга на примере Prometheus + Grafana и настроят отправку оповещений о событиях.',
+    projectDescription:
+      'Развернуть с нуля инфраструктуру и наше приложение в облаке с помощь GitLab CI/CD, использую концепцию инфраструктура как код (IaC, Terraform).\n' +
+      '‍\n' +
+      'Задачи проекта:\n' +
+      '— Поднять 3 окружения в облаке, включая  kubernetes(k8s) и базы данные(DBaaS) используя terraform\n' +
+      '— Настроить pipeline для нашего приложения, включая тестирования и канареечный деплой (Canary Deployment)\n' +
+      '— Настроим логирование, трассировку и мониторинг приложения.',
+    courseFeatures: [
+      { featureTitle: 'Процессы CI/CD', featureDescription: 'ololo lololo ' },
+      {
+        featureTitle: 'Мониторинг распределённых приложений',
+        featureDescription: 'ololo lololo ',
+      },
+      {
+        featureTitle: 'Методологии Agile, Scrum, DevOps',
+        featureDescription: 'ololo lololo ',
+      },
+    ],
+  },
+  {
+    levelTitle: 'Курсы вне четверти',
+    projectDescription:
+      'Кейс от компании партнера. Команда получает техническое задание и организовывает' +
+      ' свою работу по выполнению проекта. Ресурсы предоставляет GeekBrains. Публичная защита командного проекта перед заказчиком.',
+    courseFeatures: [
+      { featureTitle: 'Git. Базовый курс', featureDescription: 'ololo lololo ' },
+      { featureTitle: 'Операционные системы', featureDescription: 'ololo lololo ' },
+      {
+        featureTitle: 'Подготовка к собеседованию DevOps',
+        featureDescription: 'ololo lololo ',
+      },
+      {
+        featureTitle: 'Windows Server, PowerShell, WMI',
+        featureDescription: 'ololo lololo ',
+      },
+      {
+        featureTitle: 'Итоговый командный проект',
+        featureDescription: 'ololo lololo ',
+      },
+    ],
+  },
+  {
+    levelTitle: 'Дополнительные курсы от компаний-партнёров',
+    projectDescription:
+      'В разработке и проведении обучения участвуют ведущие технологические компании России. \n' +
+      'Вы узнаете больше о технологиях и инструментах, используемых реальным бизнесом для создания \n' +
+      'IT-продуктов.',
+    courseFeatures: [
+      { featureTitle: 'Системы сбора логов', featureDescription: 'ololo lololo ' },
+      {
+        featureTitle: 'Основы инфраструктуры открытых ключей (PKI)',
+        featureDescription: 'ololo lololo ',
+      },
+      {
+        featureTitle: 'Управление IT-услугами \n' + 'при помощи ITIL',
         featureDescription: 'ololo lololo ',
       },
     ],

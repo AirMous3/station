@@ -1,17 +1,32 @@
 import { useState } from 'react';
 
 import { Container } from '@/components/Container';
-import { learningProgramConfig } from '@/components/LearningProgram/config';
+import {
+  firstPartOfProgram,
+  secondPartOfProgram,
+} from '@/components/LearningProgram/config';
 
 import * as S from './components';
 
 export const LearningProgram = () => {
+  const [learningProgram, setLearningProgram] = useState(firstPartOfProgram);
   const [isOpenProgram, setIsOpenProgram] = useState(false);
+
+  const handleToggleProgram = () => {
+    if (isOpenProgram) {
+      setIsOpenProgram(!isOpenProgram);
+      setLearningProgram(firstPartOfProgram);
+    } else {
+      setIsOpenProgram(true);
+      setLearningProgram((prevState) => prevState.concat(secondPartOfProgram));
+    }
+  };
+
   return (
     <Container>
       <S.Section>
         <S.Title>Программа обучения</S.Title>
-        {learningProgramConfig.map(
+        {learningProgram.map(
           ({
             courseFeatures,
             levelDescription,
@@ -54,7 +69,9 @@ export const LearningProgram = () => {
           },
         )}
         <S.ButtonWrapper>
-          {!isOpenProgram && <S.LearningButton>Открыть всю программу</S.LearningButton>}
+          <S.LearningButton onClick={handleToggleProgram}>
+            {isOpenProgram ? 'Скрыть программу' : ' Открыть всю программу'}
+          </S.LearningButton>
         </S.ButtonWrapper>
       </S.Section>
     </Container>
