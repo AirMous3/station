@@ -35,7 +35,7 @@ export const LearningProgram = () => {
             levelTitle,
           }) => {
             return (
-              <S.Level>
+              <S.Level key={levelTitle}>
                 <S.LevelQuarter>{quarter}</S.LevelQuarter>
 
                 <S.LevelWrapper>

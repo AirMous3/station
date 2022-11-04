@@ -1,5 +1,5 @@
 import { Container } from '@/components/Container';
-import { packageConfig } from '@/components/PackageCost/config';
+import { englishConfig, packageConfig } from '@/components/PackageCost/config';
 
 import * as S from './components';
 
@@ -21,6 +21,23 @@ export const PackageCost = () => {
           </S.PackageWrapper>
         ))}
       </S.PackagesWrapper>
+
+      <Container>
+        <S.EnglishWrapper>
+          <S.EnglishTitleWrapper>
+            <S.EnglishTitle>Почему английский нужен в IT</S.EnglishTitle>
+          </S.EnglishTitleWrapper>
+
+          {englishConfig.map(({ description, title }) => (
+            <S.EnglishFeature key={title}>
+              <S.EnglishFeatureTitle>{title}</S.EnglishFeatureTitle>
+              <S.EnglishFeatureDescription>{description}</S.EnglishFeatureDescription>
+            </S.EnglishFeature>
+          ))}
+
+          <S.EnglishButton>Купить пакеты с английским</S.EnglishButton>
+        </S.EnglishWrapper>
+      </Container>
     </S.Section>
   );
 };

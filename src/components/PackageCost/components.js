@@ -1,5 +1,7 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
+import arrow from '@/assets/icons/englishArrow.svg';
+import { Button } from '@/components/Button';
 import { ArticleTitle } from '@/components/Devops/components';
 
 export const Section = styled.section`
@@ -16,6 +18,7 @@ export const PackagesWrapper = styled.div`
   gap: 50px;
   margin-top: 80px;
   text-align: center;
+  margin-bottom: 156px;
 `;
 
 export const PackageWrapper = styled.ul`
@@ -52,4 +55,90 @@ export const PackageFeature = styled.li`
 export const PackagePrice = styled.div`
   font-weight: 700;
   font-size: ${({ theme }) => theme.typography.size[9]};
+`;
+
+export const EnglishWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+export const EnglishTitleWrapper = styled.div`
+  display: flex;
+  width: 50%;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #535353;
+  border-right: 2px solid #535353;
+`;
+
+export const EnglishTitle = styled.div`
+  display: flex;
+  align-items: center;
+  font-family: 'NAMU';
+  font-weight: 700;
+  font-size: 50px;
+  color: #ffffff;
+
+  &::after {
+    content: '';
+    background-image: url(${arrow});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    max-width: 190px;
+    height: 100%;
+  }
+  }
+`;
+
+export const EnglishFeature = styled.div`
+  width: 50%;
+  padding-left: 30px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+
+  &:nth-child(n + 3) {
+    padding-top: 45px;
+    padding-left: 0;
+    padding-bottom: 30px;
+  }
+
+  &:nth-child(n + 4):nth-child(even) {
+    padding-left: 30px;
+  }
+
+  &:nth-child(odd) {
+    border-right: 2px solid #535353;
+  }
+
+  &:nth-child(-n + 4) {
+    border-bottom: 2px solid #535353;
+  }
+`;
+
+export const EnglishFeatureTitle = styled.div`
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 120%;
+  color: #3b92ea;
+`;
+
+export const EnglishFeatureDescription = styled.div`
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: #bcbcbc;
+  max-width: 500px;
+  margin-top: 6px;
+`;
+
+export const EnglishButton = styled(Button)`
+  padding-left: 48px;
+  padding-right: 48px;
+  margin-top: 91px;
 `;

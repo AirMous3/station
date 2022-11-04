@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.colors.background.body};
     font-family: Roboto;
     overflow-x: hidden;
+    box-sizing: border-box;
   }
 
   ul,
