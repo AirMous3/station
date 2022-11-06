@@ -58,8 +58,11 @@ export const PackagePrice = styled.div`
 `;
 
 export const EnglishWrapper = styled.div`
+  position: relative;
   display: flex;
   flex-wrap: wrap;
+  padding-left: 75px;
+  padding-right: 63px;
 `;
 
 export const EnglishTitleWrapper = styled.div`
@@ -79,6 +82,7 @@ export const EnglishTitle = styled.div`
   font-weight: 700;
   font-size: 50px;
   color: #ffffff;
+  line-height: 90%;
 
   &::after {
     content: '';
@@ -94,6 +98,7 @@ export const EnglishTitle = styled.div`
 `;
 
 export const EnglishFeature = styled.div`
+  position: relative;
   width: 50%;
   padding-left: 30px;
   padding-bottom: 10px;
@@ -119,26 +124,49 @@ export const EnglishFeature = styled.div`
 `;
 
 export const EnglishFeatureTitle = styled.div`
-  font-family: 'Roboto';
   font-weight: 500;
   font-size: 23px;
   line-height: 120%;
-  color: #3b92ea;
+  color: ${({ color }) => color};
 `;
 
 export const EnglishFeatureDescription = styled.div`
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 120%;
   color: #bcbcbc;
   max-width: 500px;
   margin-top: 6px;
+  span {
+    color: #ffffff;
+  }
 `;
 
 export const EnglishButton = styled(Button)`
   padding-left: 48px;
   padding-right: 48px;
   margin-top: 91px;
+`;
+
+export const EnglishFeatureNumber = styled.div`
+  position: absolute;
+  top: ${({ top }) => top || '-18px'};
+  right: 5px;
+  font-family: 'NAMU';
+  font-weight: 700;
+  font-size: 150px;
+  color: ${({ color }) => color};
+  pointer-events: none;
+`;
+
+export const BackgroundFlash = styled.div`
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: -50px;
+  right: 250px;
+  background: linear-gradient(180deg, #1e2a31 0%, #30263c 100%);
+  filter: blur(300px);
+  transform: rotate(24.51deg);
+  z-index: -1;
 `;

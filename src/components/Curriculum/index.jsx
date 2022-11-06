@@ -1,4 +1,3 @@
-import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { curriculumConfig } from '@/components/Curriculum/config';
 
@@ -23,8 +22,6 @@ export const Curriculum = () => {
           ))}
         </S.FeaturesWrapper>
       </S.Features>
-
-      <Button>Скачать программу курса</Button>
     </S.Section>
   );
 };

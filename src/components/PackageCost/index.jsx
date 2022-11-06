@@ -22,22 +22,31 @@ export const PackageCost = () => {
         ))}
       </S.PackagesWrapper>
 
-      <Container>
-        <S.EnglishWrapper>
-          <S.EnglishTitleWrapper>
-            <S.EnglishTitle>Почему английский нужен в IT</S.EnglishTitle>
-          </S.EnglishTitleWrapper>
+      <S.EnglishWrapper>
+        <S.EnglishTitleWrapper>
+          <S.EnglishTitle>Почему английский нужен в IT</S.EnglishTitle>
+        </S.EnglishTitleWrapper>
 
-          {englishConfig.map(({ description, title }) => (
+        {englishConfig.map(
+          ({ description, title, number, numberColor, titleColor, top }) => (
             <S.EnglishFeature key={title}>
-              <S.EnglishFeatureTitle>{title}</S.EnglishFeatureTitle>
-              <S.EnglishFeatureDescription>{description}</S.EnglishFeatureDescription>
-            </S.EnglishFeature>
-          ))}
+              <S.EnglishFeatureTitle color={titleColor}>{title}</S.EnglishFeatureTitle>
 
-          <S.EnglishButton>Купить пакеты с английским</S.EnglishButton>
-        </S.EnglishWrapper>
-      </Container>
+              <S.EnglishFeatureDescription
+                dangerouslySetInnerHTML={{ __html: description }}
+              />
+
+              <S.EnglishFeatureNumber color={numberColor} top={top}>
+                {number}
+              </S.EnglishFeatureNumber>
+            </S.EnglishFeature>
+          ),
+        )}
+
+        <S.EnglishButton>Купить пакеты с английским</S.EnglishButton>
+
+        <S.BackgroundFlash />
+      </S.EnglishWrapper>
     </S.Section>
   );
 };

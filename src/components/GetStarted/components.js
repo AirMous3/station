@@ -5,7 +5,7 @@ import { ArticleTitle } from '@/components/Devops/components';
 
 export const Section = styled.section`
   margin-top: 200px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 `;
 
 export const Article = styled(ArticleTitle)`
