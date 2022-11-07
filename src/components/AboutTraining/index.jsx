@@ -27,7 +27,7 @@ export const AboutTraining = () => {
 
         <S.FeaturesWrapper>
           {trainingFeaturesConfig.map(({ number, title, description }) => {
-            let active = isOpenDescription === number;
+            const active = isOpenDescription === number;
             return (
               <S.Feature
                 key={number}
