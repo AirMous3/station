@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { Container } from '@/components/Container';
+import { Accordion } from '@/components/LearningProgram/Accordion';
 import {
   firstPartOfProgram,
   secondPartOfProgram,
@@ -11,7 +12,6 @@ import * as S from './components';
 export const LearningProgram = () => {
   const [learningProgram, setLearningProgram] = useState(firstPartOfProgram);
   const [isOpenProgram, setIsOpenProgram] = useState(false);
-  const [isOpenDescription, setIsOpenDescription] = useState(0);
 
   const handleToggleProgram = () => {
     if (isOpenProgram) {
@@ -21,9 +21,6 @@ export const LearningProgram = () => {
       setIsOpenProgram(true);
       setLearningProgram((prevState) => prevState.concat(secondPartOfProgram));
     }
-  };
-  const handleToggleDescription = (id) => {
-    setIsOpenDescription(id);
   };
 
   return (
@@ -59,37 +56,7 @@ export const LearningProgram = () => {
 
                   <S.CourseWrapper layout="preserve">
                     <S.CourseTitle layout="preserve">Курсы</S.CourseTitle>
-                    {courseFeatures.map(({ featureTitle, featureDescription, id }) => {
-                      const openDescription = isOpenDescription === id;
-                      return (
-                        <S.CourseFeatureWrapper key={featureTitle} layout="preserve">
-                          <S.FeatureTitleWrapper layout="preserve">
-                            <S.CourseFeatureTitle layout="preserve">
-                              {featureTitle}
-                            </S.CourseFeatureTitle>
-
-                            {featureDescription && (
-                              <S.CourseCross
-                                layout="preserve"
-                                onClick={() => handleToggleDescription(id)}
-                              />
-                            )}
-                          </S.FeatureTitleWrapper>
-
-                          {openDescription && (
-                            <S.CourseFeatureDescription
-                              layout="preserve"
-                              initial={{ opacity: 0 }}
-                              animate={{ opacity: 1 }}
-                              exit={{ opacity: 0 }}
-                              transition={{ duration: 1 }}
-                            >
-                              {featureDescription}
-                            </S.CourseFeatureDescription>
-                          )}
-                        </S.CourseFeatureWrapper>
-                      );
-                    })}
+                    <Accordion courseFeatures={courseFeatures} />
                   </S.CourseWrapper>
                 </S.LevelWrapper>
               </S.Level>

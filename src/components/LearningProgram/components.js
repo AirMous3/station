@@ -4,7 +4,9 @@ import styled from 'styled-components/macro';
 import { Cross } from '@/components/AboutTraining/components';
 import { ArticleTitle } from '@/components/Devops/components';
 
-export const Section = styled.section``;
+export const Section = styled.section`
+  min-height: 100vh;
+`;
 
 export const Title = styled(ArticleTitle)`
   line-height: 57px;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 import buttonArrow from '@/assets/icons/buttonArrow.svg';
 import { ArticleTitle } from '@/components/Devops/components';
@@ -21,12 +21,12 @@ export const Wrapper = styled.div`
   display: flex;
 `;
 
-export const GetStartedFormWrapper = styled.form`
+export const GetStartedForm = styled.form`
+  font-family: Roboto;
   display: flex;
   flex-direction: column;
   margin-left: 285px;
   margin-top: 240px;
-  gap: 15px;
 
   .selected-flag:hover {
     background-color: inherit;
@@ -45,7 +45,7 @@ export const Input = styled.input`
   background-color: inherit;
   outline: none;
   border: none;
-  border-bottom: 1px solid #2e2e2e;
+  border-bottom: 2px solid #ffffff;
   min-width: 430px;
   max-width: 430px;
   padding-bottom: 10px;
@@ -53,6 +53,7 @@ export const Input = styled.input`
   color: ${({ theme }) => theme.colors.text.main};
   font-size: ${({ theme }) => theme.typography.size[1]};
   box-sizing: border-box;
+  margin-bottom: 25px;
 
   &::placeholder {
     color: #696969;
@@ -111,4 +112,37 @@ export const BackgroundFlash = styled.div`
   filter: blur(100px);
   transform: rotate(-38.18deg);
   z-index: -1;
+`;
+
+export const InputsWrapper = styled.div`
+  font-family: 'Roboto';
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  padding: 40px 55px 20px 41px;
+  box-sizing: border-box;
+  border-radius: 40px;
+  background: #1c1c1c;
+  background-clip: border-box;
+  background-clip: padding-box;
+  border: solid 4px transparent;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: linear-gradient(
+      124.48deg,
+      #ffffff 14.54%,
+      rgba(237, 96, 51, 0.17) 38.19%,
+      #ed6033 54.86%,
+      #ed6033 88.98%
+    );
+  }
 `;

@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import cross from '@/assets/icons/cross.svg';
 import { ArticleTitle } from '@/components/Devops/components';
+
 
 export const Section = styled.section`
   margin-top: 35px;
