@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/station/static/css/main.72ab78c3.css",
-    "main.js": "/station/static/js/main.da54bd7a.js",
+    "main.css": "/station/static/css/main.ae45597f.css",
+    "main.js": "/station/static/js/main.fd5fe464.js",
     "static/media/Inter.var.woff2?v=3.19": "/station/static/media/Inter.var.c2fe3cb2b7c746f7966a.woff2",
     "static/media/Inter-italic.var.woff2?v=3.19": "/station/static/media/Inter-italic.var.30807be7abc48ba8c73c.woff2",
     "static/media/Inter-roman.var.woff2?v=3.19": "/station/static/media/Inter-roman.var.ba4caefcdf5b36b438db.woff2",
@@ -42,6 +42,7 @@
     "static/media/Inter-Thin.woff2?v=3.19": "/station/static/media/Inter-Thin.fff2a096db014f6239d4.woff2",
     "static/media/Inter-Regular.woff2?v=3.19": "/station/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
     "static/media/mainImage.png": "/station/static/media/mainImage.ce38421449d2ea0e8445.png",
+    "static/media/Gilroy-Regular.ttf": "/station/static/media/Gilroy-Regular.fa652e766b6a85a1f9cb.ttf",
     "static/media/getStartedImage.png": "/station/static/media/getStartedImage.c1b7a3ad9efc8a51aa52.png",
     "static/media/NAMU-1960.ttf": "/station/static/media/NAMU-1960.5431efcf52ace51e893a.ttf",
     "static/media/Robotomediumitalic.ttf": "/station/static/media/Robotomediumitalic.35abcf5eb54b0c398e52.ttf",
@@ -67,6 +68,7 @@
     "static/media/Robotolightitalic.woff": "/station/static/media/Robotolightitalic.2712173932b2ed03301b.woff",
     "static/media/Robotobolditalic.woff": "/station/static/media/Robotobolditalic.12310c542a31c5056955.woff",
     "static/media/Robotothinitalic.woff": "/station/static/media/Robotothinitalic.22221769e2baf7dc6198.woff",
+    "static/media/Gilroy-Regular.woff": "/station/static/media/Gilroy-Regular.ebe86c0337572553acea.woff",
     "static/media/Robotoblack.woff": "/station/static/media/Robotoblack.eab3a566ce722e08e453.woff",
     "static/media/Robotobold.woff": "/station/static/media/Robotobold.1e0c22679977ac02c8f6.woff",
     "static/media/Robotomedium.woff": "/station/static/media/Robotomedium.5673e7a07239f4785325.woff",
@@ -90,6 +92,7 @@
     "static/media/Robotolight.woff2": "/station/static/media/Robotolight.95ff440a51f48ad36a98.woff2",
     "static/media/Roboto.woff2": "/station/static/media/Roboto.806e04d8241d87f99a68.woff2",
     "static/media/Robotothin.woff2": "/station/static/media/Robotothin.30581100ea069d04b86a.woff2",
+    "static/media/Gilroy-Regular.woff2": "/station/static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
     "static/media/Generator-Medium.woff2": "/station/static/media/Generator-Medium.881989c8261914116b16.woff2",
     "static/media/Generator-UltraBold.woff2": "/station/static/media/Generator-UltraBold.d7c38c83b2ee860baf93.woff2",
     "static/media/Generator-Bold.woff2": "/station/static/media/Generator-Bold.c6966140ddca1adab638.woff2",
@@ -102,12 +105,11 @@
     "static/media/arrow.svg": "/station/static/media/arrow.ef70f6635fce9d4d42b767dad2587a26.svg",
     "index.html": "/station/index.html",
     "static/media/cross.svg": "/station/static/media/cross.4423c3251200051a41a44989dee9489b.svg",
-    "static/media/buttonArrow.svg": "/station/static/media/buttonArrow.4e8927c7abca82a0f7b3e575102b7aed.svg",
-    "main.72ab78c3.css.map": "/station/static/css/main.72ab78c3.css.map",
-    "main.da54bd7a.js.map": "/station/static/js/main.da54bd7a.js.map"
+    "main.ae45597f.css.map": "/station/static/css/main.ae45597f.css.map",
+    "main.fd5fe464.js.map": "/station/static/js/main.fd5fe464.js.map"
   },
   "entrypoints": [
-    "static/css/main.72ab78c3.css",
-    "static/js/main.da54bd7a.js"
+    "static/css/main.ae45597f.css",
+    "static/js/main.fd5fe464.js"
   ]
 }
