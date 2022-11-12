@@ -14,11 +14,7 @@ export const OurTeam = () => {
   return (
     <S.Section>
       <Container>
-        <S.Article>
-          Наша команда
-          {/*TODO*/}
-          {/*<S.BackgroundFlash />*/}
-        </S.Article>
+        <S.Article>Наша команда</S.Article>
 
         <S.ImagesWrapper>
           {mentorConfig.map(({ image, mentorId, name, description, fullImage }) => {
@@ -31,6 +27,7 @@ export const OurTeam = () => {
 
                 {active && (
                   <S.AboutMentorWrapper key={mentorId}>
+                    <S.BackgroundFlash />
                     <img src={fullImage} alt="mentorImage" />
                     <S.MentorName>{name}</S.MentorName>
                     <S.MentorDescription>{description}</S.MentorDescription>

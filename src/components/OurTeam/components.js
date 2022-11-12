@@ -2,9 +2,7 @@ import styled from 'styled-components';
 
 import { ArticleTitle } from '@/components/Devops/components';
 
-export const Article = styled(ArticleTitle)`
-  position: relative;
-`;
+export const Article = styled(ArticleTitle)``;
 
 export const Section = styled.section`
   display: flex;
@@ -41,12 +39,13 @@ export const ImageWrapper = styled.div`
 `;
 
 export const AboutMentorWrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
   top: 0;
-  left: 350px;
+  left: 455px;
 `;
 
 export const MentorName = styled.div`
@@ -69,12 +68,21 @@ export const ImagesWrapper = styled.ul`
 
 export const BackgroundFlash = styled.div`
   position: absolute;
+  z-index: -1;
   width: 351.55px;
   height: 347.65px;
-  right: 0;
-  bottom: 0;
+  left: 105px;
+  top: -91px;
+  background: linear-gradient(
+        to bottom,
+        rgba(23, 20, 20, 0.51),
+        rgba(255, 255, 255, 0.51)
+      )
+      no-repeat border-box,
+    linear-gradient(180deg, #006b8a 0%, #812a9f 100%) no-repeat border-box;
 
-  background: rgba(217, 217, 217, 0.51);
+  background-origin: padding-box, padding-box;
   filter: blur(150px);
   transform: rotate(-1.4deg);
 `;
+/*linear-gradient( to bottom, rgba(0, 0, 0, 0.51), rgba(227, 227, 227, 0.51) ) no-repeat border-box, linear-gradient(180deg,#176880 0%,#671484 100%) no-repeat border-box;*/

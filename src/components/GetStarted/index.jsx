@@ -7,21 +7,22 @@ import image from '@/assets/icons/getStartedImage.png';
 import { Container } from '@/components/Container';
 
 import * as S from './components';
-import { InputsWrapper } from './components';
 
 const buttonStyle = {
   backgroundColor: 'inherit',
   color: 'white',
   border: 'none',
-  borderBottom: '1px solid #FFFFFF',
 };
 
 const inputStyle = {
+  maxWidth: '308px',
+  minWidth: '308px',
+  minHeight: '44px',
   background: 'inherit',
-  border: 'none',
-  color: 'white',
-  borderBottom: '1px solid #FFFFFF',
-  minWidth: '430px',
+  border: '1px solid #cccccc',
+  borderRadius: '12px',
+  padding: '10px 18px 10px 50px',
+  color: '#2E2D2F',
   fontWeight: '600',
   fontSize: '16px',
 };
@@ -58,13 +59,13 @@ export const GetStarted = () => {
 
           <S.BackgroundFlash />
 
-          <img src={image} alt="backImage" />
+          <S.Image src={image} alt="backImage" />
 
           <S.GetStartedForm>
             <S.InputsWrapper>
               <S.Input
                 type="text"
-                placeholder="Твоё имя"
+                placeholder="Имя"
                 name="name"
                 value={name}
                 onChange={(e) => setState({ ...state, name: e.currentTarget.value })}
@@ -79,16 +80,21 @@ export const GetStarted = () => {
               />
               <S.CommentInput
                 type="text"
-                placeholder="Комментарий"
+                placeholder="Комментарий..."
                 name="message"
                 value={message}
                 onChange={(e) => setState({ ...state, message: e.currentTarget.value })}
               />
+              <S.RulesWrapper>
+                <S.Checkbox type="checkbox" />
+                <S.Rules>
+                  Я ознакомился c <span>договором оферты</span> и согласен на обработку
+                  персональных данных
+                </S.Rules>
+              </S.RulesWrapper>
             </S.InputsWrapper>
 
-            <S.Button onClick={sendEmail}>
-              <S.ButtonText>Записаться</S.ButtonText>
-            </S.Button>
+            <S.ButtonStart onClick={sendEmail}>Записаться</S.ButtonStart>
           </S.GetStartedForm>
         </S.Wrapper>
       </Container>
