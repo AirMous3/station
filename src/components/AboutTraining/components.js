@@ -21,6 +21,7 @@ export const ArticleDescription = styled.div`
 `;
 
 export const FeaturesWrapper = styled.ul`
+  position: relative;
   margin-top: 65px;
   margin-bottom: 96px;
 `;
@@ -97,4 +98,21 @@ export const Background = styled(motion.div)`
   left: 0;
   background-color: ${({ theme }) => theme.colors.text.main};
   z-index: -1;
+`;
+
+export const BackgroundFlash = styled.li`
+  position: absolute;
+  width: 311px;
+  height: 299px;
+  top: -125px;
+  right: 364px;
+  background: linear-gradient(180deg, #420c64c2 0%, #1f9bbd80 100%);
+  filter: blur(700px);
+  z-index: -1;
+`;
+
+export const BackgroundFlashSecond = styled(BackgroundFlash)`
+  top: 136px;
+  right: 0;
+  background: linear-gradient(180deg, #1f95b7 0%, #8123a2d6 100%);
 `;

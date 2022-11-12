@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-scroll';
 
-import { FEATURE_DESCRIPTION_ANIMATION } from '@/components/AboutTraining/animations';
-import { trainingFeaturesConfig } from '@/components/AboutTraining/config';
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { HIDDEN, PRESERVE, VISIBLE } from '@/constants/framer';
 
+import { FEATURE_DESCRIPTION_ANIMATION } from './animations';
 import * as S from './components';
+import { trainingFeaturesConfig } from './config';
 
 export const AboutTraining = () => {
   const [hoveredFeature, setHoveredFeature] = useState();
@@ -28,6 +28,9 @@ export const AboutTraining = () => {
         </S.ArticleDescription>
 
         <S.FeaturesWrapper>
+          <S.BackgroundFlash />
+          <S.BackgroundFlashSecond />
+
           {trainingFeaturesConfig.map(({ number, title, description }) => {
             const active = isOpenDescription === number;
             return (
