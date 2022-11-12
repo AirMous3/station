@@ -39,7 +39,6 @@ export const ImageWrapper = styled.div`
 `;
 
 export const AboutMentorWrapper = styled.div`
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,9 +69,9 @@ export const BackgroundFlash = styled.div`
   position: absolute;
   z-index: -1;
   width: 351.55px;
-  height: 347.65px;
+  height: 263.65px;
   left: 105px;
-  top: -91px;
+  top: -203px;
   background: linear-gradient(
         to bottom,
         rgba(23, 20, 20, 0.51),
@@ -86,3 +85,16 @@ export const BackgroundFlash = styled.div`
   transform: rotate(-1.4deg);
 `;
 /*linear-gradient( to bottom, rgba(0, 0, 0, 0.51), rgba(227, 227, 227, 0.51) ) no-repeat border-box, linear-gradient(180deg,#176880 0%,#671484 100%) no-repeat border-box;*/
+
+export const MentorImageWrapper = styled.div`
+  background: transparent;
+  box-shadow: inset 0 -543px 78px -420px #1c1c1c;
+  min-height: 400px;
+
+  img {
+    position: relative;
+    z-index: -1;
+    opacity: 0.76;
+    background: transparent;
+  }
+`;

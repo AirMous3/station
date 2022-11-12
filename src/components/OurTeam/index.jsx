@@ -28,8 +28,13 @@ export const OurTeam = () => {
                 {active && (
                   <S.AboutMentorWrapper key={mentorId}>
                     <S.BackgroundFlash />
-                    <img src={fullImage} alt="mentorImage" />
+
+                    <S.MentorImageWrapper>
+                      <img src={fullImage} alt="mentorImage" />
+                    </S.MentorImageWrapper>
+
                     <S.MentorName>{name}</S.MentorName>
+
                     <S.MentorDescription>{description}</S.MentorDescription>
                   </S.AboutMentorWrapper>
                 )}

@@ -1,5 +1,5 @@
-import fullImage from '@/assets/icons/mentorImage.png';
 import image from '@/assets/icons/teamImage.png';
+import fullImage from '@/assets/images/mentorImage.png';
 
 export const mentorConfig = [
   {
