@@ -1,9 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div`
   position: relative;
-  max-width: 30%;
-  margin-bottom: 50px;
 `;
 export const Number = styled.div`
   font-family: NAMU;
@@ -11,6 +9,12 @@ export const Number = styled.div`
   font-weight: 700;
   color: ${({ theme }) => theme.colors.text.blue};
   margin-bottom: 20px;
+
+  ${({ textAlign }) =>
+    textAlign &&
+    css`
+      text-align: ${textAlign};
+    `}
 
   ${({ theme }) => theme.below.l`
     font-size: 130px;
@@ -20,7 +24,7 @@ export const Number = styled.div`
 export const Description = styled.div`
   font-size: ${({ theme }) => theme.typography.size[4]};
   color: ${({ theme }) => theme.colors.text.grey};
-  max-width: 318px;
+  max-width: ${({ maxWidth }) => maxWidth};
   text-align: center;
 
   ${({ theme }) => theme.below.l`
