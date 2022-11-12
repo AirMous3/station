@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 const FEATURE_HEIGHT = 74;
 
 export const Wrapper = styled.div`
@@ -9,9 +8,11 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   margin-bottom: 100px;
 `;
+
 export const FeatureWrapper = styled.div`
   position: relative;
 `;
+
 export const FeatureTitle = styled.div`
   font-weight: 700;
   font-size: ${({ theme }) => theme.typography.size[2]};
@@ -25,9 +26,9 @@ export const FeatureTitle = styled.div`
   padding: 21px 20px;
   box-sizing: border-box;
   margin-bottom: 30px;
-
-  //TODO полосочки
+  box-shadow: 0 0 8px 4px rgba(255, 137, 122, 0.2);
 `;
+
 export const FeatureDescription = styled.div`
   font-weight: 500;
   font-size: ${({ theme }) => theme.typography.size[4]};

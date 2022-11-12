@@ -23,6 +23,7 @@ export const Title = styled.h2`
 
   span {
     max-height: 106px;
+    max-width: 454px;
     display: block;
     //TODO
     background: rgba(254, 111, 95, 0.2);
@@ -63,6 +64,7 @@ export const Title = styled.h2`
 `;
 
 export const Features = styled.div`
+  position: relative;
   display: flex;
   gap: 70px;
   margin-left: 35%;
@@ -235,4 +237,16 @@ export const RightFeatures = styled(LeftFeatures)`
   &:after {
     display: none;
   }
+`;
+
+export const BackgroundFlash = styled.div`
+  position: absolute;
+  width: 277px;
+  height: 378px;
+  right: 30%;
+  top: -10%;
+  background: linear-gradient(180deg, #372c6c 0%, #2d4b60 50%, #2d4b60 100%);
+  -webkit-filter: blur(200px);
+  filter: blur(200px);
+  z-index: -1;
 `;

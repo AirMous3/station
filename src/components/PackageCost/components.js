@@ -143,9 +143,11 @@ export const EnglishFeatureDescription = styled.div`
 `;
 
 export const EnglishButton = styled(Button)`
+  max-width: 410px;
   padding-left: 48px;
   padding-right: 48px;
   margin-top: 91px;
+  box-sizing: content-box;
 `;
 
 export const EnglishFeatureNumber = styled.div`

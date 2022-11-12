@@ -11,6 +11,8 @@ export const JobAssistance = () => {
       </S.Title>
       <Container>
         <S.Features>
+          <S.BackgroundFlash />
+
           <S.LeftFeatures>
             {leftJobFeatures.map(({ title, description }) => (
               <S.FeatureWrapper key={title}>
@@ -22,6 +24,7 @@ export const JobAssistance = () => {
               </S.FeatureWrapper>
             ))}
           </S.LeftFeatures>
+
           <S.RightFeatures>
             {rightJobFeatures.map(({ title, description }) => (
               <S.FeatureWrapper key={title}>

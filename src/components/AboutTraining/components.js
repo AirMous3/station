@@ -4,14 +4,13 @@ import styled from 'styled-components';
 import cross from '@/assets/icons/cross.svg';
 import { ArticleTitle } from '@/components/Devops/components';
 
-
 export const Section = styled.section`
   margin-top: 35px;
   margin-bottom: 150px;
 `;
 
 export const Article = styled(ArticleTitle)`
-  margin-bottom: 13px;
+  margin-bottom: 55px;
 `;
 
 export const ArticleDescription = styled.div`
@@ -19,7 +18,6 @@ export const ArticleDescription = styled.div`
   font-size: ${({ theme }) => theme.typography.size[7]};
   color: ${({ theme }) => theme.colors.text.lightGrey};
   max-width: 870px;
-  margin-top: 30px;
 `;
 
 export const FeaturesWrapper = styled.ul`
