@@ -17,30 +17,35 @@ export const OurTeam = () => {
         <S.Article>Наша команда</S.Article>
 
         <S.ImagesWrapper>
-          {mentorConfig.map(({ image, mentorId, name, description, fullImage }) => {
-            let active = mentorId === isOpen;
-            return (
-              <S.TeamWrapper key={mentorId}>
-                <S.ImageWrapper active={active} onClick={() => handleClick(mentorId)}>
-                  <img src={image} alt="teamImage" />
-                </S.ImageWrapper>
+          {mentorConfig.map(
+            ({ image, mentorId, name, description, fullImage }) => {
+              let active = mentorId === isOpen;
+              return (
+                <S.TeamWrapper key={mentorId}>
+                  <S.ImageWrapper
+                    active={active}
+                    onClick={() => handleClick(mentorId)}
+                  >
+                    <img src={image} alt="teamImage" />
+                  </S.ImageWrapper>
 
-                {active && (
-                  <S.AboutMentorWrapper key={mentorId}>
-                    <S.BackgroundFlash />
+                  {active && (
+                    <S.AboutMentorWrapper key={mentorId}>
+                      <S.BackgroundFlash />
 
-                    <S.MentorImageWrapper>
-                      <img src={fullImage} alt="mentorImage" />
-                    </S.MentorImageWrapper>
+                      <S.MentorImageWrapper>
+                        <img src={fullImage} alt="mentorImage" />
+                      </S.MentorImageWrapper>
 
-                    <S.MentorName>{name}</S.MentorName>
+                      <S.MentorName>{name}</S.MentorName>
 
-                    <S.MentorDescription>{description}</S.MentorDescription>
-                  </S.AboutMentorWrapper>
-                )}
-              </S.TeamWrapper>
-            );
-          })}
+                      <S.MentorDescription>{description}</S.MentorDescription>
+                    </S.AboutMentorWrapper>
+                  )}
+                </S.TeamWrapper>
+              );
+            },
+          )}
         </S.ImagesWrapper>
       </Container>
     </S.Section>

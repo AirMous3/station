@@ -29,12 +29,15 @@ export const Circle = styled(motion.div)`
   &:before {
     content: '';
     position: absolute;
-    top: -2px;
-    bottom: -2px;
+    top: -4px;
+    bottom: -6px;
     left: -2px;
-    right: -2px;
-    //  TODO
-    background: linear-gradient(326.78deg, #fe6f5f 11.13%, rgba(0, 0, 0, 0) 73.02%);
+    right: -6px;
+    background: linear-gradient(
+      326.78deg,
+      #fe6f5f 11.13%,
+      rgba(0, 0, 0, 0) 73.02%
+    );
     border-radius: 50%;
     z-index: -1;
   }

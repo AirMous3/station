@@ -3,7 +3,7 @@ import { useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 
-import image from '@/assets/icons/getStartedImage.png';
+import image from '@/assets/images/getStartedImage.png';
 import { Container } from '@/components/Container';
 
 import * as S from './components';
@@ -68,7 +68,9 @@ export const GetStarted = () => {
                 placeholder="Имя"
                 name="name"
                 value={name}
-                onChange={(e) => setState({ ...state, name: e.currentTarget.value })}
+                onChange={(e) =>
+                  setState({ ...state, name: e.currentTarget.value })
+                }
               />
               <PhoneInput
                 buttonStyle={buttonStyle}
@@ -83,13 +85,15 @@ export const GetStarted = () => {
                 placeholder="Комментарий..."
                 name="message"
                 value={message}
-                onChange={(e) => setState({ ...state, message: e.currentTarget.value })}
+                onChange={(e) =>
+                  setState({ ...state, message: e.currentTarget.value })
+                }
               />
               <S.RulesWrapper>
                 <S.Checkbox type="checkbox" />
                 <S.Rules>
-                  Я ознакомился c <span>договором оферты</span> и согласен на обработку
-                  персональных данных
+                  Я ознакомился c <span>договором оферты</span> и согласен на
+                  обработку персональных данных
                 </S.Rules>
               </S.RulesWrapper>
             </S.InputsWrapper>

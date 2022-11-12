@@ -6,6 +6,7 @@ import {
   firstPartOfProgram,
   secondPartOfProgram,
 } from '@/components/LearningProgram/config';
+import { PRESERVE } from '@/constants/framer';
 
 import * as S from './components';
 
@@ -36,26 +37,28 @@ export const LearningProgram = () => {
             levelTitle,
           }) => {
             return (
-              <S.Level key={levelTitle} layout="preserve">
-                <S.LevelQuarter layout="preserve">{quarter}</S.LevelQuarter>
+              <S.Level key={levelTitle} layout={PRESERVE}>
+                <S.LevelQuarter layout={PRESERVE}>{quarter}</S.LevelQuarter>
 
-                <S.LevelWrapper layout="preserve">
-                  <S.LevelInfoWrapper layout="preserve">
-                    <S.LevelTitle layout="preserve">{levelTitle}</S.LevelTitle>
+                <S.LevelWrapper layout={PRESERVE}>
+                  <S.LevelInfoWrapper layout={PRESERVE}>
+                    <S.LevelTitle layout={PRESERVE}>{levelTitle}</S.LevelTitle>
 
-                    <S.LevelDescription layout="preserve">
+                    <S.LevelDescription layout={PRESERVE}>
                       {levelDescription}
                     </S.LevelDescription>
 
-                    <S.LevelProjectTitle layout="preserve">Проект</S.LevelProjectTitle>
+                    <S.LevelProjectTitle layout={PRESERVE}>
+                      Проект
+                    </S.LevelProjectTitle>
 
-                    <S.LevelProjectDescription layout="preserve">
+                    <S.LevelProjectDescription layout={PRESERVE}>
                       {projectDescription}
                     </S.LevelProjectDescription>
                   </S.LevelInfoWrapper>
 
-                  <S.CourseWrapper layout="preserve">
-                    <S.CourseTitle layout="preserve">Курсы</S.CourseTitle>
+                  <S.CourseWrapper layout={PRESERVE}>
+                    <S.CourseTitle layout={PRESERVE}>Курсы</S.CourseTitle>
                     <Accordion courseFeatures={courseFeatures} />
                   </S.CourseWrapper>
                 </S.LevelWrapper>

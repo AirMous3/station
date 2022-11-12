@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 import cross from '@/assets/icons/cross.svg';
 import { ArticleTitle } from '@/components/Devops/components';

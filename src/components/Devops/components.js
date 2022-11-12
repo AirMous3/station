@@ -87,7 +87,8 @@ export const SalaryTablet = styled.div`
   box-sizing: border-box;
   border-radius: 40px;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
-  background: ${({ theme, index }) => theme.colors.background.salaryTablets[index]};
+  background: ${({ theme, index }) =>
+    theme.colors.background.salaryTablets[index]};
   background-clip: padding-box;
   border: solid 2px transparent;
 
@@ -101,7 +102,8 @@ export const SalaryTablet = styled.div`
     z-index: -1;
     margin: -2px;
     border-radius: inherit;
-    background: ${({ theme, index }) => theme.colors.background.linearGradients[index]};
+    background: ${({ theme, index }) =>
+      theme.colors.background.linearGradients[index]};
   }
 
   ${({ theme }) => theme.below.m`
@@ -156,7 +158,12 @@ export const BackgroundFlash = styled.div`
   height: 200%;
   left: 0;
   bottom: -100%;
-  background: linear-gradient(180deg, #1e446436 0%, #00399542 50%, #6066954f 100%);
+  background: linear-gradient(
+    180deg,
+    #1e446436 0%,
+    #00399542 50%,
+    #6066954f 100%
+  );
   filter: blur(450px);
   z-index: -1;
 `;

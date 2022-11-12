@@ -1,4 +1,11 @@
-export const CurveText = ({ children, height, width, radius, id, offset = '50%' }) => {
+export const CurveText = ({
+  children,
+  height,
+  width,
+  radius,
+  id,
+  offset = '50%',
+}) => {
   const vbox = [0, 0, width, height].join(' ');
 
   function circle(cx, cy, r, deg) {

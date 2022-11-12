@@ -2,21 +2,14 @@ import CircleType from 'circletype';
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 
-import mainImage2 from '@/assets/icons/mainImage2.png';
-import mainImage from '@/assets/icons/mainImage.png';
+import mainImage2 from '@/assets/images/mainImage2.png';
+import mainImage from '@/assets/images/mainImage.png';
 import { Container } from '@/components/Container';
 import { CurveText } from '@/components/CurveText';
-import {
-  HEIGHT,
-  INITIAL_DEVOPS_X_POSITION,
-  INITIAL_DEVOPS_Y_POSITION,
-  INITIAL_PROGRAM_X_POSITION,
-  INITIAL_PROGRAM_Y_POSITION,
-  RADIUS,
-  WIDTH,
-} from '@/components/Main/constants';
 
+import { DEVOPS_TITLE_ANIMATION, PROGRAM_TITLE_ANIMATION } from './animations';
 import * as S from './components';
+import { HEIGHT, RADIUS, WIDTH } from './constants';
 
 const useScrollPosition = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -51,19 +44,15 @@ export const Main = () => {
         <S.ImageWrapper>
           <Link to="getStarted" smooth={true}>
             <S.Circle id={'circle'}>
-              у з н а т ь у з н а т ь у з н а т ь у з н а т ь у з н а т ь у з н а т ь
+              у з н а т ь у з н а т ь у з н а т ь у з н а т ь у з н а т ь у з н
+              а т ь
             </S.Circle>
           </Link>
           <S.BackgroundFlash />
 
           <S.SecondBackgroundFlash />
 
-          <S.DevopsTitle
-            initial={{
-              y: INITIAL_DEVOPS_Y_POSITION,
-              x: INITIAL_DEVOPS_X_POSITION,
-            }}
-          >
+          <S.DevopsTitle initial={DEVOPS_TITLE_ANIMATION}>
             <CurveText
               id={1}
               width={WIDTH}
@@ -76,12 +65,7 @@ export const Main = () => {
             </CurveText>
           </S.DevopsTitle>
 
-          <S.ProgramTitle
-            initial={{
-              y: INITIAL_PROGRAM_Y_POSITION,
-              x: INITIAL_PROGRAM_X_POSITION,
-            }}
-          >
+          <S.ProgramTitle initial={PROGRAM_TITLE_ANIMATION}>
             <CurveText
               id={2}
               width={WIDTH}

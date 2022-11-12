@@ -1,5 +1,5 @@
-import image from '@/assets/icons/teamImage.png';
 import fullImage from '@/assets/images/mentorImage.png';
+import image from '@/assets/images/teamImage.png';
 
 export const mentorConfig = [
   {
@@ -9,7 +9,13 @@ export const mentorConfig = [
     fullImage,
     image,
   },
-  { mentorId: 2, name: 'Алексей', description: 'Бывший студент', fullImage, image },
+  {
+    mentorId: 2,
+    name: 'Алексей',
+    description: 'Бывший студент',
+    fullImage,
+    image,
+  },
   {
     mentorId: 3,
     name: 'Светлана',
@@ -17,5 +23,11 @@ export const mentorConfig = [
     fullImage,
     image,
   },
-  { mentorId: 4, name: 'Георгий', description: 'Наипиздатейший', fullImage, image },
+  {
+    mentorId: 4,
+    name: 'Георгий',
+    description: 'Наипиздатейший',
+    fullImage,
+    image,
+  },
 ];

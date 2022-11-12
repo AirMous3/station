@@ -30,7 +30,9 @@ export const PackageCost = () => {
         {englishConfig.map(
           ({ description, title, number, numberColor, titleColor, top }) => (
             <S.EnglishFeature key={title}>
-              <S.EnglishFeatureTitle color={titleColor}>{title}</S.EnglishFeatureTitle>
+              <S.EnglishFeatureTitle color={titleColor}>
+                {title}
+              </S.EnglishFeatureTitle>
 
               <S.EnglishFeatureDescription
                 dangerouslySetInnerHTML={{ __html: description }}

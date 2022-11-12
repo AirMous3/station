@@ -8,9 +8,15 @@ export const Accordion = ({ courseFeatures }) => {
   return courseFeatures.map(({ featureTitle, featureDescription, id }) => {
     const active = isOpenDescription === id;
     return (
-      <S.CourseFeatureWrapper layout="preserve" key={id} transition={{ duration: 0.01 }}>
+      <S.CourseFeatureWrapper
+        layout="preserve"
+        key={id}
+        transition={{ duration: 0.01 }}
+      >
         <S.FeatureTitleWrapper layout="preserve">
-          <S.CourseFeatureTitle layout="preserve">{featureTitle}</S.CourseFeatureTitle>
+          <S.CourseFeatureTitle layout="preserve">
+            {featureTitle}
+          </S.CourseFeatureTitle>
 
           {featureDescription && (
             <S.CourseCross

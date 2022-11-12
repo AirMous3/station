@@ -31,7 +31,10 @@ export const Levels = () => {
                 </S.LevelDescription>
               )}
 
-              <ArrowButton active={active} onClick={() => handleClick(number)} />
+              <ArrowButton
+                active={active}
+                onClick={() => handleClick(number)}
+              />
             </S.LevelWrapper>
           </S.LevelsWrapper>
         );

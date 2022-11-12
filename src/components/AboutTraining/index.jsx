@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-scroll';
 
+import { FEATURE_DESCRIPTION_ANIMATION } from '@/components/AboutTraining/animations';
 import { trainingFeaturesConfig } from '@/components/AboutTraining/config';
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
+import { HIDDEN, PRESERVE, VISIBLE } from '@/constants/framer';
 
 import * as S from './components';
 
@@ -21,8 +23,8 @@ export const AboutTraining = () => {
         <S.Article>Как проходит обчуение</S.Article>
 
         <S.ArticleDescription>
-          За 6 месяцев Вы освоите основные навыки и инструменты, которые требуются
-          DevOps-инженерам.
+          За 6 месяцев Вы освоите основные навыки и инструменты, которые
+          требуются DevOps-инженерам.
         </S.ArticleDescription>
 
         <S.FeaturesWrapper>
@@ -31,33 +33,35 @@ export const AboutTraining = () => {
             return (
               <S.Feature
                 key={number}
+                layout={PRESERVE}
+                initial={HIDDEN}
+                animate={VISIBLE}
+                onClick={() => handleClick(active ? undefined : number)}
                 onPointerOver={() => setHoveredFeature(number)}
                 onPointerOut={() => setHoveredFeature(undefined)}
-                layout="preserve"
-                onClick={() => handleClick(active ? undefined : number)}
               >
-                {hoveredFeature === number && <S.Background layoutId="background" />}
-                <S.FeatureTitle layout="preserve" number={number}>
+                {hoveredFeature === number && (
+                  <S.Background layoutId="background" />
+                )}
+                <S.FeatureTitle layout={PRESERVE} number={number}>
                   {title}
                 </S.FeatureTitle>
                 {active && (
                   <S.FeatureDescription
-                    layout="preserve"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.8 }}
+                    layout={PRESERVE}
+                    variants={FEATURE_DESCRIPTION_ANIMATION}
                   >
                     {description}
                   </S.FeatureDescription>
                 )}
-                <S.CrossWrapper layout="preserve">
+                <S.CrossWrapper layout={PRESERVE}>
                   <S.Cross
-                    layout="preserve"
-                    animate={active ? { y: -60, rotate: 405 } : { y: 0, rotate: 0 }}
+                    layout={PRESERVE}
+                    animate={
+                      active ? { y: -60, rotate: 405 } : { y: 0, rotate: 0 }
+                    }
                     exit={{ y: 0 }}
                     transition={{ duration: 0.5 }}
-                    active={active}
                     onClick={() => handleClick(active ? undefined : number)}
                   />
                 </S.CrossWrapper>

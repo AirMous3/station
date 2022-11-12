@@ -7,7 +7,8 @@ export const courseFeaturesConfig = [
   { specialBlock: true },
   {
     title: 'Востребованные навыки ',
-    description: 'более 2000 вакансий требуют именно те навыки, которым мы обучаем',
+    description:
+      'более 2000 вакансий требуют именно те навыки, которым мы обучаем',
   },
   { specialBlock: true },
   {

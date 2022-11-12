@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components/macro';
 
 import { ArticleTitle } from '@/components/Devops/components';
 
@@ -29,7 +29,7 @@ export const FeedbackDescriptionWrapper = styled.div`
   font-size: ${({ theme }) => theme.typography.size[4]};
   color: ${({ theme }) => theme.colors.text.lightGrey};
 `;
-export const FeedbackDescription = styled.div`
+export const FeedbackDescription = styled(motion.div)`
   min-height: 234px;
   max-width: 696px;
 `;

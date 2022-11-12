@@ -1,5 +1,8 @@
 import { Container } from '@/components/Container';
-import { leftJobFeatures, rightJobFeatures } from '@/components/JobAssistance/config';
+import {
+  leftJobFeatures,
+  rightJobFeatures,
+} from '@/components/JobAssistance/config';
 
 import * as S from './components';
 
