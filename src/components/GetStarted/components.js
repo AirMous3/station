@@ -1,5 +1,6 @@
 import styled from 'styled-components/macro';
 
+import star from '@/assets/icons/star.svg';
 import { Button } from '@/components/Button';
 import { ArticleTitle } from '@/components/Devops/components';
 

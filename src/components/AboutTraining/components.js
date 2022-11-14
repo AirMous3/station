@@ -5,6 +5,7 @@ import cross from '@/assets/icons/cross.svg';
 import { ArticleTitle } from '@/components/Devops/components';
 
 export const Section = styled.section`
+  position: relative;
   margin-top: 35px;
   margin-bottom: 150px;
 `;
@@ -100,19 +101,19 @@ export const Background = styled(motion.div)`
   z-index: -1;
 `;
 
-export const BackgroundFlash = styled.li`
+export const BackgroundFlash = styled.div`
   position: absolute;
   width: 311px;
-  height: 299px;
-  top: -125px;
-  right: 364px;
+  height: 331px;
+  top: 118px;
+  right: 456px;
   background: linear-gradient(180deg, #420c64c2 0%, #1f9bbd80 100%);
-  filter: blur(700px);
+  filter: blur(89px);
   z-index: -1;
 `;
 
 export const BackgroundFlashSecond = styled(BackgroundFlash)`
-  top: 136px;
+  top: 440px;
   right: 0;
   background: linear-gradient(180deg, #1f95b7 0%, #8123a2d6 100%);
 `;

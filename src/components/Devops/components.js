@@ -149,7 +149,7 @@ export const BackgroundFlashSecond = styled.div`
     rgba(95, 14, 145, 0.1) 0%,
     rgba(31, 155, 189, 0.1) 100%
   );
-  filter: blur(200px);
+  filter: blur(100px);
 `;
 
 export const BackgroundFlash = styled.div`
@@ -164,7 +164,7 @@ export const BackgroundFlash = styled.div`
     #00399542 50%,
     #6066954f 100%
   );
-  filter: blur(450px);
+  -webkit-filter: blur(150px);
   z-index: -1;
 `;
 //background: linear-gradient(180deg,#0c0b17e6 0%,#0e228c38 50%,#15182f 100%);

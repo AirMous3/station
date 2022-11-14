@@ -4,7 +4,9 @@ import styled from 'styled-components';
 import { ArticleTitle } from '@/components/Devops/components';
 
 export const Section = styled.section`
+  position: relative;
   margin-top: 170px;
+  margin-bottom: 150px;
 `;
 
 export const Article = styled(ArticleTitle)`
@@ -13,9 +15,7 @@ export const Article = styled(ArticleTitle)`
 `;
 
 export const Features = styled.div`
-  position: relative;
   display: flex;
-  margin-bottom: 150px;
 `;
 
 export const Circle = styled(motion.div)`
@@ -41,14 +41,26 @@ export const Circle = styled(motion.div)`
     border-radius: 50%;
     z-index: -1;
   }
+  &:after {
+    content: '';
+    position: absolute;
+    width: 588px;
+    height: 588px;
+    left: 0;
+    top: 0;
+    background: linear-gradient(180deg, #201c42 0%, #8123a221 100%);
+    filter: blur(100px);
+    transform: rotate(26.63deg);
+  }
 `;
 
 export const FeaturesWrapper = styled.ul`
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 45px;
-  margin-top: 30px;
   max-width: 771px;
+  margin-top: 30px;
 `;
 
 export const FeatureNumber = styled.div`
@@ -62,7 +74,7 @@ export const FeatureNumber = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 20px 8px rgba(176, 173, 184, 0.2);
+  box-shadow: 0px 0px 9px 6px rgba(176, 173, 184, 0.2);
 
   &:before {
     content: '';
@@ -105,7 +117,7 @@ export const FeatureWrapper = styled.li`
 
   &:hover {
     ${FeatureNumber} {
-      box-shadow: 0px 0px 20px 8px rgba(100, 212, 244, 0.2);
+      box-shadow: 0px 0px 9px 6px rgb(41 111 131 / 65%);
 
       &:after {
         opacity: 1;
@@ -124,4 +136,16 @@ export const FeatureTitle = styled.div`
   font-weight: 700;
   font-size: ${({ theme }) => theme.typography.size[4]};
   color: ${({ theme }) => theme.colors.text.lightGrey};
+`;
+
+export const BackgroundFlash = styled.div`
+  position: absolute;
+  width: 288px;
+  height: 214.02px;
+  left: 0;
+  top: 249.55px;
+  z-index: -1;
+  background: linear-gradient(180deg, #1f95b7 0%, #8123a2 100%);
+  filter: blur(100px);
+  transform: rotate(26.63deg);
 `;

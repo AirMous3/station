@@ -70,8 +70,8 @@ export const BackgroundFlash = styled.div`
   z-index: -1;
   width: 351.55px;
   height: 263.65px;
-  left: 105px;
-  top: -203px;
+  right: 12%;
+  top: -30%;
   background: linear-gradient(
         to bottom,
         rgba(23, 20, 20, 0.51),
@@ -81,7 +81,7 @@ export const BackgroundFlash = styled.div`
     linear-gradient(180deg, #006b8a 0%, #812a9f 100%) no-repeat border-box;
 
   background-origin: padding-box, padding-box;
-  filter: blur(150px);
+  filter: blur(114px);
   transform: rotate(-1.4deg);
 `;
 /*linear-gradient( to bottom, rgba(0, 0, 0, 0.51), rgba(227, 227, 227, 0.51) ) no-repeat border-box, linear-gradient(180deg,#176880 0%,#671484 100%) no-repeat border-box;*/

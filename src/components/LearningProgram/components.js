@@ -86,7 +86,6 @@ export const FeatureTitleWrapper = styled(motion.div)`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  min-height: 51px;
 `;
 
 export const CourseCross = styled(Cross)`
@@ -116,4 +115,14 @@ export const CourseFeatureDescription = styled(motion.div)`
   max-width: 350px;
   margin-top: 10px;
   margin-bottom: 20px;
+`;
+
+export const BackgroundFlash = styled(motion.div)`
+  position: absolute;
+  width: 405px;
+  height: 449px;
+  background: linear-gradient(180deg, #1f95b7 0%, #8123a2 100%);
+  filter: blur(200px);
+  transform: rotate(86.42deg);
+  z-index: -1;
 `;

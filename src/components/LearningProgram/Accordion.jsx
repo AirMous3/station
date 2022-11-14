@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { PRESERVE } from '@/constants/framer';
+
 import * as S from './components';
 
 export const Accordion = ({ courseFeatures }) => {
@@ -9,18 +11,23 @@ export const Accordion = ({ courseFeatures }) => {
     const active = isOpenDescription === id;
     return (
       <S.CourseFeatureWrapper
-        layout="preserve"
+        layout={PRESERVE}
         key={id}
         transition={{ duration: 0.01 }}
       >
-        <S.FeatureTitleWrapper layout="preserve">
-          <S.CourseFeatureTitle layout="preserve">
+        <S.FeatureTitleWrapper layout={PRESERVE}>
+          <S.CourseFeatureTitle layout={PRESERVE}>
             {featureTitle}
           </S.CourseFeatureTitle>
 
           {featureDescription && (
             <S.CourseCross
-              layout="preserve"
+              layout={PRESERVE}
+              animate={
+                active
+                  ? { rotate: 135, transition: { duration: 0.5 } }
+                  : { rotate: 0, transition: { duration: 0.5 } }
+              }
               onClick={() => setIsOpenDescription(active ? undefined : id)}
             />
           )}
@@ -28,7 +35,7 @@ export const Accordion = ({ courseFeatures }) => {
 
         {active && (
           <S.CourseFeatureDescription
-            layout="preserve"
+            layout={PRESERVE}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

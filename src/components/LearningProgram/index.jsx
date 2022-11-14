@@ -9,6 +9,7 @@ import {
 import { PRESERVE } from '@/constants/framer';
 
 import * as S from './components';
+import { BackgroundFlash } from './components';
 
 export const LearningProgram = () => {
   const [learningProgram, setLearningProgram] = useState(firstPartOfProgram);
@@ -37,7 +38,12 @@ export const LearningProgram = () => {
             levelTitle,
           }) => {
             return (
-              <S.Level key={levelTitle} layout={PRESERVE}>
+              <S.Level
+                key={levelTitle}
+                layout={PRESERVE}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, transition: { duration: 0.5 } }}
+              >
                 <S.LevelQuarter layout={PRESERVE}>{quarter}</S.LevelQuarter>
 
                 <S.LevelWrapper layout={PRESERVE}>

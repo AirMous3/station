@@ -20,6 +20,8 @@ export const AboutTraining = () => {
   return (
     <S.Section>
       <Container>
+        <S.BackgroundFlash />
+        <S.BackgroundFlashSecond />
         <S.Article>Как проходит обчуение</S.Article>
 
         <S.ArticleDescription>
@@ -28,9 +30,6 @@ export const AboutTraining = () => {
         </S.ArticleDescription>
 
         <S.FeaturesWrapper>
-          <S.BackgroundFlash />
-          <S.BackgroundFlashSecond />
-
           {trainingFeaturesConfig.map(({ number, title, description }) => {
             const active = isOpenDescription === number;
             return (

@@ -246,7 +246,6 @@ export const BackgroundFlash = styled.div`
   right: 30%;
   top: -10%;
   background: linear-gradient(180deg, #372c6c 0%, #2d4b60 50%, #2d4b60 100%);
-  -webkit-filter: blur(200px);
-  filter: blur(200px);
+  filter: blur(100px);
   z-index: -1;
 `;

@@ -9,7 +9,6 @@ export const Curriculum = () => {
       <Container>
         <S.Article>Чему вы научитесь </S.Article>
       </Container>
-
       <S.Features>
         <S.Circle />
 

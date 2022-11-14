@@ -17,6 +17,8 @@ export const OurTeam = () => {
         <S.Article>Наша команда</S.Article>
 
         <S.ImagesWrapper>
+          <S.BackgroundFlash />
+
           {mentorConfig.map(
             ({ image, mentorId, name, description, fullImage }) => {
               let active = mentorId === isOpen;
@@ -31,8 +33,6 @@ export const OurTeam = () => {
 
                   {active && (
                     <S.AboutMentorWrapper key={mentorId}>
-                      <S.BackgroundFlash />
-
                       <S.MentorImageWrapper>
                         <img src={fullImage} alt="mentorImage" />
                       </S.MentorImageWrapper>
