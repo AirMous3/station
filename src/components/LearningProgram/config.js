@@ -40,6 +40,10 @@ export const firstPartOfProgram = [
         id: 4,
       },
     ],
+    backgroundFlash: {
+      color: 'linear-gradient(180deg, #1F95B7 0%, #8123A2 100%)',
+      position: { top: '300px;', left: '300px;' },
+    },
   },
   {
     quarter: 'II четверть',
@@ -81,6 +85,10 @@ export const firstPartOfProgram = [
         id: 7,
       },
     ],
+    backgroundFlash: {
+      color: 'linear-gradient(173deg,#1F95B7 0%,#8123A2 100%)',
+      position: { left: '350px;', bottom: '-140px;' },
+    },
   },
 ];
 
@@ -154,6 +162,10 @@ export const secondPartOfProgram = [
         id: 13,
       },
     ],
+    backgroundFlash: {
+      color: 'linear-gradient(180deg, #1F95B7 0%, #8123A2 100%)',
+      position: { bottom: '-200px;', left: '0;' },
+    },
   },
   {
     levelTitle: 'Курсы вне четверти',
@@ -219,5 +231,9 @@ export const secondPartOfProgram = [
         id: 21,
       },
     ],
+    backgroundFlash: {
+      color: 'linear-gradient(46deg,#1F95B7 0%,#8123A2 100%)',
+      position: { right: '100px;', top: '100px;' },
+    },
   },
 ];

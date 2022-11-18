@@ -5,7 +5,7 @@ import { PRESERVE } from '@/constants/framer';
 import * as S from './components';
 
 export const Accordion = ({ courseFeatures }) => {
-  const [isOpenDescription, setIsOpenDescription] = useState();
+  const [isOpenDescription, setIsOpenDescription] = useState(1);
 
   return courseFeatures.map(({ featureTitle, featureDescription, id }) => {
     const active = isOpenDescription === id;

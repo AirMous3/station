@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import styled from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro';
 
 import { Cross } from '@/components/AboutTraining/components';
 import { ArticleTitle } from '@/components/Devops/components';
@@ -13,6 +13,7 @@ export const Title = styled(ArticleTitle)`
 `;
 
 export const Level = styled(motion.div)`
+  position: relative;
   border-top: 2px solid #3a3a3a;
   display: flex;
   flex-direction: column;
@@ -120,9 +121,17 @@ export const CourseFeatureDescription = styled(motion.div)`
 export const BackgroundFlash = styled(motion.div)`
   position: absolute;
   width: 405px;
-  height: 449px;
-  background: linear-gradient(180deg, #1f95b7 0%, #8123a2 100%);
-  filter: blur(200px);
-  transform: rotate(86.42deg);
+  height: 350px;
+  background: ${({ color }) => color};
+  filter: blur(170px);
   z-index: -1;
+
+  ${({ position }) =>
+    position &&
+    css`
+      left: ${position.left};
+      top: ${position.top};
+      bottom: ${position.bottom};
+      right: ${position.right};
+    `}
 `;

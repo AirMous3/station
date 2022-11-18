@@ -11,7 +11,7 @@ export const Section = styled.section`
 
 export const Article = styled(ArticleTitle)`
   position: absolute;
-  top: -35px;
+  top: -85px;
   left: 90px;
   line-height: 73px;
   text-align: center;
@@ -41,6 +41,7 @@ export const GetStartedForm = styled.form`
 
   .react-tel-input {
     text-align: start;
+    max-width: 280px;
   }
 
   .react-tel-input .flag-dropdown.open .selected-flag {
@@ -57,13 +58,11 @@ export const GetStartedForm = styled.form`
 `;
 
 export const Input = styled.input`
-  max-width: 308px;
-  min-width: 308px;
+  min-width: 280px;
   min-height: 44px;
   background-color: inherit;
   outline: none;
-  border: 1px solid #cccccc;
-  border-radius: 12px;
+  border: none;
   padding: 10px 18px;
   color: ${({ theme }) => theme.colors.text.main};
   font-size: ${({ theme }) => theme.typography.size[1]};
@@ -142,4 +141,35 @@ export const Rules = styled.div`
 export const Checkbox = styled.input`
   width: 20px;
   height: 20px;
+`;
+
+export const InputWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  max-width: 308px;
+  border: 1px solid #cccccc;
+  border-radius: 12px;
+`;
+
+export const InputStarImage = styled.div`
+  background-image: url(${star});
+  background-repeat: no-repeat;
+  height: 7px;
+  width: 7px;
+`;
+
+export const Comments = styled.textarea`
+  font-family: 'Roboto';
+  max-width: 280px;
+  min-width: 280px;
+  min-height: 92px;
+  border: none;
+  resize: none;
+  background: inherit;
+  outline: none;
+  padding: 10px 20px 20px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+  color: #999999;
 `;

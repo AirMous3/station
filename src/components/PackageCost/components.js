@@ -164,10 +164,10 @@ export const EnglishFeatureNumber = styled.div`
 export const BackgroundFlash = styled.div`
   position: absolute;
   width: 50%;
-  height: 100%;
-  top: -50px;
+  height: 50%;
+  top: 0;
   right: 250px;
-  background: linear-gradient(180deg, #1e2a31 0%, #30263c 100%);
+  background: linear-gradient(180deg, #1f95b7 0%, #8123a2 100%);
   filter: blur(300px);
   transform: rotate(24.51deg);
   z-index: -1;

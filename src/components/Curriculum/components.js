@@ -44,12 +44,12 @@ export const Circle = styled(motion.div)`
   &:after {
     content: '';
     position: absolute;
-    width: 588px;
-    height: 588px;
+    width: 409px;
+    height: 440px;
     left: 0;
     top: 0;
-    background: linear-gradient(180deg, #201c42 0%, #8123a221 100%);
-    filter: blur(100px);
+    background: linear-gradient(180deg, #1f95b7 0%, #8123a2 100%);
+    filter: blur(248px);
     transform: rotate(26.63deg);
   }
 `;

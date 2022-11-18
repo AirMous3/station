@@ -8,6 +8,7 @@ import { Container } from '@/components/Container';
 
 import * as S from './components';
 
+
 const buttonStyle = {
   backgroundColor: 'inherit',
   color: 'white',
@@ -15,16 +16,14 @@ const buttonStyle = {
 };
 
 const inputStyle = {
-  maxWidth: '308px',
-  minWidth: '308px',
+  maxWidth: '280px',
+  minWidth: '280px',
   minHeight: '44px',
   background: 'inherit',
-  border: '1px solid #cccccc',
-  borderRadius: '12px',
-  padding: '10px 18px 10px 50px',
   color: '#2E2D2F',
   fontWeight: '600',
   fontSize: '16px',
+  border: 'none',
 };
 
 export const GetStarted = () => {
@@ -63,32 +62,43 @@ export const GetStarted = () => {
 
           <S.GetStartedForm>
             <S.InputsWrapper>
-              <S.Input
-                type="text"
-                placeholder="Имя"
-                name="name"
-                value={name}
-                onChange={(e) =>
-                  setState({ ...state, name: e.currentTarget.value })
-                }
-              />
-              <PhoneInput
-                buttonStyle={buttonStyle}
-                country={'by'}
-                inputStyle={inputStyle}
-                value={phone}
-                onChange={(phone) => setState({ ...state, phone })}
-                name="phone"
-              />
-              <S.CommentInput
-                type="text"
-                placeholder="Комментарий..."
-                name="message"
-                value={message}
-                onChange={(e) =>
-                  setState({ ...state, message: e.currentTarget.value })
-                }
-              />
+              <S.InputWrapper>
+                <S.Input
+                  type="text"
+                  placeholder="Имя"
+                  name="name"
+                  value={name}
+                  onChange={(e) =>
+                    setState({ ...state, name: e.currentTarget.value })
+                  }
+                />
+                <S.InputStarImage />
+              </S.InputWrapper>
+
+              <S.InputWrapper>
+                <PhoneInput
+                  buttonStyle={buttonStyle}
+                  country={'by'}
+                  inputStyle={inputStyle}
+                  value={phone}
+                  onChange={(phone) => setState({ ...state, phone })}
+                  name="phone"
+                />
+                <S.InputStarImage />
+              </S.InputWrapper>
+
+              <S.InputWrapper>
+                <S.Comments
+                  placeholder="Комментарий..."
+                  value={message}
+                  name="message"
+                  onChange={(e) =>
+                    setState({ ...state, message: e.currentTarget.value })
+                  }
+                />
+                <S.InputStarImage />
+              </S.InputWrapper>
+
               <S.RulesWrapper>
                 <S.Checkbox type="checkbox" />
                 <S.Rules>
