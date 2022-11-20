@@ -4,6 +4,7 @@ export const devopsConfig = [
     title: 'Занятия 3 раза  в неделю',
     description: '3 месяца буткемпа заменят длительное самообучение и курсы',
     maxWidth: '275px',
+    custom: 0.1,
   },
   {
     number: '02.',
@@ -12,6 +13,7 @@ export const devopsConfig = [
       'Решайте реальные задачи, учитесь работать в команде и осваивайте самые актуальные DevOps практики и инструменты',
     maxWidth: '325px',
     textAlign: 'center',
+    custom: 0.5,
   },
   {
     number: '03.',
@@ -19,6 +21,7 @@ export const devopsConfig = [
     description:
       'Комплексная система, которая поможет получить выгодные офферы в перспективных проектах',
     maxWidth: '305px',
+    custom: 0.7,
   },
 ];
 

@@ -1,6 +1,7 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components/macro';
 
-export const Section = styled.section`
+export const Section = styled(motion.section)`
   position: relative;
   margin-bottom: 200px;
   margin-top: 70px;
@@ -12,7 +13,7 @@ export const TitleWrapper = styled.div`
   min-height: 400px;
 `;
 
-export const Title = styled.h1`
+export const Title = styled(motion.h1)`
   font-family: Generator;
   font-weight: 800;
   color: ${({ theme }) => theme.colors.text.turquoise};
@@ -20,7 +21,7 @@ export const Title = styled.h1`
   padding-left: 156px;
 `;
 
-export const Description = styled.div`
+export const Description = styled(motion.div)`
   font-weight: 500;
   font-size: ${({ theme }) => theme.typography.size[4]};
   position: absolute;
@@ -45,7 +46,7 @@ export const BackgroundTitle = styled.div`
   right: -87px;
 `;
 
-export const ArticleTitle = styled.h2`
+export const ArticleTitle = styled(motion.h2)`
   font-family: NAMU;
   font-weight: 700;
   font-size: ${({ theme }) => theme.typography.size[12]};

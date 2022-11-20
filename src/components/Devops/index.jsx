@@ -2,16 +2,99 @@ import backgroundImageDevops from '@/assets/images/backgroundDevops.png';
 import { Container } from '@/components/Container';
 import { Feature } from '@/components/Devops/Feature';
 import { devopsConfig } from '@/components/Devops/config';
+import { HIDDEN, VISIBLE } from '@/constants/framer';
 
 import * as S from './components';
 import { salaries } from './config';
 
 export const Devops = () => {
+  const titleAnimation = {
+    hidden: {
+      opacity: 0,
+      y: 100,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1.5,
+      },
+    },
+  };
+  const descriptionAnimation = {
+    hidden: {
+      opacity: 0,
+      x: 200,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1.5,
+      },
+    },
+  };
+
+  const articleAnimation = {
+    hidden: {
+      opacity: 0,
+      x: -600,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1.5,
+      },
+    },
+  };
+
+  const secondArticleAnimation = {
+    hidden: {
+      opacity: 0,
+      x: -600,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 2.5,
+      },
+    },
+  };
+
+  // const salaryTabletAnimation = {
+  //   hidden: {
+  //     height: '10px',
+  //   },
+  //   visible: (custom) => ({
+  //     opacity: 1,
+  //     height: '100%',
+  //     transition: {
+  //       duration: custom + 1,
+  //     },
+  //   }),
+  // };
+  //
+  // const salaryAnimation = {
+  //   hidden: {
+  //     opacity: 0,
+  //   },
+  //   visible: (margin) => ({
+  //     opacity: 1,
+  //     margin,
+  //     transition: {
+  //       duration: 3,
+  //       delay: 5,
+  //     },
+  //   }),
+  // };
+
   return (
-    <S.Section>
+    <S.Section initial={HIDDEN} whileInView={VISIBLE} viewport={{ once: true }}>
       <S.TitleWrapper>
-        <S.Title>DevOps</S.Title>
-        <S.Description>
+        <S.Title variants={titleAnimation}>DevOps</S.Title>
+        <S.Description variants={descriptionAnimation}>
           инженеры контролируют все этапы создания продукта: от написания кода
           до релиза. Помогают отделам разработки и администрирования,
           синхронизируют их усилия и автоматизируют технические процессы. За
@@ -23,11 +106,13 @@ export const Devops = () => {
       </S.TitleWrapper>
 
       <Container>
-        <S.ArticleTitle>Как это будет</S.ArticleTitle>
+        <S.ArticleTitle variants={articleAnimation}>
+          Как это будет
+        </S.ArticleTitle>
 
         <S.FeaturesWrapper>
           {devopsConfig.map(
-            ({ number, title, description, maxWidth, textAlign }) => (
+            ({ number, title, description, maxWidth, textAlign, custom }) => (
               <Feature
                 key={number}
                 number={number}
@@ -35,12 +120,15 @@ export const Devops = () => {
                 description={description}
                 maxWidth={maxWidth}
                 textAlign={textAlign}
+                custom={custom}
               />
             ),
           )}
         </S.FeaturesWrapper>
 
-        <S.ArticleTitle>Востребованность на рынке</S.ArticleTitle>
+        <S.ArticleTitle variants={secondArticleAnimation}>
+          Востребованность на рынке
+        </S.ArticleTitle>
 
         <S.SalaryWrapper>
           <S.BackgroundFlashSecond />
