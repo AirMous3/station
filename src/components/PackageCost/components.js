@@ -61,8 +61,6 @@ export const EnglishWrapper = styled.div`
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding-left: 75px;
-  padding-right: 63px;
 `;
 
 export const EnglishTitleWrapper = styled.div`

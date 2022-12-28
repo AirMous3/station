@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components/macro';
 
 import { ArticleTitle } from '@/components/Devops/components';
 
-export const Wrapper = styled.div`
+export const Section = styled.section`
   color: ${({ theme }) => theme.colors.text.main};
 `;
 

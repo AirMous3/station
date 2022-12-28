@@ -29,10 +29,10 @@ export const Circle = styled(motion.div)`
   &:before {
     content: '';
     position: absolute;
-    top: -4px;
+    top: -3px;
     bottom: -6px;
-    left: -2px;
-    right: -6px;
+    left: 0;
+    right: -3px;
     background: linear-gradient(
       326.78deg,
       #fe6f5f 11.13%,
@@ -41,6 +41,7 @@ export const Circle = styled(motion.div)`
     border-radius: 50%;
     z-index: -1;
   }
+
   &:after {
     content: '';
     position: absolute;
@@ -48,7 +49,7 @@ export const Circle = styled(motion.div)`
     height: 440px;
     left: 0;
     top: 0;
-    background: linear-gradient(180deg, #1f95b7 0%, #8123a2 100%);
+    background: linear-gradient(180deg, #123944 0%, #461a55 100%);
     filter: blur(248px);
     transform: rotate(26.63deg);
   }

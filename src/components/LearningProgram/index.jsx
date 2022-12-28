@@ -26,7 +26,7 @@ export const LearningProgram = () => {
 
   return (
     <Container>
-      <S.Section>
+      <S.Section id={'program'}>
         <S.Title>Программа обучения</S.Title>
         {learningProgram.map(
           ({

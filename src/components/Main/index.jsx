@@ -28,8 +28,8 @@ const useScrollPosition = () => {
 export const Main = () => {
   const scrollPosition = useScrollPosition();
 
-  const offset = 64 + (scrollPosition / 4000) * 70;
-  const reverseOffset = 65 - (scrollPosition / 4000) * 70;
+  const offset = 64 + (scrollPosition / 5000) * 70;
+  const reverseOffset = 65 - (scrollPosition / 5000) * 70;
 
   useLayoutEffect(() => {
     new CircleType(document.getElementById('circle'));

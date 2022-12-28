@@ -14,7 +14,7 @@ export const TitleWrapper = styled.div`
 `;
 
 export const Title = styled(motion.h1)`
-  font-family: Generator;
+  font-family: 'Generator';
   font-weight: 800;
   color: ${({ theme }) => theme.colors.text.turquoise};
   font-size: ${({ theme }) => theme.typography.size[14]};
@@ -35,7 +35,7 @@ export const Description = styled(motion.div)`
 
 export const BackgroundTitle = styled.div`
   position: absolute;
-  font-family: Generator;
+  font-family: 'Generator';
   font-weight: 800;
   font-size: ${({ theme }) => theme.typography.size[18]};
   color: ${({ theme }) => theme.colors.background.body};
@@ -47,7 +47,7 @@ export const BackgroundTitle = styled.div`
 `;
 
 export const ArticleTitle = styled(motion.h2)`
-  font-family: NAMU;
+  font-family: 'NAMU';
   font-weight: 700;
   font-size: ${({ theme }) => theme.typography.size[12]};
   color: ${({ theme }) => theme.colors.text.main};
@@ -80,7 +80,7 @@ export const SalaryTabletsWrapper = styled.div`
 
 export const SalaryTablet = styled.div`
   position: relative;
-  font-family: Inter;
+  font-family: 'Inter';
   text-align: center;
   font-size: 30px;
   max-width: 162px;

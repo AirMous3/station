@@ -28,7 +28,7 @@ export const Feedbacks = () => {
   }, [activeId]);
 
   return (
-    <S.Wrapper>
+    <S.Section id={'feedbacks'}>
       <Container>
         <S.Article>Что говорят наши ученики</S.Article>
         <S.FeedbacksWrapper>
@@ -77,6 +77,6 @@ export const Feedbacks = () => {
           </S.DescriptionWrapper>
         </S.FeedbacksWrapper>
       </Container>
-    </S.Wrapper>
+    </S.Section>
   );
 };

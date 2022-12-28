@@ -18,7 +18,7 @@ export const AboutTraining = () => {
   };
 
   return (
-    <S.Section>
+    <S.Section id={'education'}>
       <Container>
         <S.BackgroundFlash />
         <S.BackgroundFlashSecond />

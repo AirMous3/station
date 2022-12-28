@@ -21,6 +21,7 @@ export const Description = styled.div`
 export const RevertDescription = styled(Description)`
   display: flex;
   align-items: end;
+  margin-bottom: 137px;
 
   ${({ theme }) => theme.below.m`
     display: none;
