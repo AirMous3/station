@@ -11,6 +11,7 @@ export const Navbar = styled.nav`
   display: flex;
   margin-left: auto;
   z-index: 1000;
+  align-items: center;
 `;
 
 export const NavItem = styled.a`
@@ -19,10 +20,12 @@ export const NavItem = styled.a`
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 16px;
-  display: flex;
-  align-items: center;
   text-align: center;
   color: #ececec;
+
+  @media (max-width: 1415px) {
+    margin-left: 40px;
+  }
 `;
 
 export const Button = styled.div`
@@ -40,4 +43,8 @@ export const Button = styled.div`
   margin-left: 200px;
   cursor: pointer;
   z-index: 1000;
+
+  @media (max-width: 1415px) {
+    margin-left: 40px;
+  }
 `;
