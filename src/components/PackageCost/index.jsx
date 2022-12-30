@@ -8,19 +8,26 @@ export const PackageCost = () => {
     <S.Section id={'packages'}>
       <Container>
         <S.Article>Пакеты обучения</S.Article>
-
-        <S.PackagesWrapper>
-          {packageConfig.map(({ title, features }, index) => (
-            <S.PackageWrapper key={index}>
+      </Container>
+      <S.PackagesWrapper>
+        {packageConfig.map(({ title, features, style }, index) => (
+          <S.PackageWrapper key={index} style={style}>
+            <div>
               <S.PackageTitle>{title}</S.PackageTitle>
               {features.map((feature, index) => (
                 <S.PackageFeature key={index}>{feature}</S.PackageFeature>
               ))}
-              <S.PackagePrice>От 2200 BYN</S.PackagePrice>
-            </S.PackageWrapper>
-          ))}
-        </S.PackagesWrapper>
+            </div>
 
+            <div>
+              <S.PackagePrice>От 2200 BYN</S.PackagePrice>
+              <S.PackageButton>Записаться</S.PackageButton>
+            </div>
+          </S.PackageWrapper>
+        ))}
+      </S.PackagesWrapper>
+
+      <Container>
         <S.EnglishWrapper>
           <S.EnglishTitleWrapper>
             <S.EnglishTitle>Почему английский нужен в IT</S.EnglishTitle>

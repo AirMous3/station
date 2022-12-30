@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro';
 
 import arrow from '@/assets/icons/englishArrow.svg';
 import { Button } from '@/components/Button';
@@ -22,34 +22,115 @@ export const PackagesWrapper = styled.div`
 `;
 
 export const PackageWrapper = styled.ul`
-  width: 25%;
+  position: relative;
+  max-width: 358px;
+  min-width: 358px;
+  max-height: 642px;
+  min-height: 642px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  padding: 34px 0;
+  padding: 40px 10px;
+  box-sizing: border-box;
+  align-items: center;
+  background: #1c1c1c;
+  justify-content: space-between;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: linear-gradient(180deg, #1d2efd 0%, #4ed3df 100%);
+    box-shadow: 0px 1px 8px 0px rgba(78, 211, 223, 1),
+      0px 1px 12px 0px rgba(29, 46, 253, 1);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+    margin: -2px; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    box-shadow: inset 0px 1px 8px 0px rgba(78, 211, 223, 1),
+      inset 0px 1px 12px 0px rgba(29, 46, 253, 1);
+  }
+
+  ${({ style }) =>
+    style &&
+    css`
+      background: linear-gradient(
+        145.55deg,
+        #fe6f5f 3.75%,
+        #dd435a 35.36%,
+        #7082b6 81.94%,
+        #288ce2 110.22%
+      );
+
+      :before {
+        box-shadow: none;
+        background: linear-gradient(
+          145.55deg,
+          #fe6f5f 3.75%,
+          #dd435a 35.36%,
+          #7082b6 81.94%,
+          #288ce2 110.22%
+        );
+        top: -10px;
+        bottom: -5px;
+        left: -5px;
+        right: -5px;
+        filter: blur(7px);
+      }
+
+      :after {
+        box-shadow: none;
+      }
+
+      -webkit-box-shadow: 0px -15px 21px 11px rgba(34, 60, 80, 0.2);
+      -moz-box-shadow: 0px -15px 21px 11px rgba(34, 60, 80, 0.2);
+      box-shadow: 0px -15px 21px 11px rgba(34, 60, 80, 0.2);
+
+      ${PackageButton} {
+        background: linear-gradient(230.25deg, #dadada 4.82%, #ffffff 91.47%);
+        color: #3f3f3f;
+      }
+    `}
 `;
 
 export const PackageTitle = styled.h3`
   font-weight: 700;
   font-size: ${({ theme }) => theme.typography.size[8]};
   text-transform: uppercase;
+  margin-bottom: 24px;
 `;
 
 export const PackageFeature = styled.li`
   font-weight: 500;
   font-size: ${({ theme }) => theme.typography.size[1]};
-  border-bottom: 2px solid transparent;
-  //TODO
-  border-image: radial-gradient(
-    95.57% 71934453762.28% at 98.02% 1777544.28%,
-    rgba(255, 255, 255, 0) 0%,
-    #ffffff 52.18%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  border-image-slice: 1;
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid transparent;
+    //TODO
+    border-image: radial-gradient(
+      97.56% 73428301094.76% at 100% 3426.29%,
+      rgba(255, 255, 255, 0) 2.49%,
+      #ffffff 52.18%,
+      rgba(255, 255, 255, 0) 94.59%
+    );
+    border-image-slice: 1;
+  }
 `;
 
 export const PackagePrice = styled.div`
@@ -92,7 +173,7 @@ export const EnglishTitle = styled.div`
     max-width: 190px;
     height: 100%;
   }
-  }
+}
 `;
 
 export const EnglishFeature = styled.div`
@@ -135,6 +216,7 @@ export const EnglishFeatureDescription = styled.div`
   color: #bcbcbc;
   max-width: 500px;
   margin-top: 6px;
+
   span {
     color: #ffffff;
   }
@@ -169,4 +251,27 @@ export const BackgroundFlash = styled.div`
   filter: blur(300px);
   transform: rotate(24.51deg);
   z-index: -1;
+`;
+
+export const PackageButton = styled.button`
+  position: relative;
+  z-index: 12;
+  min-height: 58px;
+  max-height: 58px;
+  min-width: 201px;
+  max-width: 201px;
+  background: linear-gradient(230.25deg, #ff630b 4.82%, #ff0000 91.47%);
+  box-shadow: 0px 4px 68px 0px rgba(255, 89, 74, 0.63);
+  border: none;
+  border-radius: 5px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26px;
+  /* identical to box height */
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 30px;
 `;

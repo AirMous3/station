@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     touch-action: none;
     margin: 0;
     background: ${({ theme }) => theme.colors.background.body};
-    font-family: 'Roboto';
+    font-family: 'Roboto', serif;
     overflow-x: hidden;
     box-sizing: border-box;
   }
