@@ -9,7 +9,7 @@ import * as S from './components';
 
 export const AboutCourse = () => {
   return (
-    <section>
+    <S.Section>
       <S.Container>
         <S.Article>Кому подойдет курс</S.Article>
 
@@ -24,6 +24,6 @@ export const AboutCourse = () => {
       <Ticker direction={'left'} />
 
       <CourseFeatures />
-    </section>
+    </S.Section>
   );
 };

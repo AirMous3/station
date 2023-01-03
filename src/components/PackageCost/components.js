@@ -8,6 +8,8 @@ export const Section = styled.section`
   color: ${({ theme }) => theme.colors.text.main};
   margin-top: 100px;
   margin-bottom: 150px;
+  position: relative;
+  min-height: 1766px;
 `;
 
 export const Article = styled(ArticleTitle)``;

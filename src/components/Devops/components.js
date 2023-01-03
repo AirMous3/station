@@ -5,6 +5,7 @@ export const Section = styled(motion.section)`
   position: relative;
   margin-bottom: 200px;
   margin-top: 70px;
+  min-height: 1626px;
 `;
 
 export const TitleWrapper = styled.div`

@@ -7,6 +7,7 @@ export const Section = styled.section`
   position: relative;
   margin-top: 170px;
   margin-bottom: 150px;
+  min-height: 766px;
 `;
 
 export const Article = styled(ArticleTitle)`

@@ -8,6 +8,7 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   margin-right: auto;
+  min-height: 761px;
 `;
 
 export const TeamWrapper = styled.li`

@@ -5,7 +5,7 @@ import { Cross } from '@/components/AboutTraining/components';
 import { ArticleTitle } from '@/components/Devops/components';
 
 export const Section = styled.section`
-  min-height: 100vh;
+  min-height: 1647px;
 `;
 
 export const Title = styled(ArticleTitle)`

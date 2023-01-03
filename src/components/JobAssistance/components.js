@@ -4,7 +4,8 @@ export const Section = styled.section`
   color: ${({ theme }) => theme.colors.text.main};
   margin-bottom: 200px;
   justify-content: center;
-
+  min-height: 1088px;
+  
   ${({ theme }) => theme.below.m`
     display: flex;
     flex-direction: column;

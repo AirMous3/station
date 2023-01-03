@@ -1,9 +1,13 @@
+import { useContext } from 'react';
+
 import { Container } from '@/components/Container';
 import { englishConfig, packageConfig } from '@/components/PackageCost/config';
+import { ModalContext } from '@/context/ModalContext';
 
 import * as S from './components';
 
 export const PackageCost = () => {
+  const { setVisible } = useContext(ModalContext);
   return (
     <S.Section id={'packages'}>
       <Container>
@@ -21,7 +25,9 @@ export const PackageCost = () => {
 
             <div>
               <S.PackagePrice>От 2200 BYN</S.PackagePrice>
-              <S.PackageButton>Записаться</S.PackageButton>
+              <S.PackageButton onClick={() => setVisible(true)}>
+                Записаться
+              </S.PackageButton>
             </div>
           </S.PackageWrapper>
         ))}
