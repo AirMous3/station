@@ -92,20 +92,24 @@ export const Devops = () => {
 
   return (
     <S.Section initial={HIDDEN} whileInView={VISIBLE} viewport={{ once: true }}>
-      <S.TitleWrapper>
-        <S.Title variants={titleAnimation}>DevOps</S.Title>
-        <S.Description variants={descriptionAnimation}>
-          инженеры контролируют все этапы создания продукта: от написания кода
-          до релиза. Помогают отделам разработки и администрирования,
-          синхронизируют их усилия и автоматизируют технические процессы. За
-          последние годы спрос на этих специалистов вырос в несколько раз. Мы
-          поможем стать DevOps-инженером с нуля и найдём вам работу.
-        </S.Description>
-        <S.BackgroundTitle>DevOps</S.BackgroundTitle>
-        <S.BackgroundFlash />
-      </S.TitleWrapper>
-
       <Container>
+        <S.TitleWrapper>
+          <S.Title variants={titleAnimation}>DevOps</S.Title>
+          <S.Description variants={descriptionAnimation}>
+            инженер — кто это и какие у него обязанности? Простыми словами, это
+            человек, который синхронизирует этапы разработки программного
+            продукта и помогает автоматизировать рабочие процессы. DevOps — это
+            много профессий в одном человеке: админ, разработчик, тестировщик и
+            менеджер. Это относительно новое направление: сейчас компании
+            находятся на этапе понимания необходимости такого человека в
+            команде, поэтому спрос на DevOps-специалистов растёт с каждым днём.
+            После обучения на курсе вы сможете стать DevOps-инженером, а также
+            найти высокооплачиваемую работу.
+          </S.Description>
+          <S.BackgroundTitle>DevOps</S.BackgroundTitle>
+          <S.BackgroundFlash />
+        </S.TitleWrapper>
+
         <S.ArticleTitle variants={articleAnimation}>
           Как это будет
         </S.ArticleTitle>

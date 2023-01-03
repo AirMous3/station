@@ -20,20 +20,20 @@ export const App = () => {
     <div>
       <ModalProvider>
         <Header />
-        <Main />
+        {/*<Main />*/}
         <StartInfoLine />
         <Devops />
-        <AboutCourse />
-        <JobAssistance />
-        <AboutTraining />
-        <OurTeam />
-        <Curriculum />
-        <LearningProgram />
-        <PackageCost />
-        <Feedbacks />
-        <GetStarted />
-        <Footer />
-        <Modal />
+        {/*<AboutCourse />*/}
+        {/*<JobAssistance />*/}
+        {/*<AboutTraining />*/}
+        {/*<OurTeam />*/}
+        {/*<Curriculum />*/}
+        {/*<LearningProgram />*/}
+        {/*<PackageCost />*/}
+        {/*<Feedbacks />*/}
+        {/*<GetStarted />*/}
+        {/*<Footer />*/}
+        {/*<Modal />*/}
       </ModalProvider>
     </div>
   );

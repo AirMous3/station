@@ -1,6 +1,7 @@
 import { Link } from 'react-scroll';
 
 import logo from '@/assets/images/logo.png';
+import { Burger } from '@/components/Burger';
 
 import * as S from './components';
 
@@ -23,8 +24,9 @@ export const Header = () => {
         <Link to="feedbacks" smooth={true}>
           <S.NavItem>Отзывы</S.NavItem>
         </Link>
+        <S.Button>Записаться на курс</S.Button>
       </S.Navbar>
-      <S.Button>Записаться на курс</S.Button>
+      <Burger />
     </S.Header>
   );
 };

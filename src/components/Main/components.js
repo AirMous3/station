@@ -37,6 +37,10 @@ export const DevopsTitle = styled(motion.h1)`
   position: absolute;
   z-index: 1;
   letter-spacing: 22px;
+
+  @media (max-width: 886px) {
+    font-size: 127px;
+  }
 `;
 
 export const ProgramTitle = styled(DevopsTitle)`

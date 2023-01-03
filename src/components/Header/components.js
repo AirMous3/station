@@ -5,6 +5,10 @@ export const Header = styled.header`
   padding-right: 100px;
   padding-top: 18px;
   display: flex;
+  @media (max-width: 1150px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 `;
 
 export const Navbar = styled.nav`
@@ -12,6 +16,10 @@ export const Navbar = styled.nav`
   margin-left: auto;
   z-index: 1000;
   align-items: center;
+
+  @media (max-width: 1150px) {
+    display: none;
+  }
 `;
 
 export const NavItem = styled.a`

@@ -12,6 +12,10 @@ export const TitleWrapper = styled.div`
   position: relative;
   user-select: none;
   min-height: 400px;
+
+  @media (max-width: 1000px) {
+    min-height: 312px;
+  }
 `;
 
 export const Title = styled(motion.h1)`
@@ -19,7 +23,11 @@ export const Title = styled(motion.h1)`
   font-weight: 800;
   color: ${({ theme }) => theme.colors.text.turquoise};
   font-size: ${({ theme }) => theme.typography.size[14]};
-  padding-left: 156px;
+  padding-left: 70px;
+
+  @media (max-width: 1000px) {
+    font-size: 111px;
+  }
 `;
 
 export const Description = styled(motion.div)`
@@ -28,10 +36,25 @@ export const Description = styled(motion.div)`
   position: absolute;
   //TODO
   color: #ebebeb;
-  max-width: 628px;
+  max-width: 703px;
   z-index: 2;
-  top: 101px;
-  left: 503px;
+  top: 97px;
+  left: 418px;
+
+  @media (max-width: 1180px) {
+    font-size: 19px;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 16px;
+    top: 95px;
+    left: 400px;
+  }
+  @media (max-width: 800px) {
+    font-size: 14px;
+    left: 150px;
+    max-width: 500px;
+  }
 `;
 
 export const BackgroundTitle = styled.div`
@@ -43,8 +66,30 @@ export const BackgroundTitle = styled.div`
   -webkit-text-stroke: 1px #273d5c;
   text-align: end;
   z-index: -1;
-  bottom: -33px;
-  right: -87px;
+  bottom: -27px;
+  right: -187px;
+
+  @media (max-width: 1465px) {
+    font-size: 270px;
+    bottom: 0px;
+    right: -65px;
+  }
+
+  @media (max-width: 1218px) {
+    right: 64px;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 207px;
+    bottom: -9px;
+    right: 23px;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 167px;
+    bottom: -47px;
+    right: 0;
+  }
 `;
 
 export const ArticleTitle = styled(motion.h2)`
@@ -56,18 +101,41 @@ export const ArticleTitle = styled(motion.h2)`
   margin-top: 60px;
   max-width: 820px;
   line-height: 54px;
+
+  @media (max-width: 1180px) {
+    font-size: 75px;
+  }
+  @media (max-width: 800px) {
+    font-size: 65px;
+  }
+  @media (max-width: 690px) {
+    font-size: 58px;
+  }
+  @media (max-width: 620px) {
+    font-size: 50px;
+  }
 `;
 
 export const FeaturesWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 90px;
+
+  @media (max-width: 800px) {
+    flex-wrap: wrap;
+    padding-left: 100px;
+    padding-right: 40px;
+  }
 `;
 
 export const SalaryWrapper = styled.div`
   position: relative;
   padding: 0 34px;
   margin-top: 150px;
+
+  @media (max-width: 800px) {
+    padding: 0;
+  }
 `;
 
 export const SalaryTabletsWrapper = styled.div`
@@ -77,6 +145,10 @@ export const SalaryTabletsWrapper = styled.div`
   margin-bottom: 44px;
   padding-left: 42px;
   padding-right: 65px;
+
+  @media (max-width: 1100px) {
+    padding: 0;
+  }
 `;
 
 export const SalaryTablet = styled.div`
@@ -110,7 +182,16 @@ export const SalaryTablet = styled.div`
 
   ${({ theme }) => theme.below.m`
     max-width: 130px; 
-  `}
+  `};
+
+  @media (max-width: 800px) {
+    max-width: 115px;
+  }
+
+  @media (max-width: 670px) {
+    max-width: 100px;
+    border-radius: 31px;
+  }
 `;
 
 export const Salary = styled.div`
@@ -121,7 +202,14 @@ export const Salary = styled.div`
 
   ${({ theme }) => theme.below.m`
     font-size: 24px; 
-  `}
+  `};
+
+  @media (max-width: 800px) {
+    font-size: 19px;
+  }
+  @media (max-width: 670px) {
+    font-size: 16px;
+  }
 `;
 
 export const Position = styled.div`
@@ -131,13 +219,22 @@ export const Position = styled.div`
 
   ${({ theme }) => theme.below.m`
     font-size: 23px; 
-  `}
+  `};
+
+  @media (max-width: 670px) {
+    font-size: 16px;
+  }
 `;
 
 export const VacanciesNote = styled.div`
   color: #fe6f5f;
   font-weight: 700;
   font-size: 30px;
+
+  @media (max-width: 660px) {
+    font-size: 20px;
+  }
+  
 `;
 
 export const BackgroundFlashSecond = styled.div`
@@ -169,12 +266,15 @@ export const BackgroundFlash = styled.div`
   -webkit-filter: blur(150px);
   z-index: -1;
 `;
-//background: linear-gradient(180deg,#0c0b17e6 0%,#0e228c38 50%,#15182f 100%);
-//background: linear-gradient(180deg,#26445eed 0%,#00399542 50%,#6066954f 100%);
-//background: linear-gradient(180deg,#1e446436 0%,#00399542 50%,#6066954f 100%);
 
 export const BackgroundImage = styled.img`
   position: absolute;
   bottom: -30%;
   left: -7%;
+  z-index: -1;
+
+  @media (max-width: 690px) {
+    right: 0;
+    left: auto;
+  }
 `;

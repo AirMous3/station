@@ -7,9 +7,8 @@ export const Container = styled.div`
   width: 100%;
   box-sizing: border-box;
 
-  // ${({ theme }) => theme.below.xxl`
-  //   max-width: 1280px;
-  //   padding-left: 85px;
-  //   padding-right: 85px;
-  // `}
+  @media (max-width: 1180px) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 `;
