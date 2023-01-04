@@ -1,3 +1,5 @@
+import { useMediaQuery } from 'react-responsive';
+
 import backgroundImageDevops from '@/assets/images/backgroundDevops.png';
 import { Container } from '@/components/Container';
 import { Feature } from '@/components/Devops/Feature';
@@ -63,32 +65,8 @@ export const Devops = () => {
     },
   };
 
-  // const salaryTabletAnimation = {
-  //   hidden: {
-  //     height: '10px',
-  //   },
-  //   visible: (custom) => ({
-  //     opacity: 1,
-  //     height: '100%',
-  //     transition: {
-  //       duration: custom + 1,
-  //     },
-  //   }),
-  // };
-  //
-  // const salaryAnimation = {
-  //   hidden: {
-  //     opacity: 0,
-  //   },
-  //   visible: (margin) => ({
-  //     opacity: 1,
-  //     margin,
-  //     transition: {
-  //       duration: 3,
-  //       delay: 5,
-  //     },
-  //   }),
-  // };
+  const isLaptop = useMediaQuery({ query: '(max-width: 560px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 450px)' });
 
   return (
     <S.Section initial={HIDDEN} whileInView={VISIBLE} viewport={{ once: true }}>
@@ -96,15 +74,24 @@ export const Devops = () => {
         <S.TitleWrapper>
           <S.Title variants={titleAnimation}>DevOps</S.Title>
           <S.Description variants={descriptionAnimation}>
-            инженер — кто это и какие у него обязанности? Простыми словами, это
-            человек, который синхронизирует этапы разработки программного
-            продукта и помогает автоматизировать рабочие процессы. DevOps — это
-            много профессий в одном человеке: админ, разработчик, тестировщик и
-            менеджер. Это относительно новое направление: сейчас компании
-            находятся на этапе понимания необходимости такого человека в
-            команде, поэтому спрос на DevOps-специалистов растёт с каждым днём.
-            После обучения на курсе вы сможете стать DevOps-инженером, а также
-            найти высокооплачиваемую работу.
+            {!isMobile &&
+              'инженер — кто это и какие у него обязанности? Простыми словами, это\n' +
+                '            человек, который синхронизирует этапы разработки программного\n' +
+                '            продукта и помогает автоматизировать рабочие процессы. DevOps — это\n' +
+                '            много профессий в одном человеке: админ, разработчик, тестировщик и\n' +
+                '            менеджер. Это относительно новое направление: сейчас компании\n' +
+                '            находятся на этапе понимания необходимости такого человека в\n' +
+                '            команде, поэтому спрос на DevOps-специалистов растёт с каждым днём.\n' +
+                '            После обучения на курсе вы сможете стать DevOps-инженером, а также\n' +
+                '            найти высокооплачиваемую работу.'}
+
+            {isMobile &&
+              'инженеры контролируют все этапы создания продукта: \n' +
+                'от написания кода до релиза. Помогают отделам разработки и администрирования, синхронизируют \n' +
+                'их усилия и автоматизируют технические процессы. \n' +
+                'За последние годы спрос на этих специалистов вырос \n' +
+                'в несколько раз. Мы поможем стать DevOps-инженером \n' +
+                'с нуля и найдём вам работу. '}
           </S.Description>
           <S.BackgroundTitle>DevOps</S.BackgroundTitle>
           <S.BackgroundFlash />
@@ -134,6 +121,31 @@ export const Devops = () => {
           Востребованность на рынке
         </S.ArticleTitle>
 
+        {!isLaptop && (
+          <S.SalaryWrapper>
+            <S.BackgroundFlashSecond />
+
+            <S.BackgroundImage
+              src={backgroundImageDevops}
+              alt="backgroundImage"
+            />
+
+            <S.SalaryTabletsWrapper>
+              {salaries.map(({ salary, position }, i) => (
+                <S.SalaryTablet index={i} key={salary}>
+                  <S.Salary index={i}>{salary}</S.Salary>
+                  <S.Position>{position}</S.Position>
+                </S.SalaryTablet>
+              ))}
+            </S.SalaryTabletsWrapper>
+
+            <S.VacanciesNote>
+              * >2000 вакансийDevOps Engineer link hh.ru
+            </S.VacanciesNote>
+          </S.SalaryWrapper>
+        )}
+      </Container>
+      {isLaptop && (
         <S.SalaryWrapper>
           <S.BackgroundFlashSecond />
 
@@ -155,7 +167,7 @@ export const Devops = () => {
             * >2000 вакансийDevOps Engineer link hh.ru
           </S.VacanciesNote>
         </S.SalaryWrapper>
-      </Container>
+      )}
     </S.Section>
   );
 };

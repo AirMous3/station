@@ -9,6 +9,13 @@ export const Header = styled.header`
     padding-left: 50px;
     padding-right: 50px;
   }
+  @media (max-width: 650px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    img {
+      width: 120px;
+    }
+  }
 `;
 
 export const Navbar = styled.nav`

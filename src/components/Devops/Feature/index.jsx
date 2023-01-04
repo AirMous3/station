@@ -32,9 +32,11 @@ export const Feature = ({
       variants={featureAnimation}
       custom={custom}
     >
-      <S.Number textAlign={textAlign}>{number}</S.Number>
-      <S.Title>{title}</S.Title>
-      <S.Description maxWidth={maxWidth}>{description}</S.Description>
+      <S.FeatureContainer>
+        <S.Number textAlign={textAlign}>{number}</S.Number>
+        <S.Title>{title}</S.Title>
+        <S.Description maxWidth={maxWidth}>{description}</S.Description>
+      </S.FeatureContainer>
     </S.Wrapper>
   );
 };

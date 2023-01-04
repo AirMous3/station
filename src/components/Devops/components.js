@@ -5,7 +5,7 @@ export const Section = styled(motion.section)`
   position: relative;
   margin-bottom: 200px;
   margin-top: 70px;
-  min-height: 1626px;
+  overflow-x: clip;
 `;
 
 export const TitleWrapper = styled.div`
@@ -15,6 +15,9 @@ export const TitleWrapper = styled.div`
 
   @media (max-width: 1000px) {
     min-height: 312px;
+  }
+  @media (max-width: 560px) {
+    min-height: 205px;
   }
 `;
 
@@ -27,6 +30,13 @@ export const Title = styled(motion.h1)`
 
   @media (max-width: 1000px) {
     font-size: 111px;
+  }
+  @media (max-width: 560px) {
+    font-size: 80px;
+  }
+  @media (max-width: 450px) {
+    font-size: 60px;
+    padding-left: 0;
   }
 `;
 
@@ -44,7 +54,6 @@ export const Description = styled(motion.div)`
   @media (max-width: 1180px) {
     font-size: 19px;
   }
-
   @media (max-width: 1000px) {
     font-size: 16px;
     top: 95px;
@@ -54,6 +63,17 @@ export const Description = styled(motion.div)`
     font-size: 14px;
     left: 150px;
     max-width: 500px;
+  }
+  @media (max-width: 560px) {
+    font-size: 12px;
+    max-width: 350px;
+    top: 67px;
+    left: 120px;
+  }
+  @media (max-width: 450px) {
+    font-size: 10px;
+    top: 55px;
+    left: 65px;
   }
 `;
 
@@ -74,21 +94,26 @@ export const BackgroundTitle = styled.div`
     bottom: 0px;
     right: -65px;
   }
-
   @media (max-width: 1218px) {
     right: 64px;
   }
-
   @media (max-width: 1000px) {
     font-size: 207px;
     bottom: -9px;
     right: 23px;
   }
-
   @media (max-width: 800px) {
     font-size: 167px;
     bottom: -47px;
     right: 0;
+  }
+  @media (max-width: 560px) {
+    font-size: 130px;
+  }
+  @media (max-width: 460px) {
+    font-size: 100px;
+    bottom: 15px;
+    right: -53px;
   }
 `;
 
@@ -113,6 +138,15 @@ export const ArticleTitle = styled(motion.h2)`
   }
   @media (max-width: 620px) {
     font-size: 50px;
+    line-height: 29px;
+  }
+  @media (max-width: 560px) {
+    font-size: 40px;
+  }
+  @media (max-width: 450px) {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 0;
   }
 `;
 
@@ -126,6 +160,10 @@ export const FeaturesWrapper = styled.div`
     padding-left: 100px;
     padding-right: 40px;
   }
+  @media (max-width: 560px) {
+    padding-left: 40px;
+    padding-right: 20px;
+  }
 `;
 
 export const SalaryWrapper = styled.div`
@@ -135,6 +173,9 @@ export const SalaryWrapper = styled.div`
 
   @media (max-width: 800px) {
     padding: 0;
+  }
+  @media (max-width: 450px) {
+    margin-top: 0;
   }
 `;
 
@@ -147,7 +188,15 @@ export const SalaryTabletsWrapper = styled.div`
   padding-right: 65px;
 
   @media (max-width: 1100px) {
-    padding: 0;
+    padding: 10px;
+  }
+
+  @media (max-width: 560px) {
+    overflow-x: overlay;
+    gap: 10px;
+  }
+  @media (max-width: 450px) {
+    padding-left: 20px;
   }
 `;
 
@@ -206,7 +255,11 @@ export const Salary = styled.div`
 
   @media (max-width: 800px) {
     font-size: 19px;
+    margin: ${({ theme, index }) =>
+        `${theme.margin.tabletSalaryTablets[index]}`}
+      0;
   }
+
   @media (max-width: 670px) {
     font-size: 16px;
   }
@@ -234,7 +287,12 @@ export const VacanciesNote = styled.div`
   @media (max-width: 660px) {
     font-size: 20px;
   }
-  
+  @media (max-width: 560px) {
+    padding-left: 20px;
+  }
+  @media (max-width: 450px) {
+    font-size: 10px;
+  }
 `;
 
 export const BackgroundFlashSecond = styled.div`
@@ -276,5 +334,10 @@ export const BackgroundImage = styled.img`
   @media (max-width: 690px) {
     right: 0;
     left: auto;
+  }
+  @media (max-width: 450px) {
+    width: 100%;
+    bottom: -14%;
+    left: -7%;
   }
 `;

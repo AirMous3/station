@@ -58,6 +58,7 @@ export const typography = {
 
 export const margin = {
   salaryTablets: ['0', '0', '30px', '40px', '70px'],
+  tabletSalaryTablets: ['0', '0', '20px', '22px', '50px'],
 };
 
 export const breakpoints = {

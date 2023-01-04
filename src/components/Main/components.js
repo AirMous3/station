@@ -2,12 +2,10 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 import arrow from '@/assets/icons/arrowDown.svg';
+import { Container } from '@/components/Container';
 
 export const Section = styled.section`
-  display: flex;
-  justify-content: space-between;
-  min-height: 760px;
-  padding: 70px 0 0px;
+  overflow-x: clip;
 `;
 
 export const Description = styled.div`
@@ -16,16 +14,19 @@ export const Description = styled.div`
   max-width: 164px;
   text-align: center;
   user-select: none;
+
+  @media (max-width: 650px) {
+    font-size: 19px;
+  }
+  @media (max-width: 450px) {
+    font-size: 13px;
+  }
 `;
 
 export const RevertDescription = styled(Description)`
   display: flex;
   align-items: end;
   margin-bottom: 137px;
-
-  ${({ theme }) => theme.below.m`
-    display: none;
-  `}
 `;
 
 export const DevopsTitle = styled(motion.h1)`
@@ -41,6 +42,13 @@ export const DevopsTitle = styled(motion.h1)`
   @media (max-width: 886px) {
     font-size: 127px;
   }
+  @media (max-width: 656px) {
+    font-size: 114px;
+  }
+  @media (max-width: 456px) {
+    font-size: 68px;
+    letter-spacing: 11px;
+  }
 `;
 
 export const ProgramTitle = styled(DevopsTitle)`
@@ -50,11 +58,6 @@ export const ProgramTitle = styled(DevopsTitle)`
 export const ImageWrapper = styled.div`
   position: relative;
   margin-left: -200px;
-
-  ${({ theme }) => theme.below.m`
-    margin-left: 55px;
-    margin-top: 106px;
-  `}
 `;
 
 export const FirstImage = styled.img`
@@ -62,7 +65,21 @@ export const FirstImage = styled.img`
 
   ${({ theme }) => theme.below.s`
     width: 90%;
-  `}
+  `};
+
+  @media (max-width: 650px) {
+    width: 66%;
+    bottom: 0;
+    position: relative;
+    left: 12%;
+  }
+  @media (max-width: 450px) {
+    width: 225px;
+    left: 20%;
+  }
+
+}
+
 `;
 
 export const SecondMainImage = styled.img`
@@ -72,18 +89,22 @@ export const SecondMainImage = styled.img`
   z-index: 2;
 
   ${({ theme }) => theme.below.m`
-    bottom: -46px;
+    bottom: 13px;
   `}
 
   ${({ theme }) => theme.below.s`
     width: 75%;
     right: -110px;
-  `}
-`;
+  `};
 
-export const Char = styled.span`
-  transform: rotate(-${({ number }) => number + 8 * 2}deg);
-  transform-origin: bottom center;
+  @media (max-width: 650px) {
+    width: 65%;
+  }
+
+  @media (max-width: 450px) {
+    width: 200px;
+    right: -140px;
+  }
 `;
 
 export const BackgroundFlash = styled.div`
@@ -122,5 +143,28 @@ export const Circle = styled.div`
     content: url(${arrow});
     display: block;
     margin-top: -131px;
+  }
+
+  @media (max-width: 450px) {
+    bottom: 74px;
+    left: 100px;
+    font-size: 12px;
+    &:after {
+      margin-top: -100px;
+    }
+  }
+`;
+
+export const MainContainer = styled(Container)`
+  display: flex;
+  justify-content: space-between;
+  min-height: 760px;
+  padding: 70px 0 0px;
+
+  @media (max-width: 650px) {
+    min-height: 600px;
+  }
+  @media (max-width: 450px) {
+    min-height: 420px;
   }
 `;

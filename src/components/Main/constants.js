@@ -1,9 +1,2 @@
-export const INITIAL_DEVOPS_Y_POSITION = -1450;
-export const INITIAL_DEVOPS_X_POSITION = 100;
-export const INITIAL_DEVOPS_ROTATE_POSITION = 40;
-export const INITIAL_PROGRAM_Y_POSITION = -1400;
-export const INITIAL_PROGRAM_X_POSITION = -100;
-export const INITIAL_PROGRAM_ROTATE_POSITION = 40;
-export const WIDTH = 1980;
-export const HEIGHT = 2260;
-export const RADIUS = 930;
+
+

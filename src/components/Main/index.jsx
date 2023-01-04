@@ -1,5 +1,6 @@
 import CircleType from 'circletype';
 import { useEffect, useLayoutEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-scroll';
 
 import mainImage2 from '@/assets/images/mainImage2.png';
@@ -7,9 +8,7 @@ import mainImage from '@/assets/images/mainImage.png';
 import { Container } from '@/components/Container';
 import { CurveText } from '@/components/CurveText';
 
-import { DEVOPS_TITLE_ANIMATION, PROGRAM_TITLE_ANIMATION } from './animations';
 import * as S from './components';
-import { HEIGHT, RADIUS, WIDTH } from './constants';
 
 const useScrollPosition = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -25,18 +24,52 @@ const useScrollPosition = () => {
 
   return scrollPosition;
 };
+export let INITIAL_DEVOPS_Y_POSITION = -1450;
+export let INITIAL_DEVOPS_X_POSITION = 100;
+export let INITIAL_DEVOPS_ROTATE_POSITION = 40;
+export let INITIAL_PROGRAM_Y_POSITION = -1400;
+export let INITIAL_PROGRAM_X_POSITION = -100;
+export let INITIAL_PROGRAM_ROTATE_POSITION = 40;
+export let WIDTH = 1980;
+export let HEIGHT = 2260;
+export let RADIUS = 930;
+
 export const Main = () => {
   const scrollPosition = useScrollPosition();
 
   const offset = 64 + (scrollPosition / 5000) * 70;
   const reverseOffset = 65 - (scrollPosition / 5000) * 70;
 
+  const isLaptop = useMediaQuery({ query: '(max-width: 650px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 450px)' });
+  if (isLaptop) {
+    INITIAL_DEVOPS_X_POSITION = 0;
+    INITIAL_PROGRAM_X_POSITION = -200;
+  }
+  if (isMobile) {
+    INITIAL_DEVOPS_Y_POSITION = -1450;
+    INITIAL_DEVOPS_X_POSITION = 0;
+    INITIAL_PROGRAM_Y_POSITION = -1400;
+    INITIAL_PROGRAM_X_POSITION = -100;
+    HEIGHT = 1830;
+    WIDTH = 1630;
+    RADIUS = 930;
+  }
+
+  const PROGRAM_TITLE_ANIMATION = {
+    y: INITIAL_PROGRAM_Y_POSITION,
+    x: INITIAL_PROGRAM_X_POSITION,
+  };
+  const DEVOPS_TITLE_ANIMATION = {
+    y: INITIAL_DEVOPS_Y_POSITION,
+    x: INITIAL_DEVOPS_X_POSITION,
+  };
   useLayoutEffect(() => {
     new CircleType(document.getElementById('circle'));
   }, []);
   return (
-    <Container>
-      <S.Section>
+    <S.Section>
+      <S.MainContainer>
         <S.RevertDescription>
           Решайте реальные задачи, учитесь работать в команде и осваивайте самые
           актуальные DevOps практики и инструменты
@@ -86,7 +119,7 @@ export const Main = () => {
           Решайте реальные задачи, учитесь работать в команде и осваивайте самые
           актуальные DevOps практики и инструменты
         </S.Description>
-      </S.Section>
-    </Container>
+      </S.MainContainer>
+    </S.Section>
   );
 };

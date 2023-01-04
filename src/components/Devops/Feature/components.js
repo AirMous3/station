@@ -18,6 +18,12 @@ export const Number = styled.div`
     font-size: 150px;
     margin-bottom: 0;
   }
+  @media (max-width: 560px) {
+    font-size: 120px;
+  }
+  @media (max-width: 450px) {
+    font-size: 100px;
+  }
 `;
 
 export const Title = styled.div`
@@ -35,6 +41,11 @@ export const Title = styled.div`
   }
   @media (max-width: 950px) {
     font-size: 23px;
+  }
+  @media (max-width: 450px) {
+    font-size: 20px;
+    top: 67px;
+    left: 49px;
   }
 `;
 
@@ -64,6 +75,22 @@ export const Wrapper = styled(motion.div)`
       }
     }
   }
+  @media (max-width: 560px) {
+    &:nth-child(even) {
+      ${Number} {
+        text-align: end;
+        margin-right: 0;
+      }
+    }
+  }
+  @media (max-width: 450px) {
+    &:nth-child(even) {
+      ${Title} {
+        right: 10px;
+        left: auto;
+      }
+    }
+  }
 `;
 
 export const Description = styled.div`
@@ -83,5 +110,11 @@ export const Description = styled.div`
   }
   @media (max-width: 620px) {
     font-size: 16px;
+  }
+`;
+
+export const FeatureContainer = styled.div`
+  @media (max-width: 560px) {
+    max-width: 255px;
   }
 `;

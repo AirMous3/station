@@ -17,24 +17,22 @@ import { ModalProvider } from '@/context/ModalContext';
 
 export const App = () => {
   return (
-    <div>
-      <ModalProvider>
-        <Header />
-        {/*<Main />*/}
-        <StartInfoLine />
-        <Devops />
-        {/*<AboutCourse />*/}
-        {/*<JobAssistance />*/}
-        {/*<AboutTraining />*/}
-        {/*<OurTeam />*/}
-        {/*<Curriculum />*/}
-        {/*<LearningProgram />*/}
-        {/*<PackageCost />*/}
-        {/*<Feedbacks />*/}
-        {/*<GetStarted />*/}
-        {/*<Footer />*/}
-        {/*<Modal />*/}
-      </ModalProvider>
-    </div>
+    <ModalProvider>
+      <Header />
+      <Main />
+      <StartInfoLine />
+      <Devops />
+      {/*<AboutCourse />*/}
+      {/*<JobAssistance />*/}
+      {/*<AboutTraining />*/}
+      {/*<OurTeam />*/}
+      {/*<Curriculum />*/}
+      {/*<LearningProgram />*/}
+      {/*<PackageCost />*/}
+      {/*<Feedbacks />*/}
+      {/*<GetStarted />*/}
+      {/*<Footer />*/}
+      {/*<Modal />*/}
+    </ModalProvider>
   );
 };
