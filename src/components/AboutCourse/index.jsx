@@ -11,7 +11,10 @@ export const AboutCourse = () => {
   return (
     <S.Section>
       <S.Container>
-        <S.Article>Кому подойдет курс</S.Article>
+        <S.Article>
+          Кому <br />
+          подойдет курс
+        </S.Article>
 
         <Levels />
 

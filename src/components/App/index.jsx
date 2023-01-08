@@ -22,8 +22,8 @@ export const App = () => {
       <Main />
       <StartInfoLine />
       <Devops />
-      {/*<AboutCourse />*/}
-      {/*<JobAssistance />*/}
+      <AboutCourse />
+      <JobAssistance />
       {/*<AboutTraining />*/}
       {/*<OurTeam />*/}
       {/*<Curriculum />*/}
@@ -36,3 +36,20 @@ export const App = () => {
     </ModalProvider>
   );
 };
+
+/*
+.gqlTVQ {
+gap: 15px;
+padding-top: 23px;
+
+gap: 4px;
+padding-top: 9px;
+}
+@media (max-width: 600px) {
+.gqlTVQ {
+padding-right: 12px;
+
+
+}
+}
+* */

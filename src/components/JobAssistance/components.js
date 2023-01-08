@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const Section = styled.section`
   color: ${({ theme }) => theme.colors.text.main};
   margin-bottom: 200px;
   justify-content: center;
   min-height: 1088px;
-  
+
   ${({ theme }) => theme.below.m`
     display: flex;
     flex-direction: column;
@@ -62,6 +62,21 @@ export const Title = styled.h2`
       right: -8px;
     }
   }
+
+  @media (max-width: 1000px) {
+    font-size: 68px;
+    line-height: 40.8px;
+    max-width: 340px;
+  }
+  @media (max-width: 450px) {
+    font-size: 30px;
+    line-height: 8.8px;
+    max-width: 160px;
+
+    span {
+      padding: 4px 0px 15px 21px;
+    }
+  }
 `;
 
 export const Features = styled.div`
@@ -71,13 +86,15 @@ export const Features = styled.div`
   margin-left: 35%;
   margin-top: -13%;
 
-  ${({ theme }) => theme.below.l`
-    margin-left: 25%;
-  `}
-
-  ${({ theme }) => theme.below.m`
+  @media (max-width: 1000px) {
+    justify-content: center;
     margin-left: 0;
-  `}
+    margin-top: 0;
+  }
+
+  @media (max-width: 600px) {
+    gap: 46px;
+  }
 `;
 
 export const Circle = styled.div`
@@ -115,6 +132,10 @@ export const Circle = styled.div`
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
+
+  @media (max-width: 1000px) {
+    bottom: -25px;
+  }
 `;
 
 export const CircleRight = styled(Circle)`
@@ -136,6 +157,10 @@ export const FeatureWrapper = styled.li`
       visibility: hidden;
     }
   }
+
+  @media (max-width: 450px) {
+    left: ${({ left }) => (left ? '-60px' : '60px')};
+  }
 `;
 
 export const Feature = styled.div`
@@ -143,7 +168,7 @@ export const Feature = styled.div`
   flex-direction: column;
   gap: 15px;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
-  padding-left: 35px;
+  padding-left: 25px;
   padding-top: 23px;
   padding-right: 26px;
   box-sizing: border-box;
@@ -162,7 +187,7 @@ export const Feature = styled.div`
     right: 0;
     width: 100%;
     height: 100%;
-    border-radius: 40px;
+    border-radius: inherit;
     background: linear-gradient(
       126.59deg,
       rgba(255, 255, 255, 0.4) 12.11%,
@@ -179,7 +204,7 @@ export const Feature = styled.div`
     right: 0;
     width: 100%;
     height: 100%;
-    border-radius: 40px;
+    border-radius: inherit;
     background: linear-gradient(
       111.15deg,
       rgba(78, 211, 223, 0.2) 17.66%,
@@ -202,17 +227,49 @@ export const Feature = styled.div`
       visibility: hidden;
     }
   }
+
+  @media (max-width: 1000px) {
+    max-width: 268px;
+    max-height: 180px;
+    min-height: 180px;
+  }
+  @media (max-width: 600px) {
+    padding-left: 20px;
+    padding-right: 12px;
+    min-width: 233px;
+  }
+  @media (max-width: 450px) {
+    max-width: 233px;
+    min-width: 233px;
+    min-height: 132px;
+    max-height: 132px;
+    border-radius: 20px;
+    gap: 4px;
+    padding-top: 9px;
+    padding-right: 8px;
+  }
 `;
 
 export const FeatureTitle = styled.div`
   font-weight: 700;
   font-size: ${({ theme }) => theme.typography.size[5]};
   text-transform: uppercase;
+
+  @media (max-width: 1000px) {
+    font-size: 16px;
+  }
 `;
 
 export const FeatureDescription = styled.div`
   font-weight: 400;
   font-size: ${({ theme }) => theme.typography.size[0]};
+
+  @media (max-width: 1000px) {
+    font-size: 12px;
+  }
+  @media (max-width: 450px) {
+    font-size: 10px;
+  }
 `;
 export const LeftFeatures = styled.ul`
   position: relative;
@@ -231,6 +288,17 @@ export const LeftFeatures = styled.ul`
     background-color: #4ed3df;
     box-shadow: 0px 0px 5px 3px rgba(78, 211, 223, 0.2);
     z-index: -2;
+  }
+
+  @media (max-width: 600px) {
+    gap: 208px;
+  }
+  @media (max-width: 450px) {
+    gap: 60px;
+
+    &:after {
+      right: 116px;
+    }
   }
 `;
 

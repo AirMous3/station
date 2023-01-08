@@ -7,10 +7,21 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 100px;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const FeatureWrapper = styled.div`
   position: relative;
+
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const FeatureTitle = styled.div`
@@ -27,6 +38,23 @@ export const FeatureTitle = styled.div`
   box-sizing: border-box;
   margin-bottom: 30px;
   box-shadow: 0 0 8px 4px rgba(255, 137, 122, 0.2);
+
+  @media (max-width: 1000px) {
+    font-size: 16px;
+    max-width: 250px;
+    min-width: 250px;
+
+    height: 52px;
+    padding: 14px 3px;
+  }
+
+  @media (max-width: 450px) {
+    max-width: 205px;
+    min-width: 205px;
+    font-size: 12px;
+    height: 35px;
+    padding: 8px 3px;
+  }
 `;
 
 export const FeatureDescription = styled.div`
@@ -36,6 +64,15 @@ export const FeatureDescription = styled.div`
   text-align: center;
   max-width: 283px;
   margin-left: 15px;
+
+  @media (max-width: 1000px) {
+    font-size: 14px;
+    max-width: 250px;
+  }
+  @media (max-width: 450px) {
+    font-size: 10px;
+    max-width: 186px;
+  }
 `;
 
 export const LineBlock = styled.div`
@@ -43,4 +80,15 @@ export const LineBlock = styled.div`
   height: 2px;
   background-color: #fe6f5f;
   margin-top: ${FEATURE_HEIGHT / 2}px;
+  min-width: 35px;
+
+  @media (max-width: 1000px) {
+    height: 40px;
+    width: 2px;
+    margin-top: 10px;
+    min-width: 0;
+  }
+  @media (max-width: 450px) {
+    height: 24px;
+  }
 `;

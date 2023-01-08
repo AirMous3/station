@@ -6,6 +6,10 @@ export const Section = styled(motion.section)`
   margin-bottom: 200px;
   margin-top: 70px;
   overflow-x: clip;
+
+  @media (max-width: 600px) {
+    margin-bottom: 50px;
+  }
 `;
 
 export const TitleWrapper = styled.div`
