@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
 
   #root {
     overflow-y: auto;
+    overflow-x: clip;
   }
 
   ul,

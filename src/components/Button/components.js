@@ -67,4 +67,10 @@ export const ButtonWrapper = styled.div`
     width: 100%;
     transition: 800ms ease all;
   }
+
+  @media (max-width: 600px) {
+    max-width: 246px;
+    font-size: 16px;
+    min-height: 46px;
+  }
 `;

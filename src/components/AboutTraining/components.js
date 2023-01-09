@@ -8,7 +8,6 @@ export const Section = styled.section`
   position: relative;
   margin-top: 35px;
   margin-bottom: 150px;
-  min-height: 1073px;
 `;
 
 export const Article = styled(ArticleTitle)`
@@ -20,12 +19,31 @@ export const ArticleDescription = styled.div`
   font-size: ${({ theme }) => theme.typography.size[7]};
   color: ${({ theme }) => theme.colors.text.lightGrey};
   max-width: 870px;
+
+  @media (max-width: 1100px) {
+    font-size: 16px;
+    max-width: 425px;
+  }
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
+  @media (max-width: 450px) {
+    font-size: 10px;
+    max-width: 262px;
+  }
 `;
 
 export const FeaturesWrapper = styled.ul`
   position: relative;
   margin-top: 65px;
   margin-bottom: 96px;
+
+  @media (max-width: 600px) {
+    margin-top: 35px;
+  }
+  @media (max-width: 450px) {
+    margin-top: 0;
+  }
 `;
 
 export const Cross = styled(motion.div)`
@@ -36,6 +54,11 @@ export const Cross = styled(motion.div)`
   width: 15px;
   height: 15px;
   cursor: pointer;
+
+  @media (max-width: 600px) {
+    width: 10px;
+    height: 10px;
+  }
 `;
 
 export const CrossWrapper = styled(motion.div)`
@@ -60,6 +83,10 @@ export const Feature = styled(motion.li)`
       filter: brightness(0);
     }
   }
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
 `;
 
 export const FeatureTitle = styled(motion.div)`
@@ -83,6 +110,19 @@ export const FeatureTitle = styled(motion.div)`
     top: 30px;
     right: -10px;
   }
+
+  @media (max-width: 1100px) {
+    font-size: 20px;
+    max-width: 386px;
+  }
+  @media (max-width: 600px) {
+    font-size: 15px;
+    max-width: 297px;
+  }
+  @media (max-width: 450px) {
+    font-size: 12px;
+    max-width: 240px;
+  }
 `;
 
 export const FeatureDescription = styled(motion.div)`
@@ -90,6 +130,19 @@ export const FeatureDescription = styled(motion.div)`
   font-size: ${({ theme }) => theme.typography.size[2]};
   max-width: 476px;
   margin: 32px 0 32px 200px;
+  @media (max-width: 1100px) {
+    font-size: 16px;
+    margin: 24px 66px 32px 12px;
+    max-width: none;
+  }
+  @media (max-width: 600px) {
+    font-size: 12px;
+    color: white;
+  }
+  @media (max-width: 450px) {
+    font-size: 8px;
+    margin: 0px 66px 12px 12px;
+  }
 `;
 
 export const Background = styled(motion.div)`

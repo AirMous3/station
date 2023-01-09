@@ -25,8 +25,8 @@ export const LearningProgram = () => {
   };
 
   return (
-    <Container>
-      <S.Section id={'program'}>
+    <S.Section id={'program'}>
+      <Container>
         <S.Title>Программа обучения</S.Title>
         {learningProgram.map(
           ({
@@ -84,7 +84,7 @@ export const LearningProgram = () => {
             {isOpenProgram ? 'Скрыть программу' : ' Открыть всю программу'}
           </S.LearningButton>
         </S.ButtonWrapper>
-      </S.Section>
-    </Container>
+      </Container>
+    </S.Section>
   );
 };

@@ -4,9 +4,7 @@ import styled, { css } from 'styled-components/macro';
 import { Cross } from '@/components/AboutTraining/components';
 import { ArticleTitle } from '@/components/Devops/components';
 
-export const Section = styled.section`
-  min-height: 1647px;
-`;
+export const Section = styled.section``;
 
 export const Title = styled(ArticleTitle)`
   line-height: 57px;
@@ -23,10 +21,20 @@ export const Level = styled(motion.div)`
 export const LevelWrapper = styled(motion.div)`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
 export const LevelInfoWrapper = styled(motion.div)`
   max-width: 513px;
+  @media (max-width: 1000px) {
+    max-width: 766px;
+  }
+  @media (max-width: 450px) {
+    max-width: 280px;
+  }
 `;
 
 export const LevelQuarter = styled(motion.div)`
@@ -35,6 +43,10 @@ export const LevelQuarter = styled(motion.div)`
   color: #292929;
   margin-bottom: 32px;
   margin-top: 8px;
+
+  @media (max-width: 450px) {
+    font-size: 10px;
+  }
 `;
 
 export const LevelTitle = styled(motion.div)`
@@ -42,6 +54,10 @@ export const LevelTitle = styled(motion.div)`
   font-size: 36px;
   line-height: 100%;
   color: #ffffff;
+
+  @media (max-width: 450px) {
+    font-size: 16px;
+  }
 `;
 
 export const LevelDescription = styled(motion.div)`
@@ -51,6 +67,10 @@ export const LevelDescription = styled(motion.div)`
   color: #7a7a7a;
   margin-top: 16px;
   margin-bottom: 32px;
+
+  @media (max-width: 450px) {
+    font-size: 10px;
+  }
 `;
 
 export const LevelProjectTitle = styled(motion.div)`
@@ -58,6 +78,10 @@ export const LevelProjectTitle = styled(motion.div)`
   font-size: 23px;
   line-height: 110%;
   color: #ffffff;
+
+  @media (max-width: 450px) {
+    font-size: 12px;
+  }
 `;
 
 export const LevelProjectDescription = styled(LevelDescription)`
@@ -66,6 +90,10 @@ export const LevelProjectDescription = styled(LevelDescription)`
 
 export const CourseWrapper = styled(motion.div)`
   width: 40%;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 export const CourseTitle = styled(LevelTitle)``;
@@ -107,6 +135,12 @@ export const LearningButton = styled.button`
   color: #ffffff;
   padding: 14px 143px;
   cursor: pointer;
+
+  @media (max-width: 450px) {
+    font-size: 10px;
+    max-width: 232px;
+    padding: 14px 52px;
+  }
 `;
 
 export const CourseFeatureDescription = styled(motion.div)`
@@ -116,6 +150,10 @@ export const CourseFeatureDescription = styled(motion.div)`
   max-width: 350px;
   margin-top: 10px;
   margin-bottom: 20px;
+
+  @media (max-width: 450px) {
+    font-size: 10px;
+  }
 `;
 
 export const BackgroundFlash = styled(motion.div)`

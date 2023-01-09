@@ -15,7 +15,10 @@ export const Accordion = ({ courseFeatures }) => {
         key={id}
         transition={{ duration: 0.01 }}
       >
-        <S.FeatureTitleWrapper layout={PRESERVE}>
+        <S.FeatureTitleWrapper
+          layout={PRESERVE}
+          onClick={() => setIsOpenDescription(active ? undefined : id)}
+        >
           <S.CourseFeatureTitle layout={PRESERVE}>
             {featureTitle}
           </S.CourseFeatureTitle>

@@ -12,6 +12,10 @@ export const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
   }
+  @media (max-width: 650px) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 `;
 
 export const FeatureWrapper = styled.div`

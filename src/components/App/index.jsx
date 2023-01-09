@@ -24,10 +24,10 @@ export const App = () => {
       <Devops />
       <AboutCourse />
       <JobAssistance />
-      {/*<AboutTraining />*/}
+      <AboutTraining />
       {/*<OurTeam />*/}
       {/*<Curriculum />*/}
-      {/*<LearningProgram />*/}
+      <LearningProgram />
       {/*<PackageCost />*/}
       {/*<Feedbacks />*/}
       {/*<GetStarted />*/}
