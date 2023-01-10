@@ -28,28 +28,11 @@ export const App = () => {
       {/*<OurTeam />*/}
       {/*<Curriculum />*/}
       <LearningProgram />
-      {/*<PackageCost />*/}
+      <PackageCost />
       {/*<Feedbacks />*/}
-      {/*<GetStarted />*/}
-      {/*<Footer />*/}
-      {/*<Modal />*/}
+      <GetStarted />
+      <Footer />
+      <Modal />
     </ModalProvider>
   );
 };
-
-/*
-.gqlTVQ {
-gap: 15px;
-padding-top: 23px;
-
-gap: 4px;
-padding-top: 9px;
-}
-@media (max-width: 600px) {
-.gqlTVQ {
-padding-right: 12px;
-
-
-}
-}
-* */

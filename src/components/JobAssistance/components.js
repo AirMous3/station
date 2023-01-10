@@ -169,8 +169,8 @@ export const Feature = styled.div`
   gap: 15px;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
   padding-left: 25px;
-  padding-top: 23px;
-  padding-right: 26px;
+  padding-top: 20px;
+  padding-right: 10px;
   box-sizing: border-box;
   border-radius: 40px;
   max-width: 346px;

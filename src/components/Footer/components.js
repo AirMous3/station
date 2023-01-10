@@ -8,6 +8,10 @@ export const Section = styled.section`
   background: #262626;
   padding: 24px 122px 32px 72px;
   box-sizing: border-box;
+
+  @media (max-width: 1000px) {
+    padding: 24px 36px 32px 28px;
+  }
 `;
 export const Communication = styled.div`
   display: flex;
@@ -17,6 +21,9 @@ export const Communication = styled.div`
 export const ContactsWrapper = styled.div`
   display: flex;
   margin-top: 24px;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
 export const ContactsDataWrapper = styled.div`
@@ -28,14 +35,31 @@ export const ContactsDataWrapper = styled.div`
   font-size: 16px;
   line-height: 150%;
   color: #ffffff;
+
+  @media (max-width: 1000px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 10px;
+  }
 `;
 
-export const Logo = styled.img``;
+export const Logo = styled.img`
+  @media (max-width: 450px) {
+    max-width: 136px;
+  }
+`;
 
 export const IconsWrapper = styled.div`
   display: flex;
   gap: 32px;
   margin-left: 72px;
+
+  @media (max-width: 1000px) {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 `;
 
 export const Icon = styled.div`
@@ -46,6 +70,12 @@ export const Icon = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
+
+  @media (max-width: 450px) {
+    width: 28px;
+    height: 28px;
+    background-size: 15px;
+  }
 `;
 
 export const TgIcon = styled(Icon)`
@@ -60,6 +90,15 @@ export const FeaturesWrapper = styled.div`
   font-size: 16px;
   line-height: 150%;
   color: #ffffff;
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+  }
+  @media (max-width: 450px) {
+    font-size: 10px;
+  }
 `;
 
 export const FeaturesDataWrapper = styled.ul`
@@ -79,4 +118,8 @@ export const Rights = styled.div`
   text-align: center;
   color: #999999;
   margin-top: 40px;
+
+  @media (max-width: 450px) {
+    font-size: 10px;
+  }
 `;

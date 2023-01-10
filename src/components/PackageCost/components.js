@@ -21,6 +21,7 @@ export const PackagesWrapper = styled.div`
   margin-top: 80px;
   text-align: center;
   margin-bottom: 156px;
+  flex-wrap: wrap;
 `;
 
 export const PackageWrapper = styled.ul`
@@ -105,7 +106,14 @@ export const PackageWrapper = styled.ul`
         background: linear-gradient(230.25deg, #dadada 4.82%, #ffffff 91.47%);
         color: #3f3f3f;
       }
-    `}
+    `};
+
+  @media (max-width: 450px) {
+    max-width: 337px;
+    min-width: 337px;
+    max-height: 528px;
+    min-height: 528px;
+  }
 `;
 
 export const PackageTitle = styled.h3`
@@ -113,6 +121,10 @@ export const PackageTitle = styled.h3`
   font-size: ${({ theme }) => theme.typography.size[8]};
   text-transform: uppercase;
   margin-bottom: 24px;
+
+  @media (max-width: 450px) {
+    font-size: 20px;
+  }
 `;
 
 export const PackageFeature = styled.li`
@@ -133,11 +145,21 @@ export const PackageFeature = styled.li`
     );
     border-image-slice: 1;
   }
+
+  @media (max-width: 450px) {
+    font-size: 16px;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+  }
 `;
 
 export const PackagePrice = styled.div`
   font-weight: 700;
   font-size: ${({ theme }) => theme.typography.size[9]};
+
+  @media (max-width: 450px) {
+    font-size: 24px;
+  }
 `;
 
 export const EnglishWrapper = styled.div`
@@ -175,7 +197,10 @@ export const EnglishTitle = styled.div`
     max-width: 190px;
     height: 100%;
   }
-}
+
+  @media (max-width: 900px) {
+    font-size: 40px;
+  }
 `;
 
 export const EnglishFeature = styled.div`
@@ -209,6 +234,10 @@ export const EnglishFeatureTitle = styled.div`
   font-size: 23px;
   line-height: 120%;
   color: ${({ color }) => color};
+
+  @media (max-width: 900px) {
+    font-size: 18px;
+  }
 `;
 
 export const EnglishFeatureDescription = styled.div`
@@ -221,6 +250,10 @@ export const EnglishFeatureDescription = styled.div`
 
   span {
     color: #ffffff;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 14px;
   }
 `;
 
@@ -276,4 +309,11 @@ export const PackageButton = styled.button`
   color: #ffffff;
   cursor: pointer;
   margin-top: 30px;
+
+  @media (max-width: 450px) {
+    min-width: 201px;
+    max-width: 201px;
+    min-height: 39px;
+    max-height: 39px;
+  }
 `;

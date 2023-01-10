@@ -1,13 +1,16 @@
 import { useContext } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import { Container } from '@/components/Container';
 import { englishConfig, packageConfig } from '@/components/PackageCost/config';
+import { PackageCostFeaturesMobileLayout } from '@/components/PackageCost/mobileLayout';
 import { ModalContext } from '@/context/ModalContext';
 
 import * as S from './components';
 
 export const PackageCost = () => {
   const { setVisible } = useContext(ModalContext);
+  const isLaptop = useMediaQuery({ query: '(max-width: 700px)' });
   return (
     <S.Section id={'packages'}>
       <Container>
@@ -33,35 +36,46 @@ export const PackageCost = () => {
         ))}
       </S.PackagesWrapper>
 
-      <Container>
-        <S.EnglishWrapper>
-          <S.EnglishTitleWrapper>
-            <S.EnglishTitle>Почему английский нужен в IT</S.EnglishTitle>
-          </S.EnglishTitleWrapper>
+      {isLaptop ? (
+        <PackageCostFeaturesMobileLayout />
+      ) : (
+        <Container>
+          <S.EnglishWrapper>
+            <S.EnglishTitleWrapper>
+              <S.EnglishTitle>Почему английский нужен в IT</S.EnglishTitle>
+            </S.EnglishTitleWrapper>
 
-          {englishConfig.map(
-            ({ description, title, number, numberColor, titleColor, top }) => (
-              <S.EnglishFeature key={title}>
-                <S.EnglishFeatureTitle color={titleColor}>
-                  {title}
-                </S.EnglishFeatureTitle>
+            {englishConfig.map(
+              ({
+                description,
+                title,
+                number,
+                numberColor,
+                titleColor,
+                top,
+              }) => (
+                <S.EnglishFeature key={title}>
+                  <S.EnglishFeatureTitle color={titleColor}>
+                    {title}
+                  </S.EnglishFeatureTitle>
 
-                <S.EnglishFeatureDescription
-                  dangerouslySetInnerHTML={{ __html: description }}
-                />
+                  <S.EnglishFeatureDescription
+                    dangerouslySetInnerHTML={{ __html: description }}
+                  />
 
-                <S.EnglishFeatureNumber color={numberColor} top={top}>
-                  {number}
-                </S.EnglishFeatureNumber>
-              </S.EnglishFeature>
-            ),
-          )}
+                  <S.EnglishFeatureNumber color={numberColor} top={top}>
+                    {number}
+                  </S.EnglishFeatureNumber>
+                </S.EnglishFeature>
+              ),
+            )}
 
-          <S.EnglishButton>Купить пакеты с английским</S.EnglishButton>
+            <S.EnglishButton>Купить пакеты с английским</S.EnglishButton>
 
-          <S.BackgroundFlash />
-        </S.EnglishWrapper>
-      </Container>
+            <S.BackgroundFlash />
+          </S.EnglishWrapper>
+        </Container>
+      )}
     </S.Section>
   );
 };

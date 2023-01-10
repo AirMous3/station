@@ -23,6 +23,10 @@ export const Quotes = styled.div`
   font-family: Generator;
   font-weight: 900;
   font-size: ${({ theme }) => theme.typography.size[16]};
+
+  @media (max-width: 450px) {
+    font-size: 60px;
+  }
 `;
 
 export const FeedbackDescriptionWrapper = styled.div`
@@ -32,6 +36,15 @@ export const FeedbackDescriptionWrapper = styled.div`
 export const FeedbackDescription = styled(motion.div)`
   min-height: 234px;
   max-width: 696px;
+
+  @media (max-width: 830px) {
+    max-width: 560px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 12px;
+    max-width: 243px;
+  }
 `;
 
 export const DescriptionWrapper = styled.div`

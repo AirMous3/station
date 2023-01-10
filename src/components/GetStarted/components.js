@@ -16,6 +16,10 @@ export const Article = styled(ArticleTitle)`
   line-height: 73px;
   text-align: center;
   margin: 0;
+
+  @media (max-width: 450px) {
+    line-height: 40px;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -23,8 +27,13 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-`;
 
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+`;
 
 export const BackgroundFlash = styled.div`
   position: absolute;
@@ -38,8 +47,10 @@ export const BackgroundFlash = styled.div`
   z-index: -1;
 `;
 
-
 export const Image = styled.img`
   max-height: 528px;
-`;
 
+  @media (max-width: 450px) {
+    max-width: 270px;
+  }
+`;

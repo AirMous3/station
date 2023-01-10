@@ -20,7 +20,7 @@ export const Feedbacks = () => {
     const intervalId = setInterval(() => {
       id === 3 ? (id = 0) : (id += 1);
       setActiveId(id);
-    }, 4000);
+    }, 4000000);
 
     return () => {
       clearInterval(intervalId);
