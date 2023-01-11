@@ -57,10 +57,19 @@ export const AvatarsWrapper = styled(motion.div)`
   align-items: center;
   height: 99px;
   gap: 50px;
-  margin-top: 50px;
   white-space: nowrap;
+
+  @media (max-width: 450px) {
+    gap: 16px;
+    justify-content: flex-end;
+  }
 `;
-export const AvatarImage = styled(motion.img)``;
+export const AvatarImage = styled(motion.img)`
+  @media (max-width: 450px) {
+    width: 27px;
+    height: 27px;
+  }
+`;
 
 export const AvatarWrapper = styled(motion.div)`
   width: 81px;
@@ -88,6 +97,17 @@ export const AvatarWrapper = styled(motion.div)`
             transition: opacity 0.5s;
           }
         `};
+
+  @media (max-width: 450px) {
+    width: 27px;
+    height: 27px;
+
+    ${({ isActive }) =>
+      isActive &&
+      css`
+        width: 80px;
+        border-radius: 890px;
+      `}
 `;
 
 export const AvatarDescriptionWrapper = styled(motion.div)`
@@ -103,6 +123,10 @@ export const AvatarTitle = styled.div`
   font-size: 23px;
   line-height: 120%;
   transition: opacity 0.5s ease-in-out;
+
+  @media (max-width: 450px) {
+    font-size: 8px;
+  }
 `;
 
 export const AvatarDescription = styled.div`
@@ -110,4 +134,8 @@ export const AvatarDescription = styled.div`
   font-size: 16px;
   line-height: 120%;
   transition: opacity 0.5s ease-in-out;
+
+  @media (max-width: 450px) {
+    font-size: 6px;
+  }
 `;

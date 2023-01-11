@@ -29,7 +29,7 @@ export const AboutTrainingMobile = () => {
           <S.CrossWrapper layout={PRESERVE}>
             <S.Cross
               layout={PRESERVE}
-              animate={active ? { y: -30, rotate: 405 } : { y: 0, rotate: 0 }}
+              animate={active ? { y: -30, rotate: 125 } : { y: 0, rotate: 0 }}
               exit={{ y: 0 }}
               transition={{ duration: 0.5 }}
               onClick={() => handleClick(active ? undefined : number)}

@@ -7,6 +7,10 @@ import { ArticleTitle } from '@/components/Devops/components';
 export const Section = styled.section`
   margin-top: 200px;
   margin-bottom: 100px;
+
+  @media (max-width: 450px) {
+    margin-top: 75px;
+  }
 `;
 
 export const Article = styled(ArticleTitle)`
@@ -19,6 +23,9 @@ export const Article = styled(ArticleTitle)`
 
   @media (max-width: 450px) {
     line-height: 40px;
+    font-size: 40px;
+    left: 94px;
+    text-align: end;
   }
 `;
 

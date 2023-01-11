@@ -1,11 +1,11 @@
-import Marquee from 'react-double-marquee';
+import Marquee from 'react-fast-marquee';
 
 import * as S from './components';
 
 export const Ticker = ({ direction }) => {
   return (
     <S.Wrapper>
-      <Marquee speed={0.05} direction={direction}>
+      <Marquee direction={direction} gradient={false} play={true}>
         Станьте DevOps-инженером с нуля
       </Marquee>
     </S.Wrapper>

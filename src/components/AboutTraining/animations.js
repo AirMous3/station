@@ -4,6 +4,6 @@ export const FEATURE_DESCRIPTION_ANIMATION = {
   },
   visible: {
     opacity: 1,
-    transition: { duration: 0.8 },
+    transition: { duration: 0.5 },
   },
 };

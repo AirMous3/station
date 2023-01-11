@@ -24,7 +24,7 @@ export const AboutCourse = () => {
       </S.Container>
 
       <Ticker />
-      <Ticker direction={'left'} />
+      <Ticker direction={'right'} />
 
       <CourseFeatures />
     </S.Section>

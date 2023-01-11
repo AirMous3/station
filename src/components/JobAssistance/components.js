@@ -114,8 +114,6 @@ export const Circle = styled.div`
     height: 100%;
     border-radius: 50%;
     background: linear-gradient(231.92deg, #ffffff 29.99%, #6c6c6c 91.35%);
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
   }
 
   &:after {
@@ -129,8 +127,6 @@ export const Circle = styled.div`
     background: linear-gradient(231.92deg, #4ed3df 29.99%, #1d2efd 91.35%);
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
   }
 
   @media (max-width: 1000px) {
@@ -193,8 +189,8 @@ export const Feature = styled.div`
       rgba(255, 255, 255, 0.4) 12.11%,
       rgba(255, 255, 255, 0.1) 73.08%
     );
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: background 0.5s ease;
+    transition: background 0.5s ease;
   }
 
   &:after {
@@ -212,8 +208,8 @@ export const Feature = styled.div`
     );
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: background 0.5s ease;
+    transition: background 0.5s ease;
   }
 
   &:hover {

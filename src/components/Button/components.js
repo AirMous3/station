@@ -14,7 +14,6 @@ export const ButtonWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
-  transition: all 0.3s ease;
   position: relative;
   box-shadow: 0px 0px 13px 4px rgba(222, 73, 55, 0.2);
   box-sizing: border-box;
@@ -35,7 +34,6 @@ export const ButtonWrapper = styled.div`
     background: #f0094a;
     box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003,
       4px 4px 5px 0px #0002;
-    transition: 400ms ease all;
   }
 
   &:after {
@@ -48,7 +46,6 @@ export const ButtonWrapper = styled.div`
     background: #f0094a;
     box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003,
       4px 4px 5px 0px #0002;
-    transition: 400ms ease all;
   }
 
   &:after {
@@ -60,12 +57,10 @@ export const ButtonWrapper = styled.div`
 
   &:hover::before {
     width: 100%;
-    transition: 800ms ease all;
   }
 
   &:hover::after {
     width: 100%;
-    transition: 800ms ease all;
   }
 
   @media (max-width: 600px) {

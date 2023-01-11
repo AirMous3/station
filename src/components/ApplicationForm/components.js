@@ -130,6 +130,6 @@ export const ButtonStart = styled(Button)`
   padding: 14px 93px;
   font-weight: 500;
   font-size: 18px;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: auto;
+  margin-right: auto;
 `;

@@ -87,8 +87,6 @@ export const FeatureNumber = styled.div`
     height: 55px;
     border-radius: 50%;
     background: linear-gradient(180deg, #4f4f4f 0%, #a7a7a7 100%);
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
     z-index: -1;
   }
 
@@ -103,8 +101,8 @@ export const FeatureNumber = styled.div`
     background: linear-gradient(180deg, #2037fb 0%, #50dadd 100%);
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: background 0.5s ease;
+    transition: background 0.5s ease;
     z-index: -1;
   }
 `;

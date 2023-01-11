@@ -29,7 +29,7 @@ export const App = () => {
       {/*<Curriculum />*/}
       <LearningProgram />
       <PackageCost />
-      {/*<Feedbacks />*/}
+      <Feedbacks />
       <GetStarted />
       <Footer />
       <Modal />

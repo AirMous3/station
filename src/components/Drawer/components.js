@@ -11,7 +11,6 @@ export const Mask = styled.div`
   bottom: 0;
   left: 0;
   z-index: 1000;
-  transition: all 1s ease;
 
   ${({ visible }) =>
     visible
@@ -30,7 +29,6 @@ export const Modal = styled.div`
   align-items: center;
   z-index: 1001;
   color: white;
-  transition: all 1s ease-in-out;
 `;
 
 export const ModalWrapper = styled.div`
@@ -43,6 +41,12 @@ export const ModalWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 450px) {
+    width: 334px;
+    height: 664px;
+    padding: 8px 18px 16px;
+  }
 `;
 
 export const Cross = styled.div`
@@ -54,6 +58,10 @@ export const Cross = styled.div`
   background-size: 28px;
   transform: rotate(45deg);
   cursor: pointer;
+
+  @media (max-width: 450px) {
+    background-size: 14px;
+  }
 `;
 
 export const Title = styled.div`
@@ -64,4 +72,13 @@ export const Title = styled.div`
   font-size: 35px;
   max-width: 564px;
   margin-bottom: 55px;
+
+  @media (max-width: 650px) {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 24px;
+  }
 `;

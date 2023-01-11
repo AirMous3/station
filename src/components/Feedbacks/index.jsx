@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import mentorImage from '@/assets/images/miniMentorImage.png';
 import { Container } from '@/components/Container';
@@ -9,6 +10,7 @@ import * as S from './components';
 
 export const Feedbacks = () => {
   const [activeId, setActiveId] = useState(0);
+  const isMobile = useMediaQuery({ query: '(max-width: 450px)' });
 
   const handleClick = (id) => {
     setActiveId(id);
@@ -20,7 +22,7 @@ export const Feedbacks = () => {
     const intervalId = setInterval(() => {
       id === 3 ? (id = 0) : (id += 1);
       setActiveId(id);
-    }, 4000000);
+    }, 4000);
 
     return () => {
       clearInterval(intervalId);
@@ -53,14 +55,27 @@ export const Feedbacks = () => {
                         layout={PRESERVE}
                         src={mentorImage}
                         alt="mentorImage"
-                        animate={active ? { x: 15 } : { x: 0 }}
+                        isActive={active}
+                        animate={
+                          isMobile
+                            ? active
+                              ? { x: 5 }
+                              : { x: 0 }
+                            : active
+                            ? { x: 15 }
+                            : { x: 0 }
+                        }
                       />
 
                       {active && (
                         <S.AvatarDescriptionWrapper
                           layout={PRESERVE}
                           initial={{ opacity: 0 }}
-                          animate={{ opacity: 1, x: 25 }}
+                          animate={
+                            isMobile
+                              ? { opacity: 1, x: 0 }
+                              : { opacity: 1, x: 25 }
+                          }
                           transition={{ duration: 0.1 }}
                         >
                           <S.AvatarTitle>{title}</S.AvatarTitle>
