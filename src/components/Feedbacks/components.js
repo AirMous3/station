@@ -85,18 +85,11 @@ export const AvatarWrapper = styled(motion.div)`
   box-shadow: 0px 0px 2px 5px rgba(254, 111, 95, 0.2);
 
   ${({ isActive }) =>
-    isActive
-      ? css`
-          width: 250px;
-          height: 97px;
-          border-radius: 890px;
-        `
-      : css`
-          ${AvatarDescriptionWrapper} {
-            opacity: 0;
-            transition: opacity 0.5s;
-          }
-        `};
+    isActive &&
+    css`
+      width: 250px;
+      height: 97px;
+    `} ;
 
   @media (max-width: 450px) {
     width: 27px;
@@ -106,7 +99,6 @@ export const AvatarWrapper = styled(motion.div)`
       isActive &&
       css`
         width: 80px;
-        border-radius: 890px;
       `}
 `;
 

@@ -1,3 +1,5 @@
+import { useMediaQuery } from 'react-responsive';
+
 import { HIDDEN, VISIBLE } from '@/constants/framer';
 
 import * as S from './components';
@@ -10,6 +12,7 @@ export const Feature = ({
   textAlign,
   custom,
 }) => {
+  const isMobile = useMediaQuery({ query: '(max-width: 450px)' });
   const featureAnimation = {
     hidden: {
       opacity: 0,
@@ -29,7 +32,7 @@ export const Feature = ({
       initial={HIDDEN}
       whileInView={VISIBLE}
       viewport={{ once: true }}
-      variants={featureAnimation}
+      variants={isMobile ? 'none' : featureAnimation}
       custom={custom}
     >
       <S.FeatureContainer>

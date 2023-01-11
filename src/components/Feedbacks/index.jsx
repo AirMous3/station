@@ -65,6 +65,10 @@ export const Feedbacks = () => {
                             ? { x: 15 }
                             : { x: 0 }
                         }
+                        transition={{
+                          x: { type: 'spring', stiffness: 100 },
+                          duration: 0.8,
+                        }}
                       />
 
                       {active && (

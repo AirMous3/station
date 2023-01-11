@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 import { FEATURE_DESCRIPTION_ANIMATION } from '@/components/AboutTraining/animations';
@@ -21,7 +22,10 @@ export const AboutTrainingMobile = () => {
         animate={VISIBLE}
         onClick={() => handleClick(active ? undefined : number)}
       >
-        <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+        <motion.div
+          layout={PRESERVE}
+          style={{ display: 'flex', alignItems: 'center', width: '100%' }}
+        >
           <S.FeatureTitle layout={PRESERVE} number={number}>
             {title}
           </S.FeatureTitle>
@@ -35,7 +39,7 @@ export const AboutTrainingMobile = () => {
               onClick={() => handleClick(active ? undefined : number)}
             />
           </S.CrossWrapper>
-        </div>
+        </motion.div>
         {active && (
           <S.FeatureDescription
             layout={PRESERVE}

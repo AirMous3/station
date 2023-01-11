@@ -11,7 +11,7 @@ export const GetStarted = () => {
         <S.Wrapper>
           <S.Article>Измени свою жизнь уже сейчас</S.Article>
 
-          <S.BackgroundFlash />
+          {/*<S.BackgroundFlash />*/}
 
           <S.Image src={image} alt="backImage" id="getStarted" />
 

@@ -32,7 +32,7 @@ export const AboutTraining = () => {
           требуются DevOps-инженерам.
         </S.ArticleDescription>
 
-        <S.FeaturesWrapper>
+        <S.FeaturesWrapper layout={PRESERVE}>
           {isMobile ? (
             <AboutTrainingMobile />
           ) : (

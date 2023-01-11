@@ -72,8 +72,10 @@ export const Devops = () => {
     <S.Section initial={HIDDEN} whileInView={VISIBLE} viewport={{ once: true }}>
       <Container>
         <S.TitleWrapper>
-          <S.Title variants={titleAnimation}>DevOps</S.Title>
-          <S.Description variants={descriptionAnimation}>
+          <S.Title variants={isMobile ? 'none' : titleAnimation}>
+            DevOps
+          </S.Title>
+          <S.Description variants={isMobile ? 'none' : descriptionAnimation}>
             {!isMobile &&
               'инженер — кто это и какие у него обязанности? Простыми словами, это\n' +
                 '            человек, который синхронизирует этапы разработки программного\n' +
@@ -97,7 +99,7 @@ export const Devops = () => {
           <S.BackgroundFlash />
         </S.TitleWrapper>
 
-        <S.ArticleTitle variants={articleAnimation}>
+        <S.ArticleTitle variants={isMobile ? 'none' : articleAnimation}>
           Как это будет
         </S.ArticleTitle>
 
@@ -117,7 +119,7 @@ export const Devops = () => {
           )}
         </S.FeaturesWrapper>
 
-        <S.ArticleTitle variants={secondArticleAnimation}>
+        <S.ArticleTitle variants={isMobile ? 'none' : secondArticleAnimation}>
           Востребованность на рынке
         </S.ArticleTitle>
 

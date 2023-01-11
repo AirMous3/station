@@ -33,7 +33,7 @@ export const ArticleDescription = styled.div`
   }
 `;
 
-export const FeaturesWrapper = styled.ul`
+export const FeaturesWrapper = styled(motion.ul)`
   position: relative;
   margin-top: 65px;
   margin-bottom: 96px;
@@ -73,7 +73,6 @@ export const Feature = styled(motion.li)`
   // TODO
   border-bottom: 1px solid #535353;
   color: ${({ theme }) => theme.colors.text.main};
-  transition: color ease-in 0.5s;
   cursor: pointer;
 
   &:hover {
@@ -87,7 +86,7 @@ export const Feature = styled(motion.li)`
   @media (max-width: 1100px) {
     flex-direction: column;
   }
-  
+
   @media (max-width: 650px) {
     &:hover {
       ${Cross} {

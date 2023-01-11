@@ -189,8 +189,6 @@ export const Feature = styled.div`
       rgba(255, 255, 255, 0.4) 12.11%,
       rgba(255, 255, 255, 0.1) 73.08%
     );
-    -webkit-transition: background 0.5s ease;
-    transition: background 0.5s ease;
   }
 
   &:after {
@@ -208,8 +206,6 @@ export const Feature = styled.div`
     );
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: background 0.5s ease;
-    transition: background 0.5s ease;
   }
 
   &:hover {
