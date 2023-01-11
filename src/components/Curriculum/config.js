@@ -32,3 +32,4 @@ export const curriculumConfig = [
     margin: '-172px',
   },
 ];
+

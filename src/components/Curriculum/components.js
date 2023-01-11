@@ -7,7 +7,6 @@ export const Section = styled.section`
   position: relative;
   margin-top: 170px;
   margin-bottom: 150px;
-  min-height: 766px;
 `;
 
 export const Article = styled(ArticleTitle)`
@@ -54,6 +53,16 @@ export const Circle = styled(motion.div)`
     filter: blur(248px);
     transform: rotate(26.63deg);
   }
+
+  @media (max-width: 450px) {
+    width: 254.58px;
+    height: 266.58px;
+    left: -61px;
+
+    &:before {
+      bottom: -2px;
+    }
+  }
 `;
 
 export const FeaturesWrapper = styled.ul`
@@ -63,6 +72,10 @@ export const FeaturesWrapper = styled.ul`
   gap: 45px;
   max-width: 771px;
   margin-top: 30px;
+
+  @media (max-width: 450px) {
+    gap: 16px;
+  }
 `;
 
 export const FeatureNumber = styled.div`
@@ -105,6 +118,22 @@ export const FeatureNumber = styled.div`
     transition: background 0.5s ease;
     z-index: -1;
   }
+
+  @media (max-width: 450px) {
+    font-size: 12px;
+    min-height: 25px;
+    min-width: 25px;
+
+    &:after {
+      width: 25px;
+      height: 25px;
+    }
+
+    &:before {
+      width: 25px;
+      height: 25px;
+    }
+  }
 `;
 
 export const FeatureWrapper = styled.li`
@@ -112,7 +141,10 @@ export const FeatureWrapper = styled.li`
   gap: 25px;
   align-items: center;
   z-index: 2;
-  margin-left: ${({ margin }) => margin};
+  margin-left: ${({ isMobile, theme, index }) =>
+    isMobile
+      ? theme.margin.curriculumMobile[index]
+      : theme.margin.curriculum[index]};
   transition: background 0.8s;
 
   &:hover {
@@ -130,12 +162,21 @@ export const FeatureWrapper = styled.li`
       }
     }
   }
+
+  @media (max-width: 450px) {
+    gap: 15px;
+  }
 `;
 
 export const FeatureTitle = styled.div`
   font-weight: 700;
   font-size: ${({ theme }) => theme.typography.size[4]};
   color: ${({ theme }) => theme.colors.text.lightGrey};
+
+  @media (max-width: 450px) {
+    font-size: 10px;
+    max-width: 240px;
+  }
 `;
 
 export const BackgroundFlash = styled.div`

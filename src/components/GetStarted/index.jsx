@@ -9,11 +9,11 @@ export const GetStarted = () => {
     <S.Section>
       <Container>
         <S.Wrapper>
-          <S.Article id="getStarted">Измени свою жизнь уже сейчас</S.Article>
+          <S.Article>Измени свою жизнь уже сейчас</S.Article>
 
           <S.BackgroundFlash />
 
-          <S.Image src={image} alt="backImage" />
+          <S.Image src={image} alt="backImage" id="getStarted" />
 
           <ApplicationForm />
         </S.Wrapper>

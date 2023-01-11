@@ -87,6 +87,14 @@ export const Feature = styled(motion.li)`
   @media (max-width: 1100px) {
     flex-direction: column;
   }
+  
+  @media (max-width: 650px) {
+    &:hover {
+      ${Cross} {
+        filter: none;
+      }
+    }
+  }
 `;
 
 export const FeatureTitle = styled(motion.div)`
@@ -122,6 +130,13 @@ export const FeatureTitle = styled(motion.div)`
   @media (max-width: 450px) {
     font-size: 12px;
     max-width: 240px;
+    padding: 16px 10px 16px 15px;
+
+    :after {
+      font-size: 8px;
+      top: 10px;
+      right: -12px;
+    }
   }
 `;
 

@@ -1,7 +1,5 @@
 import styled from 'styled-components/macro';
 
-import star from '@/assets/icons/star.svg';
-import { Button } from '@/components/Button';
 import { ArticleTitle } from '@/components/Devops/components';
 
 export const Section = styled.section`
@@ -22,10 +20,11 @@ export const Article = styled(ArticleTitle)`
   margin: 0;
 
   @media (max-width: 450px) {
-    line-height: 40px;
+    line-height: 32px;
     font-size: 40px;
     left: 94px;
     text-align: end;
+    top: 75px;
   }
 `;
 
@@ -59,5 +58,6 @@ export const Image = styled.img`
 
   @media (max-width: 450px) {
     max-width: 270px;
+    margin-left: -165px;
   }
 `;

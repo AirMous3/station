@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import styled, { css } from 'styled-components/macro';
+import styled from 'styled-components/macro';
 
 export const Number = styled.div`
   font-family: NAMU;

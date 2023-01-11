@@ -59,6 +59,8 @@ export const typography = {
 export const margin = {
   salaryTablets: ['0', '0', '30px', '40px', '70px'],
   tabletSalaryTablets: ['0', '0', '20px', '22px', '50px'],
+  curriculum: ['-136px', '-64px', '-33px', '-30px', '-69px', '-172px'],
+  curriculumMobile: ['-100px', '-77px', '-74px', '-80px', '-104px', ' -160px'],
 };
 
 export const breakpoints = {

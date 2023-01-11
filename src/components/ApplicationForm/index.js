@@ -47,7 +47,7 @@ export const ApplicationForm = () => {
     setState({ ...state, name: '', message: '' });
   };
   return (
-    <S.GetStartedForm>
+    <S.GetStartedForm >
       <S.InputsWrapper>
         <S.InputWrapper>
           <S.Input
